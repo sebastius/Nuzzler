@@ -2194,7 +2194,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic_Shielded:Conn_01x02_Shielded"
+		(symbol "Connector_Generic_MountingPin:Conn_01x02_MountingPin"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -2205,15 +2205,15 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "J"
-				(at 0.254 2.286 0)
+				(at 0 2.54 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "Value" "Conn_01x02_Shielded"
-				(at 1.016 -4.826 0)
+			(property "Value" "Conn_01x02_MountingPin"
+				(at 1.27 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2239,7 +2239,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "Description" "Generic shielded connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connectable mounting pin connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2257,7 +2257,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "ki_fp_filters" "Connector*:*_1x??-1SH*"
+			(property "ki_fp_filters" "Connector*:*_1x??-1MP*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2266,34 +2266,39 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(symbol "Conn_01x02_Shielded_1_1"
+			(symbol "Conn_01x02_MountingPin_1_1"
 				(rectangle
 					(start -1.27 1.27)
 					(end 1.27 -3.81)
-					(stroke (width 0.1524) (type default))
-					(fill (type none))
-				)
-				(rectangle
-					(start -1.016 1.016)
-					(end 1.016 -3.556)
 					(stroke (width 0.254) (type default))
 					(fill (type background))
 				)
 				(rectangle
-					(start -1.016 0.127)
-					(end 0.254 -0.127)
+					(start -1.27 0.127)
+					(end 0 -0.127)
 					(stroke (width 0.1524) (type default))
 					(fill (type none))
 				)
 				(rectangle
-					(start -1.016 -2.413)
-					(end 0.254 -2.667)
+					(start -1.27 -2.413)
+					(end 0 -2.667)
 					(stroke (width 0.1524) (type default))
 					(fill (type none))
 				)
+				(polyline
+					(pts (xy -1.016 -4.572) (xy 1.016 -4.572))
+					(stroke (width 0.1524) (type default))
+					(fill (type none))
+				)
+				(text "Mounting"
+					(at 0 -4.191 0)
+					(effects
+						(font (size 0.381 0.381))
+					)
+				)
 				(pin passive line
 					(at -5.08 0 0)
-					(length 4.064)
+					(length 3.81)
 					(name "Pin_1"
 						(effects
 							(font (size 1.27 1.27))
@@ -2307,7 +2312,7 @@
 				)
 				(pin passive line
 					(at -5.08 -2.54 0)
-					(length 4.064)
+					(length 3.81)
 					(name "Pin_2"
 						(effects
 							(font (size 1.27 1.27))
@@ -2321,13 +2326,13 @@
 				)
 				(pin passive line
 					(at 0 -7.62 90)
-					(length 3.81)
-					(name "Shield"
+					(length 3.048)
+					(name "MountPin"
 						(effects
 							(font (size 1.27 1.27))
 						)
 					)
-					(number "SH"
+					(number "MP"
 						(effects
 							(font (size 1.27 1.27))
 						)
@@ -3036,7 +3041,7 @@
 			(font (size 1.5 1.5))
 			(justify left top)
 		)
-		(uuid "834e94b1-b915-48aa-b301-c281597855bb")
+		(uuid "38436509-64da-5bbe-9ab5-be765587c41f")
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x04_Pin")
@@ -3046,7 +3051,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "64487417-1f75-4697-b623-12cba297a21e")
+		(uuid "63d76a04-e8e8-5be2-b43b-3e674b17be4b")
 		(property "Reference" "J1"
 			(at 25.4 40.64 0)
 			(effects
@@ -3081,16 +3086,16 @@
 			)
 		)
 		(pin "1"
-			(uuid "5513e5c9-d25e-4a0d-a001-832f45c9cedc")
+			(uuid "345f5f3c-7912-5d80-846f-70eb26f7f4bf")
 		)
 		(pin "2"
-			(uuid "efa0ebf3-41ac-4110-80e2-62c5693156d5")
+			(uuid "6f2284e4-3f24-50f9-bb70-5342b4b41994")
 		)
 		(pin "3"
-			(uuid "01346e61-fda1-4cad-9522-3722b07a5682")
+			(uuid "1dec1760-3d60-5a86-8532-e3e067f17c23")
 		)
 		(pin "4"
-			(uuid "9421932a-b544-422a-9525-76282360df63")
+			(uuid "b98827c9-49e4-56c2-8c83-41fa3a13c673")
 		)
 		(instances
 			(project "hotendheater"
@@ -3104,33 +3109,33 @@
 	(wire
 		(pts (xy 30.48 43.18) (xy 35.56 43.18))
 		(stroke (width 0) (type default))
-		(uuid "f1b6b50a-3ce4-4edc-a340-1cad4223778a")
+		(uuid "c2e82085-568e-5b59-9fd1-ba5a6dd3fc3d")
 	)
 	(wire
 		(pts (xy 30.48 45.72) (xy 35.56 45.72))
 		(stroke (width 0) (type default))
-		(uuid "7c94b825-0654-4206-b6a2-926e571e9d1f")
+		(uuid "5adff38e-3af6-510b-81ce-ce23f7177003")
 	)
 	(wire
 		(pts (xy 35.56 45.72) (xy 35.56 43.18))
 		(stroke (width 0) (type default))
-		(uuid "4e8c87d7-d49c-442f-a978-76310e9a7475")
+		(uuid "ed14103d-15ac-54e5-868f-57538a8855da")
 	)
 	(wire
 		(pts (xy 35.56 43.18) (xy 35.56 40.64))
 		(stroke (width 0) (type default))
-		(uuid "cf34c6c7-3e99-46f1-a419-684f7da5f318")
+		(uuid "f8b3f44e-523d-59e0-894d-360d92453846")
 	)
 	(wire
 		(pts (xy 35.56 40.64) (xy 44.45 40.64))
 		(stroke (width 0) (type default))
-		(uuid "503bbee1-5a47-425d-bc58-76eef9b2df87")
+		(uuid "8cf68221-e528-5b3e-b85c-24c7524b40a3")
 	)
 	(junction
 		(at 35.56 43.18)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "cfb3f946-313b-4df1-87ce-16c84683daa1")
+		(uuid "68452629-6377-5bce-bd63-14e9287e9c56")
 	)
 	(symbol
 		(lib_id "power:VBUS")
@@ -3140,7 +3145,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "bb83d4a8-f11b-4248-ad73-72e2ee2420a3")
+		(uuid "558bb191-2d8d-5fa4-993c-8b4ff0b1d75c")
 		(property "Reference" "#PWR01"
 			(at 35.56 44.45 0)
 			(effects
@@ -3176,7 +3181,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d97d2e96-5824-43cf-ae5b-53ce96504f52")
+			(uuid "6141e584-7cfd-530b-80b8-bbde9fc43527")
 		)
 		(instances
 			(project "hotendheater"
@@ -3190,28 +3195,28 @@
 	(wire
 		(pts (xy 30.48 48.26) (xy 35.56 48.26))
 		(stroke (width 0) (type default))
-		(uuid "809ccea3-12a8-4c6b-91f0-cc6097961e4e")
+		(uuid "4fe28fe9-f469-5c3a-b02f-ef25e5e122e9")
 	)
 	(wire
 		(pts (xy 35.56 48.26) (xy 35.56 50.8))
 		(stroke (width 0) (type default))
-		(uuid "0c521601-efc7-4d87-901d-0ea4ea49c835")
+		(uuid "b78f0de4-66ba-50c4-baab-badf9059e011")
 	)
 	(wire
 		(pts (xy 30.48 50.8) (xy 35.56 50.8))
 		(stroke (width 0) (type default))
-		(uuid "dc6b9eba-a3f4-4cff-af30-6821f155c66b")
+		(uuid "a5298ace-4b98-52cd-9e2e-5eee5e14b641")
 	)
 	(wire
 		(pts (xy 35.56 50.8) (xy 35.56 53.34))
 		(stroke (width 0) (type default))
-		(uuid "aab26e60-132f-4844-b218-cae770cc0d24")
+		(uuid "fc8f0102-596c-54b6-8592-110efe2e6cd1")
 	)
 	(junction
 		(at 35.56 50.8)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "38fd6b1e-95f1-4dd2-be97-25a9309916e1")
+		(uuid "6c108dcf-39da-504a-bf81-0f8eb7f94be1")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3221,7 +3226,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "faa4c342-4efd-4a4a-b02d-fe5b6bf81cb7")
+		(uuid "94b942a7-954b-5bb8-b729-d398f7a18173")
 		(property "Reference" "#PWR02"
 			(at 35.56 59.69 0)
 			(effects
@@ -3257,7 +3262,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "09288580-d662-4537-901e-ad5fb92a823c")
+			(uuid "8035e8d9-7430-5802-8ae7-0baa1f0a9bf7")
 		)
 		(instances
 			(project "hotendheater"
@@ -3276,7 +3281,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "9c50f729-1da2-48a1-94c9-74d1ff7857c8")
+		(uuid "54093194-897d-5054-8248-14fa9e821db9")
 		(property "Reference" "F1"
 			(at 48.26 38.1 90)
 			(effects
@@ -3311,10 +3316,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a09844f7-53e1-44fc-bf89-871aa3f2576d")
+			(uuid "17bdc5dc-8739-51f2-a537-6ace6580f744")
 		)
 		(pin "2"
-			(uuid "e307e45e-7683-4a9c-a830-18ceb8d4e927")
+			(uuid "b949704a-e111-5af4-b18a-cd78879a0950")
 		)
 		(instances
 			(project "hotendheater"
@@ -3328,51 +3333,51 @@
 	(wire
 		(pts (xy 52.07 40.64) (xy 55.88 40.64))
 		(stroke (width 0) (type default))
-		(uuid "5228bd0d-293c-4f93-a100-5fdb574c3c45")
+		(uuid "f917ee87-dda8-559d-b3b1-4b0f3d0eb52f")
 	)
 	(wire
 		(pts (xy 55.88 40.64) (xy 60.96 40.64))
 		(stroke (width 0) (type default))
-		(uuid "73dcaeb0-8a4a-4f8d-ae04-512d109ea2d9")
+		(uuid "8d1e8cfe-594d-534a-bb39-5163fb3d050e")
 	)
 	(wire
 		(pts (xy 60.96 40.64) (xy 71.12 40.64))
 		(stroke (width 0) (type default))
-		(uuid "cec49a9f-0e9d-435a-bd34-adbbc8d51a5d")
+		(uuid "6ae194da-0d5f-5b35-8f5d-8115da76762b")
 	)
 	(wire
 		(pts (xy 71.12 40.64) (xy 81.28 40.64))
 		(stroke (width 0) (type default))
-		(uuid "6a880d17-d568-4ec9-acc6-10d628634994")
+		(uuid "acdd89fd-b5e4-5a14-9d48-18ec601274f9")
 	)
 	(wire
 		(pts (xy 81.28 40.64) (xy 93.98 40.64))
 		(stroke (width 0) (type default))
-		(uuid "b384740d-4bd4-42f6-bb47-77214daeffe2")
+		(uuid "d360c4af-2637-50ba-8c2e-7e8d7917670e")
 	)
 	(junction
 		(at 55.88 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "dc19bf02-93e9-443d-8555-0f91b289abe8")
+		(uuid "e21a93ad-b580-5242-a64f-8c6e39e152c6")
 	)
 	(junction
 		(at 60.96 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8a50ab7b-b8bf-4e75-b750-a6d4b957a597")
+		(uuid "2673373b-840a-58e4-b006-26d7103638b1")
 	)
 	(junction
 		(at 71.12 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "c8bfffb7-737e-4d7b-b09b-ffc9d1c18dd5")
+		(uuid "a3552146-2ad0-58ea-8521-807eaf2dfbcf")
 	)
 	(junction
 		(at 81.28 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "b83512c5-5c4a-42aa-bc3b-3c26ab3e03bb")
+		(uuid "8a17486f-df48-59ac-a91a-bd940af077f8")
 	)
 	(symbol
 		(lib_id "nuzzler:+20V")
@@ -3382,7 +3387,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "9bc833cc-94b8-43d6-88ef-d47519ea779a")
+		(uuid "83b8ecec-b22b-5396-9d34-b3e63108dd5d")
 		(property "Reference" "#PWR03"
 			(at 55.88 44.45 0)
 			(effects
@@ -3418,7 +3423,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "4f3a1c8c-638b-40a3-8714-00268e9a20c9")
+			(uuid "48cca938-90dc-552c-8c74-71a59a7413c9")
 		)
 		(instances
 			(project "hotendheater"
@@ -3437,7 +3442,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "23e6fcc4-5e6d-4494-9fad-a8eeb3102e8b")
+		(uuid "38f028da-3167-5c92-9e69-2e4b62dc4bf8")
 		(property "Reference" "D1"
 			(at 66.04 43.18 270)
 			(effects
@@ -3474,10 +3479,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "90d99546-d330-4d24-a9ce-76ac1967bd57")
+			(uuid "e50799a6-bcc5-5461-a4cc-5afbd3bde51d")
 		)
 		(pin "2"
-			(uuid "8e43e209-455d-46b9-8bd8-03a7d4112d24")
+			(uuid "2afca382-e155-5e0b-8fa8-59cffdd31ea4")
 		)
 		(instances
 			(project "hotendheater"
@@ -3496,7 +3501,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "028959e8-3a39-47b9-b6d7-c2c4253a658a")
+		(uuid "e44522ee-a17a-5cb4-8cf2-7f1c54edbe3f")
 		(property "Reference" "#PWR04"
 			(at 60.96 54.61 0)
 			(effects
@@ -3532,7 +3537,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "2931b706-b466-45c3-bac0-8904aa7e4d60")
+			(uuid "257bb26c-27be-504f-adae-d9627995e3e5")
 		)
 		(instances
 			(project "hotendheater"
@@ -3551,7 +3556,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "e8cb8303-100d-4179-b5b2-c18710eb8634")
+		(uuid "b4ebd037-3ba5-5023-b000-70e25773fef5")
 		(property "Reference" "C1"
 			(at 73.66 43.18 0)
 			(effects
@@ -3588,10 +3593,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5b7b54cb-0a14-4869-8a73-85a37cedd479")
+			(uuid "d9612e2c-135c-579e-beb8-31be9e1def0b")
 		)
 		(pin "2"
-			(uuid "30762002-3e00-49d1-a78b-73bbf532b26a")
+			(uuid "2ee8fb2f-b119-5d06-a5fc-c9dabdf063f3")
 		)
 		(instances
 			(project "hotendheater"
@@ -3610,7 +3615,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "c7a51539-6ca4-4321-a99c-84d8ed5aad00")
+		(uuid "5223cffb-a6d3-5475-b632-f37f6b7deea7")
 		(property "Reference" "#PWR05"
 			(at 71.12 54.61 0)
 			(effects
@@ -3646,7 +3651,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "4e0e52d1-dfc1-4ffe-8b2b-945818a0e68f")
+			(uuid "e43cf6f0-962e-5b7d-a937-0095caded89a")
 		)
 		(instances
 			(project "hotendheater"
@@ -3665,7 +3670,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f01f5ae6-cef2-46b6-96a5-cad7938773bc")
+		(uuid "c188b230-072a-5361-8d5a-fd37ac6115c6")
 		(property "Reference" "C2"
 			(at 83.82 43.18 0)
 			(effects
@@ -3702,10 +3707,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "6c0662ca-936c-4329-8623-ff1f8960eac5")
+			(uuid "bb83b18a-fad7-579e-84fa-b6e754dddc33")
 		)
 		(pin "2"
-			(uuid "a5acc625-3bff-4942-aa70-f1ae8b9c32b8")
+			(uuid "649da7a7-d20d-597e-9ece-635fd9ef4ed3")
 		)
 		(instances
 			(project "hotendheater"
@@ -3724,7 +3729,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "3fe012e2-d43b-49df-b42b-63fbb986ba71")
+		(uuid "7da2ae28-6fdf-5fb2-b2ee-5cc91bdd2cba")
 		(property "Reference" "#PWR06"
 			(at 81.28 54.61 0)
 			(effects
@@ -3760,7 +3765,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c7e0e0e6-caec-4970-afa1-2caeeebd3c58")
+			(uuid "9fed14fb-f335-5efa-b9a1-ec13e7beefa1")
 		)
 		(instances
 			(project "hotendheater"
@@ -3779,7 +3784,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d6a99622-22db-434a-ad2a-6c917e32c753")
+		(uuid "f8ca3611-08c7-5b24-82a7-c57eec243cb8")
 		(property "Reference" "U1"
 			(at 104.14 34.29 0)
 			(effects
@@ -3814,13 +3819,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "e03391ff-41c2-49e3-abe2-e8b2fa4c05a2")
+			(uuid "8022725e-35c2-5894-b75d-413ac710d242")
 		)
 		(pin "2"
-			(uuid "609edc14-1cbe-46df-bce8-42f5db3acefc")
+			(uuid "38979e2d-659d-5816-b9c6-67c87355ff64")
 		)
 		(pin "3"
-			(uuid "0e211734-fdf1-4970-af97-1a670f0ac90d")
+			(uuid "61166ae0-6a26-57af-9874-efe91cc36a76")
 		)
 		(instances
 			(project "hotendheater"
@@ -3839,7 +3844,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "75d6826d-8630-42d1-90c5-344a61f92b23")
+		(uuid "463ad37f-a8a8-5656-8b99-117a0a44cda3")
 		(property "Reference" "#PWR07"
 			(at 104.14 54.61 0)
 			(effects
@@ -3875,7 +3880,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d755b354-d4f6-4c6f-b073-609abd560b60")
+			(uuid "520c2603-742c-5ca0-99af-ddee92a546a8")
 		)
 		(instances
 			(project "hotendheater"
@@ -3889,29 +3894,29 @@
 	(wire
 		(pts (xy 114.3 40.64) (xy 121.92 40.64))
 		(stroke (width 0) (type default))
-		(uuid "a2d0b443-d204-444d-870d-161b67161c31")
+		(uuid "12df33e5-372e-5c84-b036-8a8644159684")
 	)
 	(wire
 		(pts (xy 121.92 40.64) (xy 132.08 40.64))
 		(stroke (width 0) (type default))
-		(uuid "0535e626-7e3b-42d8-a7f1-e332c8fb3105")
+		(uuid "4eef1368-d6bc-5f19-86a5-2bc43c7ffebd")
 	)
 	(wire
 		(pts (xy 132.08 40.64) (xy 142.24 40.64))
 		(stroke (width 0) (type default))
-		(uuid "191e3bbe-f995-47f1-b3a0-39e2bc26f794")
+		(uuid "93c5a839-e3ac-5f67-9e82-edb58da42107")
 	)
 	(junction
 		(at 121.92 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "9f6462ee-ec89-4a6c-a164-032803a9b378")
+		(uuid "4c92d827-46a8-59b8-8dee-732c73170d1c")
 	)
 	(junction
 		(at 132.08 40.64)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "89d71bc4-2ec7-48bc-9d80-ce8d125ba17d")
+		(uuid "cdb429e3-4e43-5498-9161-0b074ecd7049")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -3921,7 +3926,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "7c35d9dc-1f6c-4fe2-b225-b865222c840e")
+		(uuid "0b4be29d-4641-5fb2-a64f-d9e3a2a03892")
 		(property "Reference" "#PWR08"
 			(at 142.24 44.45 0)
 			(effects
@@ -3957,7 +3962,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e6c71e28-2ed6-4d36-a62c-b8a2d0a5aa4e")
+			(uuid "29dc37a5-af6c-514a-aa31-eacfc4598b8c")
 		)
 		(instances
 			(project "hotendheater"
@@ -3976,7 +3981,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "80145488-2ea0-4ba1-b536-56280faee1c4")
+		(uuid "3fea0cbe-f5cd-58fc-8af1-e982126fde33")
 		(property "Reference" "C3"
 			(at 124.46 43.18 0)
 			(effects
@@ -4013,10 +4018,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "d574858b-8c17-4dc5-a2f3-f6444adc5b0a")
+			(uuid "ce45b9ee-339e-528e-9a77-62d9e4f6c62a")
 		)
 		(pin "2"
-			(uuid "df67aaf6-5f4e-46fe-a8b0-9f05e5685ad6")
+			(uuid "8741e77f-8b54-5260-8e20-617fe0079a09")
 		)
 		(instances
 			(project "hotendheater"
@@ -4035,7 +4040,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "2b5dcf02-7b44-480e-9432-a6be69cfd74b")
+		(uuid "d158401b-9313-5d98-8149-468df5919f80")
 		(property "Reference" "#PWR09"
 			(at 121.92 54.61 0)
 			(effects
@@ -4071,7 +4076,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "3b9b3bdf-81b6-4761-aba0-619cd529207b")
+			(uuid "193f01b3-5b4d-52a5-9559-d76eced50c6b")
 		)
 		(instances
 			(project "hotendheater"
@@ -4090,7 +4095,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0f69fafc-7316-4dda-9388-8fa28ec63b40")
+		(uuid "975f94e4-b0a2-5cd4-895b-d26b13df49f2")
 		(property "Reference" "R1"
 			(at 134.62 43.18 0)
 			(effects
@@ -4127,10 +4132,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a98b403b-d6da-4c87-8ab2-2e8043170b69")
+			(uuid "353e1f99-9896-578a-8150-033311489e9d")
 		)
 		(pin "2"
-			(uuid "26a0e753-e99f-46dd-b42d-21eb832c4796")
+			(uuid "e9a3e6b1-a119-5b54-9181-a1ba71539c4b")
 		)
 		(instances
 			(project "hotendheater"
@@ -4149,7 +4154,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5d9828ba-068c-4003-aa88-637199c0e44c")
+		(uuid "d4448394-b7ca-5fdd-9fe2-2a192be03841")
 		(property "Reference" "D2"
 			(at 137.16 50.8 90)
 			(effects
@@ -4186,10 +4191,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "bcf1fbcf-92d4-4210-a95b-64eab2c7606f")
+			(uuid "2af8e30f-e9e3-5dac-b965-25a5e138da97")
 		)
 		(pin "2"
-			(uuid "f6fd8dd5-7701-41fc-b228-c67abab14628")
+			(uuid "d7c2988c-c51c-5786-af05-cdfdb022f7fe")
 		)
 		(instances
 			(project "hotendheater"
@@ -4208,7 +4213,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "225a0458-a799-48bd-8ca2-f8fc1ee98f10")
+		(uuid "007798d2-a3e3-5499-ad9d-317f04204821")
 		(property "Reference" "#PWR10"
 			(at 132.08 62.23 0)
 			(effects
@@ -4244,7 +4249,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "592d5ee9-682d-40d7-9bdb-ae60c8b7741e")
+			(uuid "ee46d8ea-8bc2-51d2-bc58-5e792541656a")
 		)
 		(instances
 			(project "hotendheater"
@@ -4263,7 +4268,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "10ad149a-d611-4e69-96cd-2584eb1bc9f4")
+		(uuid "5dbdb262-31a6-5e9d-91f9-828facfcc8fb")
 		(property "Reference" "#FLG01"
 			(at 172.72 41.28 0)
 			(effects
@@ -4299,7 +4304,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "633da704-e786-4470-b56b-d1d1890218fd")
+			(uuid "969f69d8-d530-58ab-8f8d-b3885ad3e8f8")
 		)
 		(instances
 			(project "hotendheater"
@@ -4313,7 +4318,7 @@
 	(wire
 		(pts (xy 172.72 43.18) (xy 172.72 45.72))
 		(stroke (width 0) (type default))
-		(uuid "8537bb07-346b-4f49-aae0-7630ce90380d")
+		(uuid "4cd7028f-f62c-5ebe-b651-f3313d890e29")
 	)
 	(symbol
 		(lib_id "power:VBUS")
@@ -4323,7 +4328,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "b0451e6c-f087-4fb6-a479-d3aed4871dae")
+		(uuid "3e8cf483-6b6a-54b9-9425-b1c976f377f6")
 		(property "Reference" "#PWR11"
 			(at 172.72 41.91 0)
 			(effects
@@ -4359,7 +4364,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "760d535b-a6cc-4a4b-9323-f7864b5238ea")
+			(uuid "b47a02ba-d371-5563-8d2d-c6217d378112")
 		)
 		(instances
 			(project "hotendheater"
@@ -4378,7 +4383,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ed70c986-8f18-4072-878c-8a010a3c365c")
+		(uuid "21b27c99-7895-5946-bd80-3272a06d0859")
 		(property "Reference" "#FLG02"
 			(at 185.42 41.28 0)
 			(effects
@@ -4414,7 +4419,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "2f316568-f37c-4329-be32-5c05f4c2b3fd")
+			(uuid "34306a56-dcd3-5dd9-88bb-52d0c9a10d2e")
 		)
 		(instances
 			(project "hotendheater"
@@ -4428,7 +4433,7 @@
 	(wire
 		(pts (xy 185.42 43.18) (xy 185.42 45.72))
 		(stroke (width 0) (type default))
-		(uuid "e20a3396-8639-4682-91ab-a1e83464d05f")
+		(uuid "5a12ef58-cb0b-5ef3-9672-25914ec578de")
 	)
 	(symbol
 		(lib_id "nuzzler:+20V")
@@ -4438,7 +4443,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "22fa672e-2177-4d9d-99e9-9e22af9e9ad5")
+		(uuid "a8efccab-2a1d-5f07-af60-43a97d83ba26")
 		(property "Reference" "#PWR12"
 			(at 185.42 41.91 0)
 			(effects
@@ -4474,7 +4479,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "13ab441b-2401-4ab3-9c14-f0275a05e5f4")
+			(uuid "d75a28b3-1495-5eb9-b09c-93ed891618ad")
 		)
 		(instances
 			(project "hotendheater"
@@ -4493,7 +4498,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "003a8d29-9fbb-4f78-97f5-3b8401e6f99a")
+		(uuid "abad823a-c9c7-50b8-a091-b25b01989b29")
 		(property "Reference" "#FLG03"
 			(at 198.12 41.28 0)
 			(effects
@@ -4529,7 +4534,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "907d34b6-566f-46d0-8a33-bac66d138721")
+			(uuid "3aac8d02-f6a1-5eb0-b289-1ca10a18bd6d")
 		)
 		(instances
 			(project "hotendheater"
@@ -4543,7 +4548,7 @@
 	(wire
 		(pts (xy 198.12 43.18) (xy 198.12 45.72))
 		(stroke (width 0) (type default))
-		(uuid "faac9c9c-c2bc-40d8-892d-1b1b476a8b38")
+		(uuid "faf79876-60bb-5dc9-9bd0-d55b56864836")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -4553,7 +4558,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "f74a5804-cbd7-4457-9da2-e11e24818089")
+		(uuid "c491f621-cd64-5bd7-993f-9c596b8516f4")
 		(property "Reference" "#PWR13"
 			(at 198.12 41.91 0)
 			(effects
@@ -4589,7 +4594,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "510fd1fd-58ac-4697-b219-2908732f4a56")
+			(uuid "8d489991-73ad-5383-8933-011e0ae77cfb")
 		)
 		(instances
 			(project "hotendheater"
@@ -4608,7 +4613,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "4e9c09a7-20ca-4783-84d3-0c8716ea50ac")
+		(uuid "761f2db4-9b49-516e-922a-f985b88745a5")
 		(property "Reference" "#FLG04"
 			(at 210.82 41.28 0)
 			(effects
@@ -4644,7 +4649,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d00302b6-d5e3-47e8-b96b-8bbc426986ba")
+			(uuid "561036de-ee1d-59d3-a1f4-b9baf60e54ee")
 		)
 		(instances
 			(project "hotendheater"
@@ -4658,7 +4663,7 @@
 	(wire
 		(pts (xy 210.82 43.18) (xy 210.82 45.72))
 		(stroke (width 0) (type default))
-		(uuid "6bf3cf0d-3975-48f8-af62-1f9a42dc670b")
+		(uuid "b6148349-e6d9-57ec-9795-26ed6d18df93")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4668,7 +4673,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "1e6ef526-0e21-4caa-a879-6249f349eb58")
+		(uuid "fe4ff3f2-2bd8-5787-8271-60da0f60e8fa")
 		(property "Reference" "#PWR14"
 			(at 210.82 52.07 0)
 			(effects
@@ -4704,7 +4709,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "165afce0-b80c-4e30-a7bc-7e85941c2913")
+			(uuid "e5782b75-8a15-5dd9-9db4-3adbc046f7ef")
 		)
 		(instances
 			(project "hotendheater"
@@ -4722,7 +4727,7 @@
 			(font (size 1.5 1.5))
 			(justify left top)
 		)
-		(uuid "a4f9581b-4ec4-4444-b4ca-0dcf0a9669c1")
+		(uuid "e9bc59fb-6f95-5733-bbf4-4e1e617c9744")
 	)
 	(symbol
 		(lib_id "74xGxx:74AHCT1G125")
@@ -4732,7 +4737,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "bfb8f8e1-ad35-4393-b83f-526d755592fc")
+		(uuid "4a78442e-6bd7-5ac0-873d-148551ba3c9a")
 		(property "Reference" "U2"
 			(at 68.58 104.14 0)
 			(effects
@@ -4769,19 +4774,19 @@
 			)
 		)
 		(pin "1"
-			(uuid "ed062dff-403b-48e4-be0a-b20f6dc4eb22")
+			(uuid "08e82df4-f726-5868-9c2f-4792bc8a4faa")
 		)
 		(pin "2"
-			(uuid "2a8cf16c-196a-4a92-ab15-c380e57bb397")
+			(uuid "52b04dec-abb5-55a9-8ee9-546b2cc1e36f")
 		)
 		(pin "3"
-			(uuid "c9677661-bb8e-4801-9dcd-bcbd665271e9")
+			(uuid "61392a74-9fd8-55ac-a986-233f37d3fe01")
 		)
 		(pin "4"
-			(uuid "064647df-ae71-44ca-b8e0-54ff0a9ccd66")
+			(uuid "485c467c-f273-5d3c-80d4-4cf0dd7fdd09")
 		)
 		(pin "5"
-			(uuid "1863da71-d5c0-4598-9472-29251a3981db")
+			(uuid "b25169e3-9781-5722-b684-cee5411886c0")
 		)
 		(instances
 			(project "hotendheater"
@@ -4800,7 +4805,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "700a757a-9ba2-4040-83bf-d98c9b2ac9f0")
+		(uuid "99a6d0bb-cc89-558d-b3a2-8569fcec45af")
 		(property "Reference" "R2"
 			(at 40.64 99.06 0)
 			(effects
@@ -4837,10 +4842,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a7381591-769b-499f-aa9b-22b5a15abf76")
+			(uuid "aca2fa85-c7d7-5d6d-8200-c0c25e1a08b0")
 		)
 		(pin "2"
-			(uuid "30e1e279-282b-4c2f-82e0-f83ebcc6943a")
+			(uuid "ed21f039-a340-5e7c-8d06-03f42be65ac4")
 		)
 		(instances
 			(project "hotendheater"
@@ -4854,18 +4859,18 @@
 	(wire
 		(pts (xy 30.48 96.52) (xy 38.1 96.52))
 		(stroke (width 0) (type default))
-		(uuid "5ce7facf-aa1b-45dd-9974-1ef6fbbc3e8e")
+		(uuid "a40ea195-1e48-5f90-a804-57d26d3d88b3")
 	)
 	(wire
 		(pts (xy 38.1 96.52) (xy 48.26 96.52))
 		(stroke (width 0) (type default))
-		(uuid "3432b8a7-1542-437d-97e4-73725941a9ea")
+		(uuid "6c6914a6-af5a-59d7-a007-c81eecef46df")
 	)
 	(junction
 		(at 38.1 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d5dea8a4-ce2f-427d-8fed-14b72d61c58d")
+		(uuid "513baf69-3b0c-575a-bfd1-cfc088c834f1")
 	)
 	(label "HEAT"
 		(at 30.48 96.52 180)
@@ -4874,7 +4879,7 @@
 			(font (size 1.27 1.27))
 			(justify right bottom)
 		)
-		(uuid "b0531c5b-d129-4241-a2a9-609cf0cdd72f")
+		(uuid "dff49119-3464-5309-bff3-222506e77317")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4884,7 +4889,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "75215a25-a14e-4e8c-bc94-04123e899f44")
+		(uuid "90e8b1dc-5d44-5267-948d-432735f8e528")
 		(property "Reference" "#PWR15"
 			(at 38.1 110.49 0)
 			(effects
@@ -4920,7 +4925,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "0f5354f6-1ca4-4a30-b410-3cd909baaa08")
+			(uuid "5f75d94b-7376-5def-b7ee-b63c72066bc7")
 		)
 		(instances
 			(project "hotendheater"
@@ -4934,7 +4939,7 @@
 	(wire
 		(pts (xy 58.42 86.36) (xy 58.42 83.82))
 		(stroke (width 0) (type default))
-		(uuid "47eb6e6c-2301-4f80-ac4b-caf0e3ad5fc3")
+		(uuid "0f8cb9fa-b731-50da-beec-9af5c4a866f5")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -4944,7 +4949,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "690c5e0c-03c3-47eb-99a8-e280d43ec7d4")
+		(uuid "012f7960-3f24-5a5b-9d48-e6189c7c8eaa")
 		(property "Reference" "#PWR16"
 			(at 58.42 87.63 0)
 			(effects
@@ -4980,7 +4985,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "73cf9d18-5ec1-4699-983f-a063643772f1")
+			(uuid "0449d7c2-0102-5ce2-9669-4d93da9a254b")
 		)
 		(instances
 			(project "hotendheater"
@@ -4994,7 +4999,7 @@
 	(wire
 		(pts (xy 58.42 106.68) (xy 58.42 109.22))
 		(stroke (width 0) (type default))
-		(uuid "2b228955-bea5-44c3-baa9-7dabc0c8fba8")
+		(uuid "ce7e9bb8-bbf7-546e-b072-1370c399e473")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5004,7 +5009,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "91a7c2e1-8ed8-4e6b-a6ab-09f78078a191")
+		(uuid "bfa0bf2f-5f0a-55f1-893f-0ab5a019137f")
 		(property "Reference" "#PWR17"
 			(at 58.42 115.57 0)
 			(effects
@@ -5040,7 +5045,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "2db97f05-204f-48b7-9246-bc676db7438a")
+			(uuid "db01c5dc-d3b1-56fd-9db0-e5a0811d61a3")
 		)
 		(instances
 			(project "hotendheater"
@@ -5059,7 +5064,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "270edd88-e24a-4b99-a061-e85d33198d6c")
+		(uuid "7c151200-9419-59e7-ad01-dfe4e1d6d781")
 		(property "Reference" "R5"
 			(at 66.04 78.74 0)
 			(effects
@@ -5096,10 +5101,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5245d20d-a9f1-4d03-ae15-3075ede3230a")
+			(uuid "2d28814b-8458-5b81-88b8-47f944517551")
 		)
 		(pin "2"
-			(uuid "bb9226dd-9c2e-4dbb-9213-ae5d8330b580")
+			(uuid "4b5eff82-2359-52bf-aa7f-09cf216bb412")
 		)
 		(instances
 			(project "hotendheater"
@@ -5118,7 +5123,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "8d08f601-1543-44b3-a943-9dd6fe5b2752")
+		(uuid "88a7a7df-ba80-56a6-bc94-df3db88ca6de")
 		(property "Reference" "#PWR18"
 			(at 63.5 80.01 0)
 			(effects
@@ -5154,7 +5159,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "a15ed79b-ee59-4fcc-8020-9ffd85c8f29b")
+			(uuid "105dbc39-aeaf-5e4d-86c6-0e63ceb76494")
 		)
 		(instances
 			(project "hotendheater"
@@ -5168,23 +5173,23 @@
 	(wire
 		(pts (xy 63.5 86.36) (xy 63.5 85.09))
 		(stroke (width 0) (type default))
-		(uuid "1f5d63a8-9856-4fcf-a69b-2b327f63b694")
+		(uuid "f7f2419c-2a1f-5b2b-9cd7-42fe49860703")
 	)
 	(wire
 		(pts (xy 63.5 85.09) (xy 63.5 83.82))
 		(stroke (width 0) (type default))
-		(uuid "cbe7fe9e-3692-46e0-a294-7438f094c2f8")
+		(uuid "3cda47e9-4297-560e-91c0-83f7a6e7f5b4")
 	)
 	(junction
 		(at 63.5 85.09)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d36abab3-8505-4dd7-891f-85c18a1e0f95")
+		(uuid "57dbc803-9ae9-5f07-b7ea-11d3fc69045a")
 	)
 	(wire
 		(pts (xy 63.5 85.09) (xy 68.58 85.09))
 		(stroke (width 0) (type default))
-		(uuid "9cad0b58-7207-4fa8-ac21-57bdca9d7105")
+		(uuid "2729768d-2359-5a57-b77e-fd047cf63c97")
 	)
 	(label "~{HEAT_EN}"
 		(at 68.58 85.09 0)
@@ -5193,7 +5198,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "bf44649c-e923-4093-9ad2-a49a5900a850")
+		(uuid "21944ea8-b0e4-5c96-a4cf-5802352a30bb")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -5203,7 +5208,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "794533f1-28cf-44bc-a028-dcfecfd834d8")
+		(uuid "2204c8b2-8f6b-54db-8bf4-e477f6f5791f")
 		(property "Reference" "C4"
 			(at 48.26 82.55 0)
 			(effects
@@ -5240,10 +5245,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "b2d63f79-7dbe-4887-a0c3-0dc7d87f7c33")
+			(uuid "291988f0-de5a-5d10-a48a-87b299122851")
 		)
 		(pin "2"
-			(uuid "ce3a05a5-d08d-4c17-8005-8da67adf54ed")
+			(uuid "a1fb4171-c0e0-5647-8086-84a782cce481")
 		)
 		(instances
 			(project "hotendheater"
@@ -5262,7 +5267,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "162b2ad9-f2cc-4e35-a9b7-04f7dae35fbf")
+		(uuid "dea0ee4a-fc6e-5027-a2df-3385489a45b1")
 		(property "Reference" "#PWR19"
 			(at 45.72 83.82 0)
 			(effects
@@ -5298,7 +5303,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "411d9e3d-8bd8-4adc-b0d0-5815af2af7fe")
+			(uuid "70a4829c-7a7e-5a30-9483-60da8d0c7209")
 		)
 		(instances
 			(project "hotendheater"
@@ -5317,7 +5322,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "7c04f53b-8315-483f-bb90-f840a7911305")
+		(uuid "f8575232-e07d-549c-af84-df95624b1567")
 		(property "Reference" "#PWR20"
 			(at 45.72 93.98 0)
 			(effects
@@ -5353,7 +5358,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "fbfd2344-6cb4-44e2-955b-3f78ec2a928b")
+			(uuid "6852f3b4-a2b4-5408-a747-f2924b7f3b4f")
 		)
 		(instances
 			(project "hotendheater"
@@ -5372,7 +5377,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "04e89dc2-864b-4f6b-b23e-3e8ac30330d6")
+		(uuid "4aabf66f-556f-5a8f-8405-d383b0ab709f")
 		(property "Reference" "R3"
 			(at 85.09 93.98 90)
 			(effects
@@ -5407,10 +5412,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "e427fd55-30b5-45ec-a006-2c9caf6552fa")
+			(uuid "74d7f089-9858-5996-b60b-ca6b064630c5")
 		)
 		(pin "2"
-			(uuid "1c6c26c1-6711-4e99-9f0e-2bedaa37652c")
+			(uuid "26de935c-3692-5317-9848-3a6ab3594bac")
 		)
 		(instances
 			(project "hotendheater"
@@ -5424,7 +5429,7 @@
 	(wire
 		(pts (xy 76.2 96.52) (xy 81.28 96.52))
 		(stroke (width 0) (type default))
-		(uuid "4125032e-be76-4390-a130-1a88f87d627f")
+		(uuid "97443e21-5987-5062-b6d1-4516dbe14351")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5434,7 +5439,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "fd187296-2ef2-41b1-aaa7-4dec4f8be738")
+		(uuid "d1ffe486-b32e-5ca8-b9c0-fe4f37807451")
 		(property "Reference" "R4"
 			(at 96.52 99.06 0)
 			(effects
@@ -5471,10 +5476,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "f142d03f-a243-400e-bbed-d7528379e3bb")
+			(uuid "160cf4d4-dc4c-5194-972e-966fa6dfa560")
 		)
 		(pin "2"
-			(uuid "85dec8f0-d56a-4488-a6fa-9f50c0ba35e1")
+			(uuid "9d374398-967b-5d98-9b68-afc29aad2647")
 		)
 		(instances
 			(project "hotendheater"
@@ -5493,7 +5498,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "0f79a178-919a-4af2-84fc-a2a057594fe4")
+		(uuid "937e19df-b7f2-53e3-9af6-f150d2f80f9f")
 		(property "Reference" "#PWR21"
 			(at 93.98 110.49 0)
 			(effects
@@ -5529,7 +5534,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "bcc70be4-ccfe-4794-94ba-15740a77d5f1")
+			(uuid "fdebef9d-09b1-5706-961e-05ef07ea4c0d")
 		)
 		(instances
 			(project "hotendheater"
@@ -5548,7 +5553,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "249e284c-e481-43fa-8afe-5a90a5797e67")
+		(uuid "285676e2-69bd-5e00-88b1-d6bbfe37ab01")
 		(property "Reference" "Q1"
 			(at 113.03 95.25 0)
 			(effects
@@ -5585,13 +5590,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "cfa6d878-dc0e-4daf-a609-72cffd7e03a8")
+			(uuid "208f785f-ce73-583c-aacf-7a90ad38eebf")
 		)
 		(pin "2"
-			(uuid "e81edbff-cd9d-407a-b79a-74b3ca26409a")
+			(uuid "a846dd2d-1e5a-532e-9193-e026aa692c84")
 		)
 		(pin "3"
-			(uuid "8dfba82f-5b7e-47f9-8766-34a7e3969521")
+			(uuid "a57f7ab2-a60c-5549-9c23-70276f7bfa33")
 		)
 		(instances
 			(project "hotendheater"
@@ -5605,18 +5610,18 @@
 	(wire
 		(pts (xy 88.9 96.52) (xy 93.98 96.52))
 		(stroke (width 0) (type default))
-		(uuid "b19bf804-696e-4953-9aca-6e14a08eb760")
+		(uuid "7b91ca08-abc3-57d2-94bf-927c11a50e82")
 	)
 	(wire
 		(pts (xy 93.98 96.52) (xy 101.6 96.52))
 		(stroke (width 0) (type default))
-		(uuid "01b6161c-7a48-48d2-8060-327e3ea170c9")
+		(uuid "c0d7923d-ce54-5a91-8df5-09529860d8f0")
 	)
 	(junction
 		(at 93.98 96.52)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8230964c-99fd-4664-a97b-95a69c3e5e76")
+		(uuid "09f62cd7-19f9-59b2-a8ae-4e933a3dca31")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5626,7 +5631,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ba9a3140-1a37-4e8f-96b1-f809c36c8c2e")
+		(uuid "29eb9c4d-c0dd-5169-bb16-112040dbdd55")
 		(property "Reference" "#PWR22"
 			(at 109.22 107.95 0)
 			(effects
@@ -5662,7 +5667,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "a45e3367-f96d-4640-9498-54d055473c10")
+			(uuid "4694ba2c-c193-58f2-82fb-a0cc2aee2cb6")
 		)
 		(instances
 			(project "hotendheater"
@@ -5681,7 +5686,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "48170b90-9a0f-4469-baa0-0fde79b94f8f")
+		(uuid "a73145ea-fabe-5ce2-ad70-74d2ee215112")
 		(property "Reference" "J2"
 			(at 128.27 95.25 0)
 			(effects
@@ -5716,10 +5721,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "acd5a4c0-3e8f-40d0-aaf4-dce149414cac")
+			(uuid "0d67aae3-6760-533d-abab-8a9b39fb78d3")
 		)
 		(pin "2"
-			(uuid "218904bb-1a2b-48a2-8744-141ff878dd5b")
+			(uuid "18a0b0ea-4d73-5f2b-ad46-e884a46b81b5")
 		)
 		(instances
 			(project "hotendheater"
@@ -5733,28 +5738,28 @@
 	(wire
 		(pts (xy 109.22 91.44) (xy 109.22 88.9))
 		(stroke (width 0) (type default))
-		(uuid "57cecd4a-55cf-41d0-8772-63aaf6a5e174")
+		(uuid "1b600544-a90e-5650-839b-049627570d54")
 	)
 	(wire
 		(pts (xy 109.22 88.9) (xy 116.84 88.9))
 		(stroke (width 0) (type default))
-		(uuid "5f4d7d17-dc72-4f95-90a2-c620c48d12dc")
+		(uuid "a2d0ce70-e767-59a0-966d-7f7a352afd47")
 	)
 	(wire
 		(pts (xy 116.84 88.9) (xy 124.46 88.9))
 		(stroke (width 0) (type default))
-		(uuid "62671550-473a-4ccd-b3cb-10511f7b0b2b")
+		(uuid "7823675e-906a-59c8-b1cf-e24d9dd93b0c")
 	)
 	(junction
 		(at 116.84 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "d5cc1eaf-2494-4cde-801e-7813a19ff915")
+		(uuid "2a646609-b107-548f-97e2-85ca4f733ac8")
 	)
 	(wire
 		(pts (xy 124.46 91.44) (xy 119.38 91.44))
 		(stroke (width 0) (type default))
-		(uuid "2ea76f09-55db-4f09-b6b7-75fe4f8c79e1")
+		(uuid "22ea186a-dd3a-55f9-8ed8-ec92f8aef139")
 	)
 	(symbol
 		(lib_id "nuzzler:+20V")
@@ -5764,7 +5769,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ecf561fd-db3f-4495-a690-e61a3acd0b4a")
+		(uuid "7a41e2b5-92ca-5acf-b83a-aa44a3d3710b")
 		(property "Reference" "#PWR23"
 			(at 123.19 91.44 90)
 			(effects
@@ -5800,7 +5805,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "0efd9ad8-0596-4d85-a630-0d41f48b6bd4")
+			(uuid "81e3e8ab-eef0-5676-ba1d-53d891006ba3")
 		)
 		(instances
 			(project "hotendheater"
@@ -5819,7 +5824,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0bb1df9a-63f6-4066-9641-1bbc5a5eb044")
+		(uuid "efdf0c13-fdbe-52e0-86b0-3fdfbd5d2857")
 		(property "Reference" "D3"
 			(at 121.92 83.82 90)
 			(effects
@@ -5856,10 +5861,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "7af17d89-c4b4-4fbb-a2ec-08c4b961b305")
+			(uuid "eb909bf7-9d55-5854-99f3-74dd4766b2cd")
 		)
 		(pin "2"
-			(uuid "7b174aeb-3e7a-4939-b441-d201ca96c13c")
+			(uuid "39aec898-3c65-5589-b613-6f38ac5d4971")
 		)
 		(instances
 			(project "hotendheater"
@@ -5878,7 +5883,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d64b05c4-60f6-446e-9f6a-bae800beeae1")
+		(uuid "c469d6cd-0138-5358-ae4a-41ba85738d01")
 		(property "Reference" "R6"
 			(at 119.38 76.2 0)
 			(effects
@@ -5915,10 +5920,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "72c01b4e-a711-4aa4-9dfe-0f463ed5cacc")
+			(uuid "e5178c16-896d-59fd-9318-d947d3f5eec8")
 		)
 		(pin "2"
-			(uuid "d6e52198-a848-48e0-8a09-16481d7c0d49")
+			(uuid "18fdb3bf-21d2-57f6-80e6-bb80921f2ea5")
 		)
 		(instances
 			(project "hotendheater"
@@ -5937,7 +5942,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "eac0190a-13ec-4f55-8ae2-b4ec8cb0c4dc")
+		(uuid "78636f34-d385-53db-88f5-442c7b66934c")
 		(property "Reference" "#PWR24"
 			(at 116.84 77.47 0)
 			(effects
@@ -5973,7 +5978,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d2921c44-afd8-4614-acd2-483f9ecf8118")
+			(uuid "0447fcca-ea91-5c63-8107-0c4c84b72e09")
 		)
 		(instances
 			(project "hotendheater"
@@ -5991,25 +5996,25 @@
 			(font (size 1.5 1.5))
 			(justify left top)
 		)
-		(uuid "2f95212f-e3ea-4a89-99c3-341145b762fa")
+		(uuid "00f958c4-4057-5e59-8972-6ad8ba25b390")
 	)
 	(symbol
-		(lib_id "Connector_Generic_Shielded:Conn_01x02_Shielded")
+		(lib_id "Connector_Generic_MountingPin:Conn_01x02_MountingPin")
 		(at 38.1 139.7 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "73d0a649-6915-4454-91fb-3507a8cb4875")
+		(uuid "dac623d1-e55f-5db1-bc15-fc88022b16c4")
 		(property "Reference" "J3"
-			(at 38.35 137.41 0)
+			(at 38.1 137.16 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Value" "Thermistor"
-			(at 39.12 144.53 0)
+			(at 39.37 144.78 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
@@ -6036,13 +6041,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "e0758586-d3c0-4944-b4f1-5e35b12aeba2")
+			(uuid "24a0ac21-c4bf-5011-ba29-fbda0f2eeb8b")
 		)
 		(pin "2"
-			(uuid "5fa8e78e-810e-483d-87d3-703dd689d651")
+			(uuid "2174719e-0d12-56e6-a0ce-4f7d139f701a")
 		)
-		(pin "SH"
-			(uuid "7826f590-52d5-4f4f-a294-5fdd69ece867")
+		(pin "MP"
+			(uuid "2c2ff740-fd89-5342-8787-d76ff5c5b305")
 		)
 		(instances
 			(project "hotendheater"
@@ -6056,7 +6061,7 @@
 	(wire
 		(pts (xy 33.02 139.7) (xy 30.48 139.7))
 		(stroke (width 0) (type default))
-		(uuid "87afd05d-dc10-4078-8f10-95424ba943e1")
+		(uuid "000f6206-070b-5fbd-8f56-e6934a9be81b")
 	)
 	(label "THERM"
 		(at 30.48 139.7 180)
@@ -6065,17 +6070,17 @@
 			(font (size 1.27 1.27))
 			(justify right bottom)
 		)
-		(uuid "c378426e-6309-4622-b8ee-1d849a18b63f")
+		(uuid "d7a6b24c-eaa5-5233-942a-3e4648d6b527")
 	)
 	(wire
 		(pts (xy 33.02 142.24) (xy 30.48 142.24))
 		(stroke (width 0) (type default))
-		(uuid "77bccb5e-2ba9-49f0-a0e6-038e88b91576")
+		(uuid "c243005c-bb68-504d-bf9b-ae049cffc2e7")
 	)
 	(wire
 		(pts (xy 30.48 142.24) (xy 30.48 147.32))
 		(stroke (width 0) (type default))
-		(uuid "376adc26-8285-4c5e-b064-c1b94e26e969")
+		(uuid "1afcb98d-c4e8-5847-904b-c02d7b812596")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6085,7 +6090,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "86352693-1a9e-4f8a-8940-fdc356cea912")
+		(uuid "decfd6c6-cc9b-5c73-ae6f-65497486ca25")
 		(property "Reference" "#PWR25"
 			(at 30.48 153.67 0)
 			(effects
@@ -6121,7 +6126,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "4edb5bb9-600b-4a4f-8c26-c3a42a1e2d1f")
+			(uuid "daeade9e-be0f-5672-af00-a25627a057b5")
 		)
 		(instances
 			(project "hotendheater"
@@ -6140,7 +6145,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "66ce9129-9008-424f-9019-00ea08b96784")
+		(uuid "5e0bbb6e-3122-5ec5-967f-6410f2327cae")
 		(property "Reference" "#PWR26"
 			(at 38.1 153.67 0)
 			(effects
@@ -6176,7 +6181,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "2330491d-886d-4e75-ab04-f9a8a4b9f97b")
+			(uuid "4fa5954a-e682-5b31-a63f-227213e88a9c")
 		)
 		(instances
 			(project "hotendheater"
@@ -6195,7 +6200,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "453b00e4-69d7-484c-b860-489ea284b8be")
+		(uuid "9a4b71d0-21c6-50bb-b8c7-19f60ae683de")
 		(property "Reference" "R7"
 			(at 58.42 137.16 0)
 			(effects
@@ -6232,10 +6237,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "c2c90ec0-0591-40fc-9a77-d188692bb2e8")
+			(uuid "3b8812d2-c6f3-5aba-82ef-ff8d135ba900")
 		)
 		(pin "2"
-			(uuid "bb37168d-c24a-4d91-8b50-389cb716f95c")
+			(uuid "ff4784e5-8773-567a-ae1c-4753df13027d")
 		)
 		(instances
 			(project "hotendheater"
@@ -6254,7 +6259,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1a4b9e54-e643-40f5-be21-2d60a32005f7")
+		(uuid "ac65ce92-42c0-5359-af44-5c874291bb4d")
 		(property "Reference" "C5"
 			(at 58.42 144.78 0)
 			(effects
@@ -6291,10 +6296,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "2ed098c7-26c1-43fb-8162-d2e70cffc731")
+			(uuid "7d92e096-94ba-5f73-be7b-b139c1943ce7")
 		)
 		(pin "2"
-			(uuid "33d4e104-10cd-49b7-b3d6-6adbcf4039eb")
+			(uuid "7d7411e2-d057-5343-ad84-9bc0608f904c")
 		)
 		(instances
 			(project "hotendheater"
@@ -6313,7 +6318,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "beb6dfdf-241b-4342-a21c-eee6c1b892f8")
+		(uuid "25893868-3374-5984-b650-7456289c6e87")
 		(property "Reference" "#PWR27"
 			(at 55.88 138.43 0)
 			(effects
@@ -6349,7 +6354,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "caf014c7-93cc-4044-98cb-9277651ab37a")
+			(uuid "cdd39284-4262-5e8d-ae81-524afea14239")
 		)
 		(instances
 			(project "hotendheater"
@@ -6368,7 +6373,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "32059bb3-f909-488c-9b9d-acad2abc1854")
+		(uuid "6eba66d7-0642-52c1-9098-a0c9b2b3bbb3")
 		(property "Reference" "#PWR28"
 			(at 55.88 156.21 0)
 			(effects
@@ -6404,7 +6409,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "7a603856-166d-4668-bcd2-7cc437d21b46")
+			(uuid "1de3de1b-19b5-59b8-b370-05f9abca7d59")
 		)
 		(instances
 			(project "hotendheater"
@@ -6418,13 +6423,13 @@
 	(wire
 		(pts (xy 55.88 142.24) (xy 60.96 142.24))
 		(stroke (width 0) (type default))
-		(uuid "053561d4-97fa-4ec7-8ea2-653d5e1aaafa")
+		(uuid "3f5c3402-379b-5be6-8856-c0917606e9d1")
 	)
 	(junction
 		(at 55.88 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "230da627-a584-438a-b80c-e0b046e19f2f")
+		(uuid "754f694a-2275-545a-b570-84ab1490de63")
 	)
 	(label "THERM"
 		(at 60.96 142.24 0)
@@ -6433,7 +6438,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "fe5e4792-e1c6-49ae-8513-762210829c88")
+		(uuid "feb4aea2-8150-5ecb-b20d-82ebc77e6571")
 	)
 	(symbol
 		(lib_id "Comparator:LM393")
@@ -6443,7 +6448,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c4043a1f-6617-4542-b70f-2738532aac2c")
+		(uuid "8a3aebb4-66b1-57b9-880f-9db262373e88")
 		(property "Reference" "U3"
 			(at 87.63 138.43 0)
 			(effects
@@ -6478,13 +6483,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "47ec6661-3f10-4a6a-b18b-c3a6b9d21549")
+			(uuid "79798ab1-98df-5bba-83d1-538098dc30be")
 		)
 		(pin "2"
-			(uuid "d5f93818-323f-4c3b-8e9c-5017cd03bae8")
+			(uuid "75383ba5-e802-5dad-8adc-504c8a0e1728")
 		)
 		(pin "3"
-			(uuid "9ffcba73-1e01-43c0-a71a-19bf490f23f3")
+			(uuid "1051806d-e696-50ea-8607-6c3b9546a23c")
 		)
 		(instances
 			(project "hotendheater"
@@ -6498,7 +6503,7 @@
 	(wire
 		(pts (xy 76.2 139.7) (xy 73.66 139.7))
 		(stroke (width 0) (type default))
-		(uuid "0cbf0690-b666-4c20-ae6b-c4ae3dbfe6d7")
+		(uuid "8b75ab3b-8723-55ca-8abd-3d5ca7a60b79")
 	)
 	(label "VREF"
 		(at 73.66 139.7 180)
@@ -6507,12 +6512,12 @@
 			(font (size 1.27 1.27))
 			(justify right bottom)
 		)
-		(uuid "30dd8025-ac3f-4115-8a46-359732b616e6")
+		(uuid "3b2958c9-a1fa-50cd-96b6-f90197daf9ed")
 	)
 	(wire
 		(pts (xy 76.2 144.78) (xy 73.66 144.78))
 		(stroke (width 0) (type default))
-		(uuid "6ba2e67e-bf18-4c5e-9640-73b35751cef1")
+		(uuid "f58848e0-61fe-5ade-98d0-eacfe70ea178")
 	)
 	(label "THERM"
 		(at 73.66 144.78 180)
@@ -6521,12 +6526,12 @@
 			(font (size 1.27 1.27))
 			(justify right bottom)
 		)
-		(uuid "cbe85097-e86a-4e34-ab5d-bc54557636b0")
+		(uuid "b020c812-8690-52b2-8293-62aaf7408bf8")
 	)
 	(wire
 		(pts (xy 91.44 142.24) (xy 93.98 142.24))
 		(stroke (width 0) (type default))
-		(uuid "a4129bb9-1a2c-4eb7-9678-b3339492a850")
+		(uuid "99c82063-ec40-5924-b532-c0afca944f77")
 	)
 	(label "~{HEAT_EN}"
 		(at 93.98 142.24 0)
@@ -6535,7 +6540,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "13bd9f3b-8b7f-4173-90a4-95a14128aa2f")
+		(uuid "e50619c5-6b2b-53d0-abfc-adf0914bb267")
 	)
 	(symbol
 		(lib_id "Comparator:LM393")
@@ -6545,7 +6550,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "547d961b-e329-4c50-a591-41b1c713b1ff")
+		(uuid "3b9521fa-b56a-52de-ba48-0d13ef4d81b9")
 		(property "Reference" "U3"
 			(at 118.11 138.43 0)
 			(effects
@@ -6580,13 +6585,13 @@
 			)
 		)
 		(pin "5"
-			(uuid "b3c40679-c6a1-4d5d-8e9a-78f8606b73a2")
+			(uuid "faaef5be-b915-55c4-926d-6d432857318c")
 		)
 		(pin "6"
-			(uuid "5901db7d-3556-4f4f-957f-456e82d4208b")
+			(uuid "9cd72db2-4e93-55f8-a560-e47b39b3c630")
 		)
 		(pin "7"
-			(uuid "996edb0c-6b60-4929-9573-9b0a46a4b13b")
+			(uuid "049baa43-7fb5-56a9-be8e-57d5ea51e5ba")
 		)
 		(instances
 			(project "hotendheater"
@@ -6600,7 +6605,7 @@
 	(wire
 		(pts (xy 106.68 139.7) (xy 104.14 139.7))
 		(stroke (width 0) (type default))
-		(uuid "3ded6c32-b07c-4eab-82ac-3b148c959f7f")
+		(uuid "c1a88b6c-53ab-5f30-91d2-c628fc6fbb44")
 	)
 	(label "THERM"
 		(at 104.14 139.7 180)
@@ -6609,12 +6614,12 @@
 			(font (size 1.27 1.27))
 			(justify right bottom)
 		)
-		(uuid "320943d4-9a2d-4275-b0c1-781124265df3")
+		(uuid "e0ea469d-57cc-5260-84e3-7e612da67894")
 	)
 	(wire
 		(pts (xy 106.68 144.78) (xy 104.14 144.78))
 		(stroke (width 0) (type default))
-		(uuid "b2f9a14f-9257-4b23-8b2c-6e38002a623e")
+		(uuid "2a08741d-dedb-5c8d-bfa2-aedd12663634")
 	)
 	(label "VREF"
 		(at 104.14 144.78 180)
@@ -6623,12 +6628,12 @@
 			(font (size 1.27 1.27))
 			(justify right bottom)
 		)
-		(uuid "518da0f0-5779-4504-86b9-ba27c834b6db")
+		(uuid "1bba0c44-2087-5987-ba5b-a7235368b23d")
 	)
 	(wire
 		(pts (xy 121.92 142.24) (xy 127 142.24))
 		(stroke (width 0) (type default))
-		(uuid "30cdf829-75ef-4daf-9763-e178ea749e53")
+		(uuid "8c35ff5e-7453-5322-bef5-f9409e7daa6d")
 	)
 	(symbol
 		(lib_id "Device:LED")
@@ -6638,7 +6643,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "29862496-0915-455e-814a-938fe03d09a6")
+		(uuid "ed74189e-315c-5a13-a0a3-2e3640895733")
 		(property "Reference" "D5"
 			(at 132.08 137.16 90)
 			(effects
@@ -6675,10 +6680,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "c1785c46-c5ac-4295-a783-2982bca42f7d")
+			(uuid "e9cbe00c-3d5d-59a0-a454-8e8f21f23438")
 		)
 		(pin "2"
-			(uuid "64d5962d-1058-4421-bae3-8129605258fb")
+			(uuid "c85df73b-5d48-560d-947a-948e064a0598")
 		)
 		(instances
 			(project "hotendheater"
@@ -6697,7 +6702,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "be7cbbe5-e868-4bb4-a489-cab0c32ab80b")
+		(uuid "332c1461-7062-5b4f-b603-b7b773ca54dd")
 		(property "Reference" "R11"
 			(at 129.54 129.54 0)
 			(effects
@@ -6734,10 +6739,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a888535f-8030-4385-a559-1d06c47bab2f")
+			(uuid "ff11b27b-093e-5b2f-b800-4d3c295642e3")
 		)
 		(pin "2"
-			(uuid "d0684167-18b1-45ab-a32d-e08487ad1be8")
+			(uuid "de2d8925-c3c1-5a48-81a5-822606203957")
 		)
 		(instances
 			(project "hotendheater"
@@ -6756,7 +6761,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "8e9b105a-09bc-41c0-9639-fc85ffb904e1")
+		(uuid "535e60ce-28cd-5a94-973b-60d7f0901b8d")
 		(property "Reference" "#PWR29"
 			(at 127 130.81 0)
 			(effects
@@ -6792,7 +6797,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e3995b88-a2ec-4796-b4f8-ffa8bf49cfb0")
+			(uuid "8ddd0895-ce61-54ef-9d50-380ef27e532a")
 		)
 		(instances
 			(project "hotendheater"
@@ -6811,7 +6816,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d72e97eb-a6e7-4df8-8433-38d8b2f677fd")
+		(uuid "7e85530b-45f7-5a5e-986f-c996e186d2f5")
 		(property "Reference" "U3"
 			(at 144.78 140.97 0)
 			(effects
@@ -6848,10 +6853,10 @@
 			)
 		)
 		(pin "4"
-			(uuid "9a36a3cf-9413-428b-a428-5948cd732938")
+			(uuid "45b47c1a-773a-5040-a540-27ab66898e10")
 		)
 		(pin "8"
-			(uuid "8c8f41db-7cf0-4562-b2f8-efbc10ba4310")
+			(uuid "83565ec5-d54c-5e03-bb28-4d15a273beed")
 		)
 		(instances
 			(project "hotendheater"
@@ -6870,7 +6875,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "0a5a92c7-f624-4c94-a3d6-6d3f24420443")
+		(uuid "6971d3b4-075d-5e3c-814f-6bcee58c6366")
 		(property "Reference" "#PWR30"
 			(at 139.7 138.43 0)
 			(effects
@@ -6906,7 +6911,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "713ffd70-5123-4d83-8822-159bb4c432be")
+			(uuid "00207ab1-865c-5d84-874e-a7e9018912fe")
 		)
 		(instances
 			(project "hotendheater"
@@ -6925,7 +6930,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "5b47e4d4-948e-469f-82ea-0e0df121fff5")
+		(uuid "faf00937-dd74-5302-b7ef-7ff79335149a")
 		(property "Reference" "#PWR31"
 			(at 139.7 156.21 0)
 			(effects
@@ -6961,7 +6966,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "30ed10f5-246f-4c07-8cff-7ce85004bbf3")
+			(uuid "9f6bace4-1210-56da-8834-67608dd276d3")
 		)
 		(instances
 			(project "hotendheater"
@@ -6980,7 +6985,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "0d768c42-68fd-48c1-a4e5-bab9fef16089")
+		(uuid "4d437448-0318-5b3c-bc95-e34641d59fa5")
 		(property "Reference" "C6"
 			(at 157.48 140.97 0)
 			(effects
@@ -7017,10 +7022,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "4ae94b7a-fb1f-4428-b87f-1607f6e56a08")
+			(uuid "22686a12-d438-51c2-97c2-a4e16fc14a95")
 		)
 		(pin "2"
-			(uuid "fbbf9d97-f0b5-425a-9168-cae08c65117b")
+			(uuid "f33354e8-15fe-5c78-b303-d01d07ee872d")
 		)
 		(instances
 			(project "hotendheater"
@@ -7039,7 +7044,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "fe582606-00ba-4b24-b6f5-d1cee069876a")
+		(uuid "d1da4b5a-8277-5da4-b617-33c25fcd370d")
 		(property "Reference" "#PWR32"
 			(at 154.94 142.24 0)
 			(effects
@@ -7075,7 +7080,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "1d5e50fd-8320-4202-bc50-703e8bc35126")
+			(uuid "4379a201-7970-5764-a68c-75ad2028e5c3")
 		)
 		(instances
 			(project "hotendheater"
@@ -7094,7 +7099,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "caf0c42b-8bcc-424a-9e33-3bf27b710f5d")
+		(uuid "a3477a94-f69a-59c2-b78a-2c1421b536a7")
 		(property "Reference" "#PWR33"
 			(at 154.94 152.4 0)
 			(effects
@@ -7130,7 +7135,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "3eeea39c-1de3-4c95-9773-3603ad8ce957")
+			(uuid "90701bfb-86b4-55a0-b7d9-d86cdd32164f")
 		)
 		(instances
 			(project "hotendheater"
@@ -7149,7 +7154,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "5ba04c15-e91d-4f01-b091-7f116b1a515a")
+		(uuid "9a0439d6-d95e-59e7-906e-b96b738be362")
 		(property "Reference" "R8"
 			(at 167.64 137.16 0)
 			(effects
@@ -7186,10 +7191,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "167709f8-f9a4-48f7-af9a-2e85a7527619")
+			(uuid "ceaeccf4-69f2-5b05-98ba-ec75b8bf8642")
 		)
 		(pin "2"
-			(uuid "e772b325-7748-4165-8abc-c956b51900f9")
+			(uuid "87ada31c-c030-5341-a97f-206f8f371783")
 		)
 		(instances
 			(project "hotendheater"
@@ -7208,7 +7213,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a028c6cf-8f38-438a-985f-f958bb1d9593")
+		(uuid "023f203a-222b-59fb-a66a-3c676e0aaaeb")
 		(property "Reference" "R9"
 			(at 167.64 144.78 0)
 			(effects
@@ -7245,10 +7250,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "df1f66b3-0105-4b42-a3da-12b5c2003d88")
+			(uuid "9f10c475-a349-5567-9148-be9730600201")
 		)
 		(pin "2"
-			(uuid "45c1af17-f15c-4d44-9225-666466ddb3ab")
+			(uuid "1dcbf5ba-4d79-5c63-b47a-551cddeaec0b")
 		)
 		(instances
 			(project "hotendheater"
@@ -7267,7 +7272,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "c9f04bb1-77d0-4928-88b4-a23030718bf9")
+		(uuid "96711256-da0b-5c82-b249-2a950828feea")
 		(property "Reference" "#PWR34"
 			(at 170.18 138.43 0)
 			(effects
@@ -7303,7 +7308,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "312b41d4-f90c-49a5-8e2a-3fedb5bdcd5b")
+			(uuid "bc5c922d-646e-5149-837f-b499af74b2af")
 		)
 		(instances
 			(project "hotendheater"
@@ -7322,7 +7327,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "c3f199ef-3057-4671-8d19-76582a9fdf62")
+		(uuid "c1c10df1-9fba-5b4a-9732-f227e28753ac")
 		(property "Reference" "#PWR35"
 			(at 170.18 156.21 0)
 			(effects
@@ -7358,7 +7363,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "fb1ea862-de9f-4a09-b862-689d92892261")
+			(uuid "70e29a31-7e19-5cb8-b4a5-519a78a22c7b")
 		)
 		(instances
 			(project "hotendheater"
@@ -7372,29 +7377,29 @@
 	(wire
 		(pts (xy 170.18 142.24) (xy 175.26 142.24))
 		(stroke (width 0) (type default))
-		(uuid "17f69d12-9d60-45fe-8f50-c69089a056bd")
+		(uuid "074d7421-06f4-5131-a1ee-8f2f6ec7750f")
 	)
 	(wire
 		(pts (xy 175.26 142.24) (xy 180.34 142.24))
 		(stroke (width 0) (type default))
-		(uuid "008b8353-2146-4d3b-bf74-742eb21fe9b2")
+		(uuid "ade24aef-c46c-59ae-bc85-213ec625b30a")
 	)
 	(junction
 		(at 170.18 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f1c7b030-e73f-4854-a903-fb8c95f3d8c2")
+		(uuid "0a7ebab4-d395-56e0-b478-f0efcfe1115e")
 	)
 	(junction
 		(at 175.26 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "e53212e9-3387-4e2d-b423-264da66155f5")
+		(uuid "2962c6f1-8038-5afb-86ff-51cf58ab4c3d")
 	)
 	(wire
 		(pts (xy 175.26 142.24) (xy 175.26 139.7))
 		(stroke (width 0) (type default))
-		(uuid "dab04719-9544-43d6-8616-8d93e791293e")
+		(uuid "ae9a4918-b442-57c4-9324-b444381a1796")
 	)
 	(label "VREF"
 		(at 175.26 139.7 90)
@@ -7403,7 +7408,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "6e71040d-ded1-4ad8-80d3-595c24c6d254")
+		(uuid "4cb84951-b4da-55fb-8b98-a6acf2fe6515")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -7413,7 +7418,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a8c60534-20d6-4bbd-94d0-be749314c912")
+		(uuid "34a1f8e1-d57b-51e0-a15b-fae64e64203d")
 		(property "Reference" "R10"
 			(at 184.15 139.7 90)
 			(effects
@@ -7448,10 +7453,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "6f5470cf-61cf-4ea6-96b8-13bc79f37f57")
+			(uuid "afbc48b5-a454-5858-a5f3-a745614b588f")
 		)
 		(pin "2"
-			(uuid "49ddf0fe-5765-4186-8dc6-ac0ebbc33134")
+			(uuid "549ddee2-a332-5d3d-bc9c-7aed642fb654")
 		)
 		(instances
 			(project "hotendheater"
@@ -7465,7 +7470,7 @@
 	(wire
 		(pts (xy 187.96 142.24) (xy 190.5 142.24))
 		(stroke (width 0) (type default))
-		(uuid "02c89b5e-56e3-40b4-a226-286583061f60")
+		(uuid "a059006b-67e9-54ca-98b3-c1236b8e0bee")
 	)
 	(label "~{HEAT_EN}"
 		(at 190.5 142.24 0)
@@ -7474,7 +7479,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "f78166a2-6155-495d-9d77-2d2eaf73c11c")
+		(uuid "0a6f8eab-495a-5536-a3b4-2d193356c09c")
 	)
 	(text "4. HEADER NAAR CHEAP YELLOW DISPLAY + VSENSE (100k/12k: 20V -> 2,14V)"
 		(exclude_from_sim no)
@@ -7483,7 +7488,7 @@
 			(font (size 1.5 1.5))
 			(justify left top)
 		)
-		(uuid "ebb5cf5a-0dea-4a69-8d2d-9f141fdd63e1")
+		(uuid "24db13f2-6754-5ae2-89f7-5cccad2e8f55")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -7493,7 +7498,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7ecf05db-9d3b-4796-b738-aca14daffe92")
+		(uuid "aca739be-93f9-5ead-8403-c8357e8aee63")
 		(property "Reference" "R12"
 			(at 33.02 172.72 0)
 			(effects
@@ -7530,10 +7535,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "1492d300-84f7-4309-8a73-af1460e51230")
+			(uuid "d9bb0a2e-a748-5311-a60b-8b92d025b528")
 		)
 		(pin "2"
-			(uuid "76800137-30c5-4cde-b5dc-dbacb685ab11")
+			(uuid "a6b78ce3-bc0c-5ef3-b84d-99fadcf814ae")
 		)
 		(instances
 			(project "hotendheater"
@@ -7552,7 +7557,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "54fa0bed-c4de-4630-a099-b80c853de9e0")
+		(uuid "15043907-7c3b-5f87-9106-c831111067cc")
 		(property "Reference" "R13"
 			(at 33.02 180.34 0)
 			(effects
@@ -7589,10 +7594,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "282b70b4-18a2-44c3-ae0c-87f8ee5f16a1")
+			(uuid "9e76130f-94aa-55f0-8824-f7ccd98127b9")
 		)
 		(pin "2"
-			(uuid "e52ce9b7-065e-4f9f-bd75-d89b6591aa5e")
+			(uuid "398fa493-43f8-5061-9066-74bfb7c9cfb7")
 		)
 		(instances
 			(project "hotendheater"
@@ -7611,7 +7616,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7aab7022-fb14-4ff0-a02c-fdfcbac0ec73")
+		(uuid "74b56fb1-4e25-581a-9781-1fa4ff3ace2e")
 		(property "Reference" "C7"
 			(at 40.64 180.34 0)
 			(effects
@@ -7648,10 +7653,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "907824c7-bcd1-45dc-a20d-d5d6d092174f")
+			(uuid "033cea16-14d8-5d00-94b9-fc803eb6623e")
 		)
 		(pin "2"
-			(uuid "e4738367-3c79-46d9-9762-7156df335b67")
+			(uuid "dbe8927e-6904-5a87-b224-a2c72996bb9c")
 		)
 		(instances
 			(project "hotendheater"
@@ -7670,7 +7675,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "41f134d8-9604-487f-80c9-9c13821d65c2")
+		(uuid "80cbd8ac-c295-5e9d-aaa7-4f122b8ce28b")
 		(property "Reference" "#PWR36"
 			(at 30.48 173.99 0)
 			(effects
@@ -7706,7 +7711,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e7404c8b-f77b-45ca-8bd8-ba4def78d2b3")
+			(uuid "ec7e6ab8-50f3-5bb0-8620-1a12c5c27bd6")
 		)
 		(instances
 			(project "hotendheater"
@@ -7725,7 +7730,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "6b3fe253-7228-4f0b-8a83-9c4b244f089e")
+		(uuid "9c98df71-b636-5232-a1ee-2c1c50d1c53e")
 		(property "Reference" "#PWR37"
 			(at 30.48 191.77 0)
 			(effects
@@ -7761,7 +7766,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c4495c85-d0c6-4469-8060-210e8a8bb4e9")
+			(uuid "97fe5d77-90ca-5126-8115-209021459a66")
 		)
 		(instances
 			(project "hotendheater"
@@ -7780,7 +7785,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "9ff14f09-c198-4fbf-a782-3fe3a1ff8b29")
+		(uuid "16c98878-6570-5255-bec7-080eac4b4a2b")
 		(property "Reference" "#PWR38"
 			(at 38.1 191.77 0)
 			(effects
@@ -7816,7 +7821,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "905332b4-b4b5-41b6-80f3-5596f9c44af2")
+			(uuid "591bed44-291b-5e36-aa21-0ff8de610d35")
 		)
 		(instances
 			(project "hotendheater"
@@ -7830,24 +7835,24 @@
 	(wire
 		(pts (xy 30.48 177.8) (xy 38.1 177.8))
 		(stroke (width 0) (type default))
-		(uuid "192245f1-2d7d-4223-91d7-bf751f3a1545")
+		(uuid "ceb9b52b-ee2c-59de-86e9-b155b9f1f7ab")
 	)
 	(wire
 		(pts (xy 38.1 177.8) (xy 43.18 177.8))
 		(stroke (width 0) (type default))
-		(uuid "d48478e7-7e7a-402d-a5c5-fcdd35dd2d61")
+		(uuid "4bb61b95-5a88-5379-b01f-ae018d3850c1")
 	)
 	(junction
 		(at 30.48 177.8)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "8636b521-8714-4a6f-bdac-47dabeb5dc74")
+		(uuid "bde68e14-9ed1-533c-9d1e-4f042266bf9d")
 	)
 	(junction
 		(at 38.1 177.8)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "03d65610-9243-472e-915b-9fc70a817728")
+		(uuid "f7968066-d9b2-5708-983b-82a2f30b4bcb")
 	)
 	(label "VSENSE"
 		(at 43.18 177.8 0)
@@ -7856,7 +7861,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "83a192dd-e529-4988-a85b-4f47c8df4c86")
+		(uuid "3f9af4dc-85c4-5f32-9f1c-ada36743d079")
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
@@ -7866,7 +7871,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8cb20f06-94d9-4755-8d83-6e0fad3d1d7c")
+		(uuid "ea8861e0-d129-592b-b043-5677ec0a2056")
 		(property "Reference" "D4"
 			(at 66.04 175.26 0)
 			(effects
@@ -7901,10 +7906,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "0bab2b57-064b-40c3-b145-1d8f5bc8049d")
+			(uuid "d74a78de-4572-5723-b645-00e4b5269078")
 		)
 		(pin "2"
-			(uuid "3df59520-030e-4327-83c3-ed5831acb7ae")
+			(uuid "0cdfa609-1da6-5d51-ad6c-7874700756c8")
 		)
 		(instances
 			(project "hotendheater"
@@ -7918,7 +7923,7 @@
 	(wire
 		(pts (xy 62.23 177.8) (xy 59.69 177.8))
 		(stroke (width 0) (type default))
-		(uuid "9f6696f5-8aaa-48ca-aeae-473caf8a42da")
+		(uuid "0c90b1c1-bc70-5c31-91da-0fa5d418711a")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -7928,7 +7933,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "ff3f47f5-e84e-4bb7-8edf-52ad5608058e")
+		(uuid "8c4b1afa-2af7-57c4-92c2-ea253c8d8af3")
 		(property "Reference" "#PWR39"
 			(at 63.5 177.8 90)
 			(effects
@@ -7964,7 +7969,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "dcc26c3b-d9cd-40fb-a62c-33f791ac70e9")
+			(uuid "c7ccad84-bc47-5844-ae6f-ffa7e1b4a185")
 		)
 		(instances
 			(project "hotendheater"
@@ -7978,7 +7983,7 @@
 	(wire
 		(pts (xy 69.85 177.8) (xy 72.39 177.8))
 		(stroke (width 0) (type default))
-		(uuid "1ea9364d-d676-4c94-9237-7ef05adb08fa")
+		(uuid "be76297d-ce25-5a94-ba27-9add30122216")
 	)
 	(label "5V_CYD"
 		(at 72.39 177.8 0)
@@ -7987,7 +7992,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "bd5bab28-99f4-49f4-b1b1-72f8861a9f1b")
+		(uuid "e7fe3f96-14b4-5f4f-9b07-269c7fa24ca6")
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x06_Pin")
@@ -7997,7 +8002,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "f12ec786-48c4-4d4e-b0e1-4cb95515a6e7")
+		(uuid "371518d3-7573-5da1-bcc7-a97d012b7e2b")
 		(property "Reference" "J4"
 			(at 88.9 167.64 0)
 			(effects
@@ -8032,22 +8037,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "7008b3da-b6c5-457a-91fa-6bb723ce8dd1")
+			(uuid "8d89f8d6-7627-52eb-bad2-ef2f8390bbd1")
 		)
 		(pin "2"
-			(uuid "fe2ebe7b-c6f7-46a0-b479-769f471bd77d")
+			(uuid "c2cbcc41-0e14-5ff4-8df1-e2c2105e8f50")
 		)
 		(pin "3"
-			(uuid "022078c8-da97-4cf1-b82e-6d9d23f87c7a")
+			(uuid "7b962dd4-feb2-55ad-a455-e737b3d396a5")
 		)
 		(pin "4"
-			(uuid "cef6850f-54ae-472d-b1d9-51ec92d86e8b")
+			(uuid "e46968aa-8018-5ce9-9a6f-0e78dc4aa766")
 		)
 		(pin "5"
-			(uuid "e3b535fb-9908-46e8-ac91-cd9077270b7d")
+			(uuid "0d6ea56f-4547-5ed2-bbc4-4e3dacfd7ba1")
 		)
 		(pin "6"
-			(uuid "c35b5767-2869-4e03-9357-2ec8476f01ba")
+			(uuid "62496d5d-c860-595d-86da-14801217245b")
 		)
 		(instances
 			(project "hotendheater"
@@ -8061,7 +8066,7 @@
 	(wire
 		(pts (xy 93.98 170.18) (xy 96.52 170.18))
 		(stroke (width 0) (type default))
-		(uuid "7e2659ae-712f-4007-a27e-597d44006c22")
+		(uuid "793f0cf3-372e-54bd-bff3-3a580e98aa2b")
 	)
 	(label "5V_CYD"
 		(at 96.52 170.18 0)
@@ -8070,12 +8075,12 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "c521b953-7df7-4d94-ae1f-f801d2bb22c6")
+		(uuid "c2c4116c-ec2b-5e18-88fb-6947fccd33d2")
 	)
 	(wire
 		(pts (xy 93.98 172.72) (xy 96.52 172.72))
 		(stroke (width 0) (type default))
-		(uuid "203d7338-9140-4ce3-8272-98b96d914603")
+		(uuid "ab5f988d-95f5-5dcc-9964-9da6d05b0976")
 	)
 	(label "THERM"
 		(at 96.52 172.72 0)
@@ -8084,12 +8089,12 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "ae750359-bf05-4b52-8a58-cd75bbb715a7")
+		(uuid "f2aa1ad0-a0bb-5bee-b6d2-02c53a08f98c")
 	)
 	(wire
 		(pts (xy 93.98 175.26) (xy 96.52 175.26))
 		(stroke (width 0) (type default))
-		(uuid "730b960f-4e3b-4362-b07d-ab9af7c75b77")
+		(uuid "d7993b4c-f5e9-5f02-9c8d-a1129a437775")
 	)
 	(label "HEAT"
 		(at 96.52 175.26 0)
@@ -8098,12 +8103,12 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "9b9299f1-ab6f-4ab7-adc2-12613b7d5195")
+		(uuid "aed3042a-66c1-548d-876c-e01375ef0e2b")
 	)
 	(wire
 		(pts (xy 93.98 177.8) (xy 96.52 177.8))
 		(stroke (width 0) (type default))
-		(uuid "d3224b47-4351-48c7-9a71-5d9d65b3a91f")
+		(uuid "77ebc8e1-ec7e-52fa-8b0c-222f743393e3")
 	)
 	(label "VSENSE"
 		(at 96.52 177.8 0)
@@ -8112,12 +8117,12 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "6d8ba9ad-10bb-43c9-b6f2-1635eff73de4")
+		(uuid "01d28c28-fbb8-5ddd-90e1-1d450d0b1aef")
 	)
 	(wire
 		(pts (xy 93.98 180.34) (xy 96.52 180.34))
 		(stroke (width 0) (type default))
-		(uuid "7770e17c-0eca-4a37-9966-822bff679566")
+		(uuid "ce817c01-a084-5dc5-adec-151a3cc254a4")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -8127,7 +8132,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "07a5a38c-016a-47a1-a260-9067c0c96647")
+		(uuid "9e692fda-74cd-50eb-8de4-a5ede4d49889")
 		(property "Reference" "#PWR40"
 			(at 92.71 180.34 270)
 			(effects
@@ -8163,7 +8168,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "41339a1a-9803-46a0-bc6e-09c3a0b47db9")
+			(uuid "184be123-991d-50d8-a6f7-587f85a2f7ce")
 		)
 		(instances
 			(project "hotendheater"
@@ -8177,12 +8182,12 @@
 	(wire
 		(pts (xy 93.98 182.88) (xy 96.52 182.88))
 		(stroke (width 0) (type default))
-		(uuid "c70ec77d-4b75-4b8e-881a-37d1e5c9713e")
+		(uuid "98ef186b-551f-5751-87d3-7169960444a7")
 	)
 	(wire
 		(pts (xy 96.52 182.88) (xy 96.52 185.42))
 		(stroke (width 0) (type default))
-		(uuid "6944e267-ad7c-43a8-abb8-1923831b97e1")
+		(uuid "4ab61a09-eb47-5890-8e49-c374d225d149")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8192,7 +8197,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "57866b2b-d5f3-4ac1-8d1c-1b0f5476599a")
+		(uuid "6ec59494-de98-5df7-8659-03f2786ec0d1")
 		(property "Reference" "#PWR41"
 			(at 96.52 191.77 0)
 			(effects
@@ -8228,7 +8233,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "acba1b66-e360-4fce-bc70-6f44c9b1188e")
+			(uuid "aba84dbe-37c8-5c2f-b724-b8c903fee3d4")
 		)
 		(instances
 			(project "hotendheater"
@@ -8246,17 +8251,17 @@
 			(font (size 1.27 1.27))
 			(justify left top)
 		)
-		(uuid "d8d0eea0-9a32-4392-834d-db3e337f92eb")
+		(uuid "c898e625-ff2b-5df0-af3b-e9302652fd82")
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
 		(at 228.6 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "6c970968-48b7-4010-8099-0ba3339adff0")
+		(uuid "d0c847b8-5e7a-51c7-9d98-bfe2febfd45a")
 		(property "Reference" "H1"
 			(at 228.6 63.5 0)
 			(effects
@@ -8304,10 +8309,10 @@
 		(at 241.3 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "332a84ec-870c-47c6-b067-383390229f33")
+		(uuid "2cd62d77-c288-5562-9236-2781c7d43235")
 		(property "Reference" "H2"
 			(at 241.3 63.5 0)
 			(effects
@@ -8355,10 +8360,10 @@
 		(at 254 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "7f0a2d15-f4b8-4bc0-ad53-4ec19326c71e")
+		(uuid "218eb448-f0ce-580d-bc9b-ad69132cf193")
 		(property "Reference" "H3"
 			(at 254 63.5 0)
 			(effects
@@ -8406,10 +8411,10 @@
 		(at 266.7 68.58 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "ab8bc4f7-afa0-4d10-b993-e829c7235f37")
+		(uuid "b4b19ef9-128c-5249-9251-10def89710ab")
 		(property "Reference" "H4"
 			(at 266.7 63.5 0)
 			(effects
