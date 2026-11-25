@@ -13,11 +13,11 @@ What changed and why:
 | | v1 | v2 |
 |---|---|---|
 | Supply | 12V PD (12 W at 12 Ω) | **20V PD (≈33 W, 1.7 A)** |
-| 5V rail | Nano regulator (fed from VIN) | **TSR 1-2450 buck** (6.5–36 V in) |
-| MOSFET | IRF540N (not logic level, driven at ~4.5 V) | **IRLZ44N**, driven at 5 V through a **74AHCT1G125** buffer, so a 3.3 V ESP32 pin can switch it fully |
+| 5V rail | Nano regulator (fed from VIN) | **XL1509-5.0 buck** (4.5–40 V in, JLC basic part) |
+| MOSFET | IRF540N (not logic level, driven at ~4.5 V) | **IRLZ44N**, gate driven to 5 V by an LM393 comparator (HEAT > 2.5 V), so a 3.3 V ESP32 pin can switch it fully |
 | Thermistor pull-up | 100k to 5V (≈5–10 °C per ADC step at 220 °C) | **2k2 to the CYD 3.3V**: good resolution from 90 to 290 °C and never above 3.3 V on the ESP32 ADC |
-| Protection | none | 3A fuse, SMF24A TVS, 100 µF bulk, **hardware over-temperature cutoff** (LM393, trips at ~290 °C, re-enables at ~276 °C) |
-| Extras | | Supply-voltage sense (VSENSE), LEDs for 5V / heater on / over-temperature |
+| Protection | none | 2.5A PTC, SMF24A TVS, 100 µF bulk, **hardware over-temperature cutoff** (other half of the LM393, trips at ~281 °C, re-enables at ~270 °C; wired-AND on the gate) |
+| Extras | | Supply-voltage sense (VSENSE), LEDs for 5V / heater on |
 
 ### X1C hotend facts (used for the design)
 - Ceramic heater: 48 W, ~12 Ω cold, rated for 300 °C. At 24 V in the printer that gives 48 W; at 20 V here ≈33 W.
@@ -39,41 +39,53 @@ The heater can't turn on without the CYD: HTR has a pulldown, and without 3V3 th
 
 ### Firmware notes
 - Thermistor: `R_ntc = 2200 * V / (3.3 - V)`, then Beta or Steinhart–Hart. Use the ESP32 ADC calibration (11 dB attenuation).
-- At 20 V the hotend heats quickly and overshoots without a fan: use PID, a soft maximum of ~280 °C (heater rating is 300 °C) and thermal-runaway detection (no temperature rise within X s while heating → off).
+- At 20 V the hotend heats quickly and overshoots without a fan: use PID, a soft maximum of ~260 °C (the hardware cutoff is at ~281 °C, the heater rating is 300 °C) and thermal-runaway detection (no temperature rise within X s while heating → off).
 - PWM: anything up to ~1 kHz is fine; a slow PWM (e.g. 10 Hz) also works for a heater.
 - If VS is used: refuse to heat unless the PD trigger actually delivers ~20 V.
 - The hardware cutoff is a backstop only and does not replace firmware limits.
 
-### Bill of materials
+### Manufacturing at JLCPCB (Economic PCBA)
 
-| Ref | Qty | Value | Footprint | Notes |
-|---|---|---|---|---|
-| C1 | 1 | 100µF 35V | CP_Elec_6.3x7.7 | electrolytic |
-| C2 | 1 | 10µF 50V | 1206 | X7R |
-| C3 | 1 | 10µF 16V | 0805 | |
-| C4, C5, C6, C7 | 4 | 100nF | 0805 | |
-| D1 | 1 | SMF24A | SOD-123FL | TVS, unidirectional |
-| D2, D3, D5 | 3 | LED green / orange / red | 0805 | 5V / heater on / over-temperature |
-| D4 | 1 | B5819W | SOD-123 | Schottky |
-| F1 | 1 | 3A fast, ≥32V | 1206 | |
-| J1 | 1 | 1x4 pin header | 2.54 mm | for the USB-C PD trigger module (set to 20V); check the module pinout: pins 1–2 V+, 3–4 GND |
-| J2 | 1 | JST XH 2-pin horizontal | S2B-XH-A | heater |
-| J3 | 1 | JST GH 2-pin horizontal | SM02B-GHS-TB | thermistor |
-| J4 | 1 | 1x6 pin header | 2.54 mm | to CYD |
-| Q1 | 1 | IRLZ44N | TO-220 | |
-| R1, R11 | 2 | 1k | 0805 | |
-| R2, R4, R12 | 3 | 100k | 0805 | |
-| R3 | 1 | 47Ω | 0805 | |
-| R5, R6, R9 | 3 | 10k | 0805 | |
-| R7 | 1 | 2k2 | 0805 | thermistor pull-up |
-| R8 | 1 | 110k | 0805 | sets the cutoff temperature |
-| R10 | 1 | 1M | 0805 | hysteresis |
-| R13 | 1 | 12k | 0805 | |
-| U1 | 1 | Traco TSR 1-2450 | SIP-3 | or a pin-compatible 7805 buck module, e.g. Mornsun K7805-1000R3 |
-| U2 | 1 | 74AHCT1G125 | SOT-23-5 | |
-| U3 | 1 | LM393 | SOIC-8 | |
+All SMD parts on the top side are **JLC Basic or Preferred Extended** parts, so there are **no $3.07 feeder-loading fees**.
+Files are in [`jlc/`](jlc): Gerbers, `nuzzler-v2-BOM-JLC.csv` and `nuzzler-v2-CPL-JLC.csv` (top side, positions from KiCad).
+Check the part rotations in JLC's placement preview (especially U1/U2 SOIC-8 and the diodes D1, D4, D5 and LEDs D2, D3).
 
-Board: 56 × 46 mm, 2 layers, 4× M3. Gerbers and drill files: [`grbrs/nuzzler-v2-gerbers.zip`](grbrs/nuzzler-v2-gerbers.zip).
+JLC places (24 parts, 16 unique, 60 joints per board):
+
+| Ref | Qty | Value | Footprint | LCSC | Type |
+|---|---|---|---|---|---|
+| U1 | 1 | XL1509-5.0E1 | SOIC-8 | C61063 | Basic |
+| U2 | 1 | LM393DR2G | SOIC-8 | C7955 | Basic |
+| D1 | 1 | SMF24A (TVS) | SOD-123FL | C19077514 | Preferred |
+| D4 | 1 | B5819W | SOD-123 | C8598 | Basic |
+| D5 | 1 | SS34 | SMA | C8678 | Basic |
+| D2 | 1 | LED green | 0805 | C2297 | Basic |
+| D3 | 1 | LED yellow | 0805 | C2296 | Basic |
+| C2 | 1 | 10µF 50V | 1206 | C13585 | Basic |
+| C3 | 1 | 10µF 25V | 0805 | C15850 | Basic |
+| C5, C6, C7 | 3 | 100nF 50V | 0805 | C49678 | Basic |
+| R1, R3 | 2 | 1k | 0805 | C17513 | Basic |
+| R7 | 1 | 2k2 | 0805 | C17520 | Basic |
+| R4, R5, R6, R9 | 4 | 10k | 0805 | C17414 | Basic |
+| R13 | 1 | 12k | 0805 | C17444 | Basic |
+| R2, R8, R12 | 3 | 100k | 0805 | C149504 | Basic |
+| R10 | 1 | 1M | 0805 | C17514 | Basic |
+
+Hand-soldered (through-hole, plus the small JST-GH, which is not in JLC's cheap library):
+
+| Ref | Qty | Part | Notes |
+|---|---|---|---|
+| Q1 | 1 | IRLZ44N | TO-220 |
+| L1 | 1 | 68µH ≥1A radial, 5 mm pitch, Ø≤8.7 mm | e.g. Fastron 07HCP-680K, Bourns RLB0914-680KL |
+| C1 | 1 | 100µF 35V radial Ø6.3 mm, 2.5 mm pitch | |
+| C4 | 1 | 220µF 16V radial Ø6.3 mm, 2.5 mm pitch | buck output |
+| F1 | 1 | PTC Ihold 2.5A, ≥30V, radial 5.1 mm | e.g. Bourns MF-R250, Littelfuse 30R250UU |
+| J1 | 1 | 1x4 pin header 2.54 mm | + USB-C PD trigger module set to 20V; check the module pinout: pins 1–2 V+, 3–4 GND |
+| J2 | 1 | JST XH 2-pin horizontal (S2B-XH-A) | heater |
+| J3 | 1 | JST GH 2-pin SMD horizontal (SM02B-GHS-TB) | thermistor |
+| J4 | 1 | 1x6 pin header 2.54 mm | to CYD |
+
+Board: 56 × 52 mm, 2 layers, 4× M3, all SMD on top. Gerbers and drill files: [`grbrs/nuzzler-v2-gerbers.zip`](grbrs/nuzzler-v2-gerbers.zip).
 
 ![](https://github.com/sebastius/Nuzzler/blob/main/pcb%20nuzzler.png?raw=true)
 

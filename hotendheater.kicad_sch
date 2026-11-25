@@ -396,7 +396,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Device:Fuse"
+		(symbol "Device:Polyfuse"
 			(pin_numbers
 				(hide yes)
 			)
@@ -409,15 +409,15 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "F"
-				(at 2.032 0 90)
+				(at -2.54 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "Value" "Fuse"
-				(at -1.905 0 90)
+			(property "Value" "Polyfuse"
+				(at 2.54 0 90)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -425,12 +425,13 @@
 				)
 			)
 			(property "Footprint" ""
-				(at -1.778 0 90)
+				(at 1.27 -5.08 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
 					(font (size 1.27 1.27))
+					(justify left)
 				)
 			)
 			(property "Datasheet" ""
@@ -442,7 +443,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "Description" "Fuse"
+			(property "Description" "Resettable fuse, polymeric positive temperature coefficient"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -451,7 +452,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "ki_keywords" "fuse"
+			(property "ki_keywords" "resettable fuse PTC PPTC polyfuse polyswitch"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -460,7 +461,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "ki_fp_filters" "*Fuse*"
+			(property "ki_fp_filters" "*polyfuse* *PTC*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -469,10 +470,20 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(symbol "Fuse_0_1"
+			(symbol "Polyfuse_0_1"
+				(polyline
+					(pts
+						(xy -1.524 2.54)
+						(xy -1.524 1.524)
+						(xy 1.524 -1.524)
+						(xy 1.524 -2.54)
+					)
+					(stroke (width 0) (type default))
+					(fill (type none))
+				)
 				(rectangle
-					(start -0.762 -2.54)
-					(end 0.762 2.54)
+					(start -0.762 2.54)
+					(end 0.762 -2.54)
 					(stroke (width 0.254) (type default))
 					(fill (type none))
 				)
@@ -482,7 +493,7 @@
 					(fill (type none))
 				)
 			)
-			(symbol "Fuse_1_1"
+			(symbol "Polyfuse_1_1"
 				(pin passive line
 					(at 0 3.81 270)
 					(length 1.27)
@@ -994,41 +1005,47 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Converter_DCDC:TSR_1-2450"
+		(symbol "Regulator_Switching:XL1509-5.0"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -7.62 6.35 0)
+				(at -7.112 6.096 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font (size 1.27 1.27))
-					(justify left)
 				)
 			)
-			(property "Value" "TSR_1-2450"
-				(at -1.27 6.35 0)
+			(property "Value" "XL1509-5.0"
+				(at 5.842 6.096 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font (size 1.27 1.27))
-					(justify left)
 				)
 			)
-			(property "Footprint" "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT"
-				(at 0 -3.81 0)
+			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+				(at 0 8.382 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
 				(effects
-					(font (size 1.27 1.27) (italic yes))
-					(justify left)
+					(font (size 1.27 1.27))
 				)
 			)
-			(property "Datasheet" "http://www.tracopower.com/products/tsr1.pdf"
+			(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1809050422_XLSEMI-XL1509-5-0E1_C61063.pdf"
+				(at 2.54 10.668 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "Description" "Buck DC/DC Converter, 2A, 5V Output Voltage, 7-40V Input Voltage"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1037,7 +1054,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "Description" "1A step-down regulator module, fixed 5V output voltage, 5-36V input voltage, -40°C to +85°C temperature range, TO-220 compatible LM78xx replacement"
+			(property "ki_keywords" "Buck DC/DC Converter"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1046,7 +1063,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "ki_keywords" "dc-dc traco buck"
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1055,28 +1072,19 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "ki_fp_filters" "Converter*DCDC*TRACO*TSR?1*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(symbol "TSR_1-2450_0_1"
+			(symbol "XL1509-5.0_0_1"
 				(rectangle
 					(start -7.62 5.08)
-					(end 7.62 -2.54)
+					(end 7.62 -5.08)
 					(stroke (width 0.254) (type default))
 					(fill (type background))
 				)
 			)
-			(symbol "TSR_1-2450_1_1"
+			(symbol "XL1509-5.0_1_1"
 				(pin power_in line
 					(at -10.16 2.54 0)
 					(length 2.54)
-					(name "Vin"
+					(name "VIN"
 						(effects
 							(font (size 1.27 1.27))
 						)
@@ -1087,10 +1095,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at 0 -5.08 90)
+				(pin power_out line
+					(at 10.16 2.54 180)
 					(length 2.54)
-					(name "GND"
+					(name "OUT"
 						(effects
 							(font (size 1.27 1.27))
 						)
@@ -1101,15 +1109,88 @@
 						)
 					)
 				)
-				(pin power_out line
-					(at 10.16 2.54 180)
+				(pin input line
+					(at 10.16 -2.54 180)
 					(length 2.54)
-					(name "Vout"
+					(name "FB"
 						(effects
 							(font (size 1.27 1.27))
 						)
 					)
 					(number "3"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+				(pin input line
+					(at -10.16 -2.54 0)
+					(length 2.54)
+					(name "~{EN}"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "4"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "5"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "6"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "7"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(hide yes)
+					(name "GND"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "8"
 						(effects
 							(font (size 1.27 1.27))
 						)
@@ -1212,6 +1293,277 @@
 						)
 					)
 					(number "1"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:D_Schottky"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "Value" "D_Schottky"
+				(at 0 -2.54 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "Description" "Schottky diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "ki_keywords" "diode Schottky"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(symbol "D_Schottky_0_1"
+				(polyline
+					(pts
+						(xy -1.905 0.635)
+						(xy -1.905 1.27)
+						(xy -1.27 1.27)
+						(xy -1.27 -1.27)
+						(xy -0.635 -1.27)
+						(xy -0.635 -0.635)
+					)
+					(stroke (width 0.254) (type default))
+					(fill (type none))
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27)
+						(xy 1.27 -1.27)
+						(xy -1.27 0)
+						(xy 1.27 1.27)
+					)
+					(stroke (width 0.254) (type default))
+					(fill (type none))
+				)
+				(polyline
+					(pts (xy 1.27 0) (xy -1.27 0))
+					(stroke (width 0) (type default))
+					(fill (type none))
+				)
+			)
+			(symbol "D_Schottky_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "1"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "2"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
+		(symbol "Device:L"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "L"
+				(at -1.27 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "Value" "L"
+				(at 1.905 0 90)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "Description" "Inductor"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "ki_keywords" "inductor choke coil reactor magnetic"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "ki_fp_filters" "Choke_* *Coil* Inductor_* L_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(symbol "L_0_1"
+				(arc
+					(start 0 2.54)
+					(mid 0.6323 1.905)
+					(end 0 1.27)
+					(stroke (width 0) (type default))
+					(fill (type none))
+				)
+				(arc
+					(start 0 1.27)
+					(mid 0.6323 0.635)
+					(end 0 0)
+					(stroke (width 0) (type default))
+					(fill (type none))
+				)
+				(arc
+					(start 0 0)
+					(mid 0.6323 -0.635)
+					(end 0 -1.27)
+					(stroke (width 0) (type default))
+					(fill (type none))
+				)
+				(arc
+					(start 0 -1.27)
+					(mid 0.6323 -1.905)
+					(end 0 -2.54)
+					(stroke (width 0) (type default))
+					(fill (type none))
+				)
+			)
+			(symbol "L_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "1"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "1"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "2"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "2"
 						(effects
 							(font (size 1.27 1.27))
 						)
@@ -1693,22 +2045,25 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "74xGxx:74AHCT1G125"
+		(symbol "Comparator:LM393"
+			(pin_names
+				(offset 0.127)
+			)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "U"
-				(at -2.54 3.81 0)
+				(at 3.81 3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "Value" "74AHCT1G125"
-				(at 0 -3.81 0)
+			(property "Value" "LM393"
+				(at 6.35 -3.81 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -1724,7 +2079,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1733,7 +2088,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "Description" "Single Buffer Gate Tri-State, Low-Voltage CMOS"
+			(property "Description" "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1742,7 +2097,15 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "ki_keywords" "Single Gate Buff Tri-State LVC CMOS"
+			(property "ki_locked" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font (size 1.27 1.27))
+				)
+			)
+			(property "ki_keywords" "cmp open collector"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1751,7 +2114,7 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(property "ki_fp_filters" "SOT* SG-*"
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -1760,22 +2123,33 @@
 					(font (size 1.27 1.27))
 				)
 			)
-			(symbol "74AHCT1G125_0_1"
+			(symbol "LM393_1_1"
 				(polyline
 					(pts
-						(xy -7.62 6.35)
-						(xy -7.62 -6.35)
+						(xy -5.08 5.08)
 						(xy 5.08 0)
-						(xy -7.62 6.35)
+						(xy -5.08 -5.08)
+						(xy -5.08 5.08)
 					)
 					(stroke (width 0.254) (type default))
 					(fill (type background))
 				)
-			)
-			(symbol "74AHCT1G125_1_1"
-				(pin input inverted
-					(at 0 10.16 270)
-					(length 7.62)
+				(polyline
+					(pts
+						(xy 3.302 -0.508)
+						(xy 2.794 -0.508)
+						(xy 3.302 0)
+						(xy 2.794 0.508)
+						(xy 2.286 0)
+						(xy 2.794 -0.508)
+						(xy 2.286 -0.508)
+					)
+					(stroke (width 0.127) (type default))
+					(fill (type none))
+				)
+				(pin open_collector line
+					(at 7.62 0 180)
+					(length 2.54)
 					(name ""
 						(effects
 							(font (size 1.27 1.27))
@@ -1788,9 +2162,9 @@
 					)
 				)
 				(pin input line
-					(at -15.24 0 0)
-					(length 7.62)
-					(name ""
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
 						(effects
 							(font (size 1.27 1.27))
 						)
@@ -1801,10 +2175,10 @@
 						)
 					)
 				)
-				(pin power_in line
-					(at -5.08 -10.16 90)
-					(length 5.08)
-					(name "GND"
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
 						(effects
 							(font (size 1.27 1.27))
 						)
@@ -1815,10 +2189,79 @@
 						)
 					)
 				)
-				(pin tri_state line
-					(at 12.7 0 180)
-					(length 7.62)
+			)
+			(symbol "LM393_2_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08)
+						(xy 5.08 0)
+						(xy -5.08 -5.08)
+						(xy -5.08 5.08)
+					)
+					(stroke (width 0.254) (type default))
+					(fill (type background))
+				)
+				(polyline
+					(pts
+						(xy 3.302 -0.508)
+						(xy 2.794 -0.508)
+						(xy 3.302 0)
+						(xy 2.794 0.508)
+						(xy 2.286 0)
+						(xy 2.794 -0.508)
+						(xy 2.286 -0.508)
+					)
+					(stroke (width 0.127) (type default))
+					(fill (type none))
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "5"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "6"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+				(pin open_collector line
+					(at 7.62 0 180)
+					(length 2.54)
 					(name ""
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+					(number "7"
+						(effects
+							(font (size 1.27 1.27))
+						)
+					)
+				)
+			)
+			(symbol "LM393_3_1"
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
 						(effects
 							(font (size 1.27 1.27))
 						)
@@ -1830,14 +2273,14 @@
 					)
 				)
 				(pin power_in line
-					(at -5.08 10.16 270)
-					(length 5.08)
-					(name "VCC"
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
 						(effects
 							(font (size 1.27 1.27))
 						)
 					)
-					(number "5"
+					(number "8"
 						(effects
 							(font (size 1.27 1.27))
 						)
@@ -2341,385 +2784,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Comparator:LM393"
-			(pin_names
-				(offset 0.127)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "U"
-				(at 3.81 3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "Value" "LM393"
-				(at 6.35 -3.81 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "Description" "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "ki_keywords" "cmp open collector"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm* DIP*W7.62mm* SOP*5.28x5.23mm*P1.27mm* VSSOP*3x3mm*P0.65mm* TSSOP*4.4x3mm*P0.65mm*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(symbol "LM393_1_1"
-				(polyline
-					(pts
-						(xy -5.08 5.08)
-						(xy 5.08 0)
-						(xy -5.08 -5.08)
-						(xy -5.08 5.08)
-					)
-					(stroke (width 0.254) (type default))
-					(fill (type background))
-				)
-				(polyline
-					(pts
-						(xy 3.302 -0.508)
-						(xy 2.794 -0.508)
-						(xy 3.302 0)
-						(xy 2.794 0.508)
-						(xy 2.286 0)
-						(xy 2.794 -0.508)
-						(xy 2.286 -0.508)
-					)
-					(stroke (width 0.127) (type default))
-					(fill (type none))
-				)
-				(pin open_collector line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "1"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "2"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "3"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-			)
-			(symbol "LM393_2_1"
-				(polyline
-					(pts
-						(xy -5.08 5.08)
-						(xy 5.08 0)
-						(xy -5.08 -5.08)
-						(xy -5.08 5.08)
-					)
-					(stroke (width 0.254) (type default))
-					(fill (type background))
-				)
-				(polyline
-					(pts
-						(xy 3.302 -0.508)
-						(xy 2.794 -0.508)
-						(xy 3.302 0)
-						(xy 2.794 0.508)
-						(xy 2.286 0)
-						(xy 2.794 -0.508)
-						(xy 2.286 -0.508)
-					)
-					(stroke (width 0.127) (type default))
-					(fill (type none))
-				)
-				(pin input line
-					(at -7.62 2.54 0)
-					(length 2.54)
-					(name "+"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "5"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-				(pin input line
-					(at -7.62 -2.54 0)
-					(length 2.54)
-					(name "-"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "6"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-				(pin open_collector line
-					(at 7.62 0 180)
-					(length 2.54)
-					(name ""
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "7"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-			)
-			(symbol "LM393_3_1"
-				(pin power_in line
-					(at -2.54 -7.62 90)
-					(length 3.81)
-					(name "V-"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "4"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-				(pin power_in line
-					(at -2.54 7.62 270)
-					(length 3.81)
-					(name "V+"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "8"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
-		(symbol "Device:D_Schottky"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "D"
-				(at 0 2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "Value" "D_Schottky"
-				(at 0 -2.54 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "Description" "Schottky diode"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "ki_keywords" "diode Schottky"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(property "ki_fp_filters" "TO-???* *_Diode_* *SingleDiode* D_*"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font (size 1.27 1.27))
-				)
-			)
-			(symbol "D_Schottky_0_1"
-				(polyline
-					(pts
-						(xy -1.905 0.635)
-						(xy -1.905 1.27)
-						(xy -1.27 1.27)
-						(xy -1.27 -1.27)
-						(xy -0.635 -1.27)
-						(xy -0.635 -0.635)
-					)
-					(stroke (width 0.254) (type default))
-					(fill (type none))
-				)
-				(polyline
-					(pts
-						(xy 1.27 1.27)
-						(xy 1.27 -1.27)
-						(xy -1.27 0)
-						(xy 1.27 1.27)
-					)
-					(stroke (width 0.254) (type default))
-					(fill (type none))
-				)
-				(polyline
-					(pts (xy 1.27 0) (xy -1.27 0))
-					(stroke (width 0) (type default))
-					(fill (type none))
-				)
-			)
-			(symbol "D_Schottky_1_1"
-				(pin passive line
-					(at -3.81 0 0)
-					(length 2.54)
-					(name "K"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "1"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-				(pin passive line
-					(at 3.81 0 180)
-					(length 2.54)
-					(name "A"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-					(number "2"
-						(effects
-							(font (size 1.27 1.27))
-						)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "Connector:Conn_01x06_Pin"
 			(pin_names
 				(offset 1.016)
@@ -3034,7 +3098,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "1. VOEDING - USB-C PD-trigger (20V) -> zekering -> +20V -> TSR 1-2450 -> +5V"
+	(text "1. VOEDING - USB-C PD-trigger (20V) -> PTC -> +20V -> XL1509-5.0 buck -> +5V"
 		(exclude_from_sim no)
 		(at 20.32 25.4 0)
 		(effects
@@ -3078,7 +3142,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "USB-C PD trigger module, ingesteld op 20V"
+		(property "Description" "USB-C PD trigger module, ingesteld op 20V (THT, zelf solderen)"
 			(at 25.4 45.72 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -3274,7 +3338,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:Fuse")
+		(lib_id "Device:Polyfuse")
 		(at 48.26 40.64 90)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3288,13 +3352,13 @@
 				(font (size 1.27 1.27))
 			)
 		)
-		(property "Value" "3A"
+		(property "Value" "PTC 2.5A 30V"
 			(at 48.26 43.18 90)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
-		(property "Footprint" "Fuse:Fuse_1206_3216Metric"
+		(property "Footprint" "Fuse:Fuse_Bourns_MF-RG300"
 			(at 48.26 40.64 90)
 			(effects
 				(font (size 1.27 1.27))
@@ -3308,7 +3372,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "SMD zekering 1206, 3A snel, >=32V"
+		(property "Description" "Radiale PTC, Ihold 2.5A, >=30V, 5.1mm (bv. Bourns MF-R250, Littelfuse 30R250UU) (THT, zelf solderen)"
 			(at 48.26 40.64 90)
 			(effects
 				(font (size 1.27 1.27))
@@ -3478,6 +3542,13 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C19077514"
+			(at 60.96 44.45 270)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e50799a6-bcc5-5461-a4cc-5afbd3bde51d")
 		)
@@ -3571,7 +3642,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:CP_Elec_6.3x7.7"
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
 			(at 71.12 44.45 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -3585,7 +3656,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Elco 100uF 35V 6.3x7.7"
+		(property "Description" "Elco 100uF 35V radiaal 6.3mm (THT, zelf solderen)"
 			(at 71.12 44.45 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -3699,7 +3770,14 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "MLCC 10uF 50V X7R 1206"
+		(property "Description" "MLCC 10uF 50V X5R 1206, dicht bij U1 VIN"
+			(at 81.28 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C13585"
 			(at 81.28 44.45 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -3777,7 +3855,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Converter_DCDC:TSR_1-2450")
+		(lib_id "Regulator_Switching:XL1509-5.0")
 		(at 104.14 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -3786,32 +3864,39 @@
 		(dnp no)
 		(uuid "f8ca3611-08c7-5b24-82a7-c57eec243cb8")
 		(property "Reference" "U1"
-			(at 104.14 34.29 0)
+			(at 104.14 33.02 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
-		(property "Value" "TSR 1-2450"
-			(at 104.14 36.83 0)
+		(property "Value" "XL1509-5.0E1"
+			(at 104.14 35.56 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
-		(property "Footprint" "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT"
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 			(at 104.14 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "http://www.tracopower.com/products/tsr1.pdf"
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/1809050422_XLSEMI-XL1509-5-0E1_C61063.pdf"
 			(at 104.14 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "5V 1A buck, 7805-pinout (alternatief: Mornsun K7805-1000R3)"
+		(property "Description" "Buck 4.5-40V -> 5V 2A, 150kHz"
+			(at 104.14 43.18 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C61063"
 			(at 104.14 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -3827,6 +3912,21 @@
 		(pin "3"
 			(uuid "61166ae0-6a26-57af-9874-efe91cc36a76")
 		)
+		(pin "4"
+			(uuid "463ad37f-a8a8-5656-8b99-117a0a44cda3")
+		)
+		(pin "5"
+			(uuid "520c2603-742c-5ca0-99af-ddee92a546a8")
+		)
+		(pin "6"
+			(uuid "12df33e5-372e-5c84-b036-8a8644159684")
+		)
+		(pin "7"
+			(uuid "4eef1368-d6bc-5f19-86a5-2bc43c7ffebd")
+		)
+		(pin "8"
+			(uuid "93c5a839-e3ac-5f67-9e82-edb58da42107")
+		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
@@ -3838,49 +3938,49 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 104.14 48.26 0)
+		(at 104.14 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "463ad37f-a8a8-5656-8b99-117a0a44cda3")
+		(uuid "4c92d827-46a8-59b8-8dee-732c73170d1c")
 		(property "Reference" "#PWR07"
-			(at 104.14 54.61 0)
+			(at 104.14 57.15 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Value" "GND"
-			(at 104.14 52.07 0)
+			(at 104.14 54.61 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 104.14 48.26 0)
+			(at 104.14 50.8 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 104.14 48.26 0)
+			(at 104.14 50.8 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 104.14 48.26 0)
+			(at 104.14 50.8 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "520c2603-742c-5ca0-99af-ddee92a546a8")
+			(uuid "cdb429e3-4e43-5498-9161-0b074ecd7049")
 		)
 		(instances
 			(project "hotendheater"
@@ -3892,77 +3992,60 @@
 		)
 	)
 	(wire
-		(pts (xy 114.3 40.64) (xy 121.92 40.64))
+		(pts (xy 93.98 45.72) (xy 91.44 45.72))
 		(stroke (width 0) (type default))
-		(uuid "12df33e5-372e-5c84-b036-8a8644159684")
+		(uuid "0b4be29d-4641-5fb2-a64f-d9e3a2a03892")
 	)
 	(wire
-		(pts (xy 121.92 40.64) (xy 132.08 40.64))
+		(pts (xy 91.44 45.72) (xy 91.44 50.8))
 		(stroke (width 0) (type default))
-		(uuid "4eef1368-d6bc-5f19-86a5-2bc43c7ffebd")
-	)
-	(wire
-		(pts (xy 132.08 40.64) (xy 142.24 40.64))
-		(stroke (width 0) (type default))
-		(uuid "93c5a839-e3ac-5f67-9e82-edb58da42107")
-	)
-	(junction
-		(at 121.92 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "4c92d827-46a8-59b8-8dee-732c73170d1c")
-	)
-	(junction
-		(at 132.08 40.64)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "cdb429e3-4e43-5498-9161-0b074ecd7049")
+		(uuid "29dc37a5-af6c-514a-aa31-eacfc4598b8c")
 	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 142.24 40.64 0)
+		(lib_id "power:GND")
+		(at 91.44 50.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "0b4be29d-4641-5fb2-a64f-d9e3a2a03892")
+		(uuid "3fea0cbe-f5cd-58fc-8af1-e982126fde33")
 		(property "Reference" "#PWR08"
-			(at 142.24 44.45 0)
+			(at 91.44 57.15 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 142.24 37.08 0)
+		(property "Value" "GND"
+			(at 91.44 54.61 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 142.24 40.64 0)
+			(at 91.44 50.8 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 142.24 40.64 0)
+			(at 91.44 50.8 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 142.24 40.64 0)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 91.44 50.8 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "29dc37a5-af6c-514a-aa31-eacfc4598b8c")
+			(uuid "ce45b9ee-339e-528e-9a77-62d9e4f6c62a")
 		)
 		(instances
 			(project "hotendheater"
@@ -3973,55 +4056,528 @@
 			)
 		)
 	)
+	(wire
+		(pts (xy 114.3 45.72) (xy 115.57 45.72))
+		(stroke (width 0) (type default))
+		(uuid "8741e77f-8b54-5260-8e20-617fe0079a09")
+	)
+	(wire
+		(pts (xy 115.57 45.72) (xy 115.57 49.53))
+		(stroke (width 0) (type default))
+		(uuid "d158401b-9313-5d98-8149-468df5919f80")
+	)
 	(symbol
-		(lib_id "Device:C")
-		(at 121.92 44.45 0)
+		(lib_id "power:+5V")
+		(at 115.57 49.53 180)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
-		(uuid "3fea0cbe-f5cd-58fc-8af1-e982126fde33")
-		(property "Reference" "C3"
-			(at 124.46 43.18 0)
+		(uuid "193f01b3-5b4d-52a5-9559-d76eced50c6b")
+		(property "Reference" "#PWR09"
+			(at 115.57 45.72 0)
 			(effects
 				(font (size 1.27 1.27))
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "10u"
-			(at 124.46 45.72 0)
+		(property "Value" "+5V"
+			(at 115.57 53.09 0)
 			(effects
 				(font (size 1.27 1.27))
-				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 121.92 44.45 0)
+		(property "Footprint" ""
+			(at 115.57 49.53 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 44.45 0)
+			(at 115.57 49.53 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "MLCC 10uF 16V 0805"
-			(at 121.92 44.45 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 115.57 49.53 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "ce45b9ee-339e-528e-9a77-62d9e4f6c62a")
+			(uuid "975f94e4-b0a2-5cd4-895b-d26b13df49f2")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "#PWR09")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 114.3 40.64) (xy 120.65 40.64))
+		(stroke (width 0) (type default))
+		(uuid "353e1f99-9896-578a-8150-033311489e9d")
+	)
+	(wire
+		(pts (xy 120.65 40.64) (xy 123.19 40.64))
+		(stroke (width 0) (type default))
+		(uuid "e9a3e6b1-a119-5b54-9181-a1ba71539c4b")
+	)
+	(junction
+		(at 120.65 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d4448394-b7ca-5fdd-9fe2-2a192be03841")
+	)
+	(symbol
+		(lib_id "Device:D_Schottky")
+		(at 120.65 44.45 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "2af8e30f-e9e3-5dac-b965-25a5e138da97")
+		(property "Reference" "D5"
+			(at 125.73 43.18 270)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Value" "SS34"
+			(at 125.73 45.72 270)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 120.65 44.45 270)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 44.45 270)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Vrijloopdiode buck"
+			(at 120.65 44.45 270)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C8678"
+			(at 120.65 44.45 270)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d7c2988c-c51c-5786-af05-cdfdb022f7fe")
 		)
 		(pin "2"
-			(uuid "8741e77f-8b54-5260-8e20-617fe0079a09")
+			(uuid "007798d2-a3e3-5499-ad9d-317f04204821")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "D5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 120.65 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "ee46d8ea-8bc2-51d2-bc58-5e792541656a")
+		(property "Reference" "#PWR10"
+			(at 120.65 54.61 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 120.65 52.07 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" ""
+			(at 120.65 48.26 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 120.65 48.26 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 120.65 48.26 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5dbdb262-31a6-5e9d-91f9-828facfcc8fb")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "#PWR10")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:L")
+		(at 127 40.64 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "969f69d8-d530-58ab-8f8d-b3885ad3e8f8")
+		(property "Reference" "L1"
+			(at 127 36.83 90)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Value" "68u"
+			(at 127 44.45 90)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" "Inductor_THT:L_Radial_D8.7mm_P5.00mm_Fastron_07HCP"
+			(at 127 40.64 90)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 127 40.64 90)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "68uH >=1A radiaal 5mm (bv. Fastron 07HCP-680K, Bourns RLB0914-680KL) (THT, zelf solderen)"
+			(at 127 40.64 90)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4cd7028f-f62c-5ebe-b651-f3313d890e29")
+		)
+		(pin "2"
+			(uuid "3e8cf483-6b6a-54b9-9425-b1c976f377f6")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "L1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 130.81 40.64) (xy 134.62 40.64))
+		(stroke (width 0) (type default))
+		(uuid "b47a02ba-d371-5563-8d2d-c6217d378112")
+	)
+	(wire
+		(pts (xy 134.62 40.64) (xy 142.24 40.64))
+		(stroke (width 0) (type default))
+		(uuid "21b27c99-7895-5946-bd80-3272a06d0859")
+	)
+	(wire
+		(pts (xy 142.24 40.64) (xy 149.86 40.64))
+		(stroke (width 0) (type default))
+		(uuid "34306a56-dcd3-5dd9-88bb-52d0c9a10d2e")
+	)
+	(wire
+		(pts (xy 149.86 40.64) (xy 157.48 40.64))
+		(stroke (width 0) (type default))
+		(uuid "5a12ef58-cb0b-5ef3-9672-25914ec578de")
+	)
+	(junction
+		(at 134.62 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a8efccab-2a1d-5f07-af60-43a97d83ba26")
+	)
+	(junction
+		(at 142.24 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d75a28b3-1495-5eb9-b09c-93ed891618ad")
+	)
+	(junction
+		(at 149.86 40.64)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "abad823a-c9c7-50b8-a091-b25b01989b29")
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 157.48 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "3aac8d02-f6a1-5eb0-b289-1ca10a18bd6d")
+		(property "Reference" "#PWR11"
+			(at 157.48 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 157.48 37.08 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" ""
+			(at 157.48 40.64 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 157.48 40.64 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 157.48 40.64 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "faf79876-60bb-5dc9-9bd0-d55b56864836")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "#PWR11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C_Polarized")
+		(at 134.62 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c491f621-cd64-5bd7-993f-9c596b8516f4")
+		(property "Reference" "C4"
+			(at 132.08 43.18 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify right)
+			)
+		)
+		(property "Value" "220u 16V"
+			(at 132.08 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify right)
+			)
+		)
+		(property "Footprint" "Capacitor_THT:CP_Radial_D6.3mm_P2.50mm"
+			(at 134.62 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Elco 220uF 16V radiaal 6.3mm, uitgang buck (THT, zelf solderen)"
+			(at 134.62 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8d489991-73ad-5383-8933-011e0ae77cfb")
+		)
+		(pin "2"
+			(uuid "761f2db4-9b49-516e-922a-f985b88745a5")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 134.62 48.26 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "561036de-ee1d-59d3-a1f4-b9baf60e54ee")
+		(property "Reference" "#PWR12"
+			(at 134.62 54.61 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 134.62 52.07 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" ""
+			(at 134.62 48.26 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 134.62 48.26 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 134.62 48.26 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b6148349-e6d9-57ec-9795-26ed6d18df93")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "#PWR12")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 142.24 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "fe4ff3f2-2bd8-5787-8271-60da0f60e8fa")
+		(property "Reference" "C3"
+			(at 144.78 43.18 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 144.78 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 142.24 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "MLCC 10uF 25V 0805"
+			(at 142.24 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C15850"
+			(at 142.24 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e5782b75-8a15-5dd9-9db4-3adbc046f7ef")
+		)
+		(pin "2"
+			(uuid "e9bc59fb-6f95-5733-bbf4-4e1e617c9744")
 		)
 		(instances
 			(project "hotendheater"
@@ -4034,54 +4590,54 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 121.92 48.26 0)
+		(at 142.24 48.26 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "d158401b-9313-5d98-8149-468df5919f80")
-		(property "Reference" "#PWR09"
-			(at 121.92 54.61 0)
+		(uuid "4a78442e-6bd7-5ac0-873d-148551ba3c9a")
+		(property "Reference" "#PWR13"
+			(at 142.24 54.61 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Value" "GND"
-			(at 121.92 52.07 0)
+			(at 142.24 52.07 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 121.92 48.26 0)
+			(at 142.24 48.26 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 121.92 48.26 0)
+			(at 142.24 48.26 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 121.92 48.26 0)
+			(at 142.24 48.26 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "193f01b3-5b4d-52a5-9559-d76eced50c6b")
+			(uuid "08e82df4-f726-5868-9c2f-4792bc8a4faa")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR09")
+					(reference "#PWR13")
 					(unit 1)
 				)
 			)
@@ -4089,53 +4645,60 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 132.08 44.45 0)
+		(at 149.86 44.45 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "975f94e4-b0a2-5cd4-895b-d26b13df49f2")
+		(uuid "52b04dec-abb5-55a9-8ee9-546b2cc1e36f")
 		(property "Reference" "R1"
-			(at 134.62 43.18 0)
+			(at 152.4 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(justify left)
 			)
 		)
 		(property "Value" "1k"
-			(at 134.62 45.72 0)
+			(at 152.4 45.72 0)
 			(effects
 				(font (size 1.27 1.27))
 				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 132.08 44.45 0)
+			(at 149.86 44.45 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 44.45 0)
+			(at 149.86 44.45 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Resistor"
-			(at 132.08 44.45 0)
+			(at 149.86 44.45 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 149.86 44.45 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "353e1f99-9896-578a-8150-033311489e9d")
+			(uuid "61392a74-9fd8-55ac-a986-233f37d3fe01")
 		)
 		(pin "2"
-			(uuid "e9a3e6b1-a119-5b54-9181-a1ba71539c4b")
+			(uuid "485c467c-f273-5d3c-80d4-4cf0dd7fdd09")
 		)
 		(instances
 			(project "hotendheater"
@@ -4148,53 +4711,60 @@
 	)
 	(symbol
 		(lib_id "Device:LED")
-		(at 132.08 52.07 90)
+		(at 149.86 52.07 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "d4448394-b7ca-5fdd-9fe2-2a192be03841")
+		(uuid "b25169e3-9781-5722-b684-cee5411886c0")
 		(property "Reference" "D2"
-			(at 137.16 50.8 90)
+			(at 154.94 50.8 90)
 			(effects
 				(font (size 1.27 1.27))
 				(justify left)
 			)
 		)
 		(property "Value" "groen"
-			(at 137.16 53.34 90)
+			(at 154.94 53.34 90)
 			(effects
 				(font (size 1.27 1.27))
 				(justify left)
 			)
 		)
 		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 132.08 52.07 90)
+			(at 149.86 52.07 90)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 52.07 90)
+			(at 149.86 52.07 90)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "LED +5V aanwezig"
-			(at 132.08 52.07 90)
+			(at 149.86 52.07 90)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C2297"
+			(at 149.86 52.07 90)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "2af8e30f-e9e3-5dac-b965-25a5e138da97")
+			(uuid "99a6d0bb-cc89-558d-b3a2-8569fcec45af")
 		)
 		(pin "2"
-			(uuid "d7c2988c-c51c-5786-af05-cdfdb022f7fe")
+			(uuid "aca2fa85-c7d7-5d6d-8200-c0c25e1a08b0")
 		)
 		(instances
 			(project "hotendheater"
@@ -4207,54 +4777,54 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 132.08 55.88 0)
+		(at 149.86 55.88 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "007798d2-a3e3-5499-ad9d-317f04204821")
-		(property "Reference" "#PWR10"
-			(at 132.08 62.23 0)
+		(uuid "ed21f039-a340-5e7c-8d06-03f42be65ac4")
+		(property "Reference" "#PWR14"
+			(at 149.86 62.23 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Value" "GND"
-			(at 132.08 59.69 0)
+			(at 149.86 59.69 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 132.08 55.88 0)
+			(at 149.86 55.88 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 132.08 55.88 0)
+			(at 149.86 55.88 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 132.08 55.88 0)
+			(at 149.86 55.88 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "ee46d8ea-8bc2-51d2-bc58-5e792541656a")
+			(uuid "a40ea195-1e48-5f90-a804-57d26d3d88b3")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR10")
+					(reference "#PWR14")
 					(unit 1)
 				)
 			)
@@ -4262,49 +4832,49 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 172.72 43.18 0)
+		(at 175.26 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "5dbdb262-31a6-5e9d-91f9-828facfcc8fb")
+		(uuid "6c6914a6-af5a-59d7-a007-c81eecef46df")
 		(property "Reference" "#FLG01"
-			(at 172.72 41.28 0)
+			(at 175.26 41.28 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 172.72 39.37 0)
+			(at 175.26 39.37 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 172.72 43.18 0)
+			(at 175.26 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 172.72 43.18 0)
+			(at 175.26 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 172.72 43.18 0)
+			(at 175.26 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "969f69d8-d530-58ab-8f8d-b3885ad3e8f8")
+			(uuid "513baf69-3b0c-575a-bfd1-cfc088c834f1")
 		)
 		(instances
 			(project "hotendheater"
@@ -4316,574 +4886,13 @@
 		)
 	)
 	(wire
-		(pts (xy 172.72 43.18) (xy 172.72 45.72))
+		(pts (xy 175.26 43.18) (xy 175.26 45.72))
 		(stroke (width 0) (type default))
-		(uuid "4cd7028f-f62c-5ebe-b651-f3313d890e29")
-	)
-	(symbol
-		(lib_id "power:VBUS")
-		(at 172.72 45.72 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "3e8cf483-6b6a-54b9-9425-b1c976f377f6")
-		(property "Reference" "#PWR11"
-			(at 172.72 41.91 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Value" "VBUS"
-			(at 172.72 49.28 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Footprint" ""
-			(at 172.72 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 172.72 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VBUS\""
-			(at 172.72 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b47a02ba-d371-5563-8d2d-c6217d378112")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 185.42 43.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "21b27c99-7895-5946-bd80-3272a06d0859")
-		(property "Reference" "#FLG02"
-			(at 185.42 41.28 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 185.42 39.37 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Footprint" ""
-			(at 185.42 43.18 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 43.18 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 185.42 43.18 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "34306a56-dcd3-5dd9-88bb-52d0c9a10d2e")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#FLG02")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts (xy 185.42 43.18) (xy 185.42 45.72))
-		(stroke (width 0) (type default))
-		(uuid "5a12ef58-cb0b-5ef3-9672-25914ec578de")
-	)
-	(symbol
-		(lib_id "nuzzler:+20V")
-		(at 185.42 45.72 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "a8efccab-2a1d-5f07-af60-43a97d83ba26")
-		(property "Reference" "#PWR12"
-			(at 185.42 41.91 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Value" "+20V"
-			(at 185.42 49.28 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Footprint" ""
-			(at 185.42 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 185.42 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+20V\""
-			(at 185.42 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d75a28b3-1495-5eb9-b09c-93ed891618ad")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 198.12 43.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "abad823a-c9c7-50b8-a091-b25b01989b29")
-		(property "Reference" "#FLG03"
-			(at 198.12 41.28 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 198.12 39.37 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Footprint" ""
-			(at 198.12 43.18 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 198.12 43.18 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 198.12 43.18 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3aac8d02-f6a1-5eb0-b289-1ca10a18bd6d")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#FLG03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts (xy 198.12 43.18) (xy 198.12 45.72))
-		(stroke (width 0) (type default))
-		(uuid "faf79876-60bb-5dc9-9bd0-d55b56864836")
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 198.12 45.72 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "c491f621-cd64-5bd7-993f-9c596b8516f4")
-		(property "Reference" "#PWR13"
-			(at 198.12 41.91 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 198.12 49.28 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Footprint" ""
-			(at 198.12 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 198.12 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+3V3\""
-			(at 198.12 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8d489991-73ad-5383-8933-011e0ae77cfb")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 210.82 43.18 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "761f2db4-9b49-516e-922a-f985b88745a5")
-		(property "Reference" "#FLG04"
-			(at 210.82 41.28 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 210.82 39.37 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Footprint" ""
-			(at 210.82 43.18 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 210.82 43.18 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Special symbol for telling ERC where power comes from"
-			(at 210.82 43.18 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "561036de-ee1d-59d3-a1f4-b9baf60e54ee")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#FLG04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts (xy 210.82 43.18) (xy 210.82 45.72))
-		(stroke (width 0) (type default))
-		(uuid "b6148349-e6d9-57ec-9795-26ed6d18df93")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 210.82 45.72 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
-		(uuid "fe4ff3f2-2bd8-5787-8271-60da0f60e8fa")
-		(property "Reference" "#PWR14"
-			(at 210.82 52.07 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 210.82 49.53 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Footprint" ""
-			(at 210.82 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 210.82 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 210.82 45.72 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e5782b75-8a15-5dd9-9db4-3adbc046f7ef")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR14")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(text "2. HEATER DRIVER - HEAT (3,3V van ESP32) -> 74AHCT1G125 op 5V -> IRLZ44N (low-side).\n   ~{HEAT_EN} hoog (oververhitting) -> bufferuitgang hoog-ohmig -> R4 trekt de gate laag."
-		(exclude_from_sim no)
-		(at 20.32 60.96 0)
-		(effects
-			(font (size 1.5 1.5))
-			(justify left top)
-		)
-		(uuid "e9bc59fb-6f95-5733-bbf4-4e1e617c9744")
-	)
-	(symbol
-		(lib_id "74xGxx:74AHCT1G125")
-		(at 63.5 96.52 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4a78442e-6bd7-5ac0-873d-148551ba3c9a")
-		(property "Reference" "U2"
-			(at 68.58 104.14 0)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Value" "74AHCT1G125"
-			(at 68.58 106.68 0)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
-			(at 63.5 96.52 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/sg/scyt129e/scyt129e.pdf"
-			(at 63.5 96.52 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Single Buffer Gate Tri-State, Low-Voltage CMOS"
-			(at 63.5 96.52 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "08e82df4-f726-5868-9c2f-4792bc8a4faa")
-		)
-		(pin "2"
-			(uuid "52b04dec-abb5-55a9-8ee9-546b2cc1e36f")
-		)
-		(pin "3"
-			(uuid "61392a74-9fd8-55ac-a986-233f37d3fe01")
-		)
-		(pin "4"
-			(uuid "485c467c-f273-5d3c-80d4-4cf0dd7fdd09")
-		)
-		(pin "5"
-			(uuid "b25169e3-9781-5722-b684-cee5411886c0")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "U2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 38.1 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "99a6d0bb-cc89-558d-b3a2-8569fcec45af")
-		(property "Reference" "R2"
-			(at 40.64 99.06 0)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Value" "100k"
-			(at 40.64 101.6 0)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 38.1 100.33 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 100.33 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Pulldown HEAT: heater uit als CYD los is of opstart"
-			(at 38.1 100.33 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "aca2fa85-c7d7-5d6d-8200-c0c25e1a08b0")
-		)
-		(pin "2"
-			(uuid "ed21f039-a340-5e7c-8d06-03f42be65ac4")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "R2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts (xy 30.48 96.52) (xy 38.1 96.52))
-		(stroke (width 0) (type default))
-		(uuid "a40ea195-1e48-5f90-a804-57d26d3d88b3")
-	)
-	(wire
-		(pts (xy 38.1 96.52) (xy 48.26 96.52))
-		(stroke (width 0) (type default))
-		(uuid "6c6914a6-af5a-59d7-a007-c81eecef46df")
-	)
-	(junction
-		(at 38.1 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "513baf69-3b0c-575a-bfd1-cfc088c834f1")
-	)
-	(label "HEAT"
-		(at 30.48 96.52 180)
-		(fields_autoplaced yes)
-		(effects
-			(font (size 1.27 1.27))
-			(justify right bottom)
-		)
 		(uuid "dff49119-3464-5309-bff3-222506e77317")
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 38.1 104.14 0)
+		(lib_id "power:VBUS")
+		(at 175.26 45.72 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
@@ -4891,34 +4900,34 @@
 		(dnp no)
 		(uuid "90e8b1dc-5d44-5267-948d-432735f8e528")
 		(property "Reference" "#PWR15"
-			(at 38.1 110.49 0)
+			(at 175.26 41.91 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 38.1 107.95 0)
+		(property "Value" "VBUS"
+			(at 175.26 49.28 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 38.1 104.14 0)
+			(at 175.26 45.72 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 104.14 0)
+			(at 175.26 45.72 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 38.1 104.14 0)
+		(property "Description" "Power symbol creates a global label with name \"VBUS\""
+			(at 175.26 45.72 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
@@ -4936,56 +4945,111 @@
 			)
 		)
 	)
-	(wire
-		(pts (xy 58.42 86.36) (xy 58.42 83.82))
-		(stroke (width 0) (type default))
-		(uuid "0f8cb9fa-b731-50da-beec-9af5c4a866f5")
-	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 58.42 83.82 0)
+		(lib_id "power:PWR_FLAG")
+		(at 187.96 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "012f7960-3f24-5a5b-9d48-e6189c7c8eaa")
-		(property "Reference" "#PWR16"
-			(at 58.42 87.63 0)
+		(uuid "0f8cb9fa-b731-50da-beec-9af5c4a866f5")
+		(property "Reference" "#FLG02"
+			(at 187.96 41.28 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 58.42 80.26 0)
+		(property "Value" "PWR_FLAG"
+			(at 187.96 39.37 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 83.82 0)
+			(at 187.96 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 83.82 0)
+			(at 187.96 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 58.42 83.82 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 187.96 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "0449d7c2-0102-5ce2-9669-4d93da9a254b")
+			(uuid "012f7960-3f24-5a5b-9d48-e6189c7c8eaa")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "#FLG02")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 187.96 43.18) (xy 187.96 45.72))
+		(stroke (width 0) (type default))
+		(uuid "0449d7c2-0102-5ce2-9669-4d93da9a254b")
+	)
+	(symbol
+		(lib_id "nuzzler:+20V")
+		(at 187.96 45.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "ce7e9bb8-bbf7-546e-b072-1370c399e473")
+		(property "Reference" "#PWR16"
+			(at 187.96 41.91 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Value" "+20V"
+			(at 187.96 49.28 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" ""
+			(at 187.96 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 187.96 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+20V\""
+			(at 187.96 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bfa0bf2f-5f0a-55f1-893f-0ab5a019137f")
 		)
 		(instances
 			(project "hotendheater"
@@ -4996,56 +5060,111 @@
 			)
 		)
 	)
-	(wire
-		(pts (xy 58.42 106.68) (xy 58.42 109.22))
-		(stroke (width 0) (type default))
-		(uuid "ce7e9bb8-bbf7-546e-b072-1370c399e473")
-	)
 	(symbol
-		(lib_id "power:GND")
-		(at 58.42 109.22 0)
+		(lib_id "power:PWR_FLAG")
+		(at 200.66 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "bfa0bf2f-5f0a-55f1-893f-0ab5a019137f")
-		(property "Reference" "#PWR17"
-			(at 58.42 115.57 0)
+		(uuid "db01c5dc-d3b1-56fd-9db0-e5a0811d61a3")
+		(property "Reference" "#FLG03"
+			(at 200.66 41.28 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 58.42 113.03 0)
+		(property "Value" "PWR_FLAG"
+			(at 200.66 39.37 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 58.42 109.22 0)
+			(at 200.66 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 58.42 109.22 0)
+			(at 200.66 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 58.42 109.22 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 200.66 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "db01c5dc-d3b1-56fd-9db0-e5a0811d61a3")
+			(uuid "7c151200-9419-59e7-ad01-dfe4e1d6d781")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "#FLG03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 200.66 43.18) (xy 200.66 45.72))
+		(stroke (width 0) (type default))
+		(uuid "2d28814b-8458-5b81-88b8-47f944517551")
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 200.66 45.72 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "4b5eff82-2359-52bf-aa7f-09cf216bb412")
+		(property "Reference" "#PWR17"
+			(at 200.66 41.91 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 200.66 49.28 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" ""
+			(at 200.66 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 200.66 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3V3\""
+			(at 200.66 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "88a7a7df-ba80-56a6-bc94-df3db88ca6de")
 		)
 		(instances
 			(project "hotendheater"
@@ -5057,109 +5176,110 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 63.5 80.01 0)
+		(lib_id "power:PWR_FLAG")
+		(at 213.36 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
+		(in_bom no)
+		(on_board no)
 		(dnp no)
-		(uuid "7c151200-9419-59e7-ad01-dfe4e1d6d781")
-		(property "Reference" "R5"
-			(at 66.04 78.74 0)
+		(uuid "105dbc39-aeaf-5e4d-86c6-0e63ceb76494")
+		(property "Reference" "#FLG04"
+			(at 213.36 41.28 0)
 			(effects
 				(font (size 1.27 1.27))
-				(justify left)
+				(hide yes)
 			)
 		)
-		(property "Value" "10k"
-			(at 66.04 81.28 0)
+		(property "Value" "PWR_FLAG"
+			(at 213.36 39.37 0)
 			(effects
 				(font (size 1.27 1.27))
-				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 63.5 80.01 0)
+		(property "Footprint" ""
+			(at 213.36 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 63.5 80.01 0)
+			(at 213.36 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "Pullup ~{HEAT_EN} (LM393 open collector)"
-			(at 63.5 80.01 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 213.36 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "2d28814b-8458-5b81-88b8-47f944517551")
-		)
-		(pin "2"
-			(uuid "4b5eff82-2359-52bf-aa7f-09cf216bb412")
+			(uuid "f7f2419c-2a1f-5b2b-9cd7-42fe49860703")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "R5")
+					(reference "#FLG04")
 					(unit 1)
 				)
 			)
 		)
 	)
+	(wire
+		(pts (xy 213.36 43.18) (xy 213.36 45.72))
+		(stroke (width 0) (type default))
+		(uuid "3cda47e9-4297-560e-91c0-83f7a6e7f5b4")
+	)
 	(symbol
 		(lib_id "power:+5V")
-		(at 63.5 76.2 0)
+		(at 213.36 45.72 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "88a7a7df-ba80-56a6-bc94-df3db88ca6de")
+		(uuid "57dbc803-9ae9-5f07-b7ea-11d3fc69045a")
 		(property "Reference" "#PWR18"
-			(at 63.5 80.01 0)
+			(at 213.36 41.91 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Value" "+5V"
-			(at 63.5 72.64 0)
+			(at 213.36 49.28 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 63.5 76.2 0)
+			(at 213.36 45.72 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 63.5 76.2 0)
+			(at 213.36 45.72 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 63.5 76.2 0)
+			(at 213.36 45.72 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "105dbc39-aeaf-5e4d-86c6-0e63ceb76494")
+			(uuid "2729768d-2359-5a57-b77e-fd047cf63c97")
 		)
 		(instances
 			(project "hotendheater"
@@ -5170,140 +5290,111 @@
 			)
 		)
 	)
-	(wire
-		(pts (xy 63.5 86.36) (xy 63.5 85.09))
-		(stroke (width 0) (type default))
-		(uuid "f7f2419c-2a1f-5b2b-9cd7-42fe49860703")
-	)
-	(wire
-		(pts (xy 63.5 85.09) (xy 63.5 83.82))
-		(stroke (width 0) (type default))
-		(uuid "3cda47e9-4297-560e-91c0-83f7a6e7f5b4")
-	)
-	(junction
-		(at 63.5 85.09)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "57dbc803-9ae9-5f07-b7ea-11d3fc69045a")
-	)
-	(wire
-		(pts (xy 63.5 85.09) (xy 68.58 85.09))
-		(stroke (width 0) (type default))
-		(uuid "2729768d-2359-5a57-b77e-fd047cf63c97")
-	)
-	(label "~{HEAT_EN}"
-		(at 68.58 85.09 0)
-		(fields_autoplaced yes)
-		(effects
-			(font (size 1.27 1.27))
-			(justify left bottom)
-		)
-		(uuid "21944ea8-b0e4-5c96-a4cf-5802352a30bb")
-	)
 	(symbol
-		(lib_id "Device:C")
-		(at 45.72 83.82 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2204c8b2-8f6b-54db-8bf4-e477f6f5791f")
-		(property "Reference" "C4"
-			(at 48.26 82.55 0)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 48.26 85.09 0)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 45.72 83.82 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 83.82 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Ontkoppeling U2"
-			(at 45.72 83.82 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "291988f0-de5a-5d10-a48a-87b299122851")
-		)
-		(pin "2"
-			(uuid "a1fb4171-c0e0-5647-8086-84a782cce481")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "C4")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 45.72 80.01 0)
+		(lib_id "power:PWR_FLAG")
+		(at 226.06 43.18 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "dea0ee4a-fc6e-5027-a2df-3385489a45b1")
-		(property "Reference" "#PWR19"
-			(at 45.72 83.82 0)
+		(uuid "21944ea8-b0e4-5c96-a4cf-5802352a30bb")
+		(property "Reference" "#FLG05"
+			(at 226.06 41.28 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Value" "+5V"
-			(at 45.72 76.45 0)
+		(property "Value" "PWR_FLAG"
+			(at 226.06 39.37 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 45.72 80.01 0)
+			(at 226.06 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 80.01 0)
+			(at 226.06 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 45.72 80.01 0)
+		(property "Description" "Special symbol for telling ERC where power comes from"
+			(at 226.06 43.18 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "70a4829c-7a7e-5a30-9483-60da8d0c7209")
+			(uuid "2204c8b2-8f6b-54db-8bf4-e477f6f5791f")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "#FLG05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 226.06 43.18) (xy 226.06 45.72))
+		(stroke (width 0) (type default))
+		(uuid "291988f0-de5a-5d10-a48a-87b299122851")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 226.06 45.72 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "a1fb4171-c0e0-5647-8086-84a782cce481")
+		(property "Reference" "#PWR19"
+			(at 226.06 52.07 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 226.06 49.53 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" ""
+			(at 226.06 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 226.06 45.72 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dea0ee4a-fc6e-5027-a2df-3385489a45b1")
 		)
 		(instances
 			(project "hotendheater"
@@ -5314,51 +5405,218 @@
 			)
 		)
 	)
-	(symbol
-		(lib_id "power:GND")
-		(at 45.72 87.63 0)
-		(unit 1)
+	(text "2. HEATER DRIVER - U2B vergelijkt HEAT (3,3V) met 2,5V; open-collector + 1k pull-up -> gate op 5V.\n   U2A trekt dezelfde gate-node laag bij oververhitting (wired-AND): heater alleen aan als HEAT hoog EN niet te heet."
 		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
+		(at 20.32 60.96 0)
+		(effects
+			(font (size 1.5 1.5))
+			(justify left top)
+		)
+		(uuid "70a4829c-7a7e-5a30-9483-60da8d0c7209")
+	)
+	(symbol
+		(lib_id "Comparator:LM393")
+		(at 63.5 96.52 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
 		(dnp no)
 		(uuid "f8575232-e07d-549c-af84-df95624b1567")
-		(property "Reference" "#PWR20"
-			(at 45.72 93.98 0)
+		(property "Reference" "U2"
+			(at 63.5 88.9 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Value" "LM393"
+			(at 63.5 104.14 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 63.5 96.52 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 45.72 91.44 0)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
+			(at 63.5 96.52 0)
 			(effects
 				(font (size 1.27 1.27))
+				(hide yes)
 			)
 		)
-		(property "Footprint" ""
-			(at 45.72 87.63 0)
+		(property "Description" "Gate driver"
+			(at 63.5 96.52 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C7955"
+			(at 63.5 96.52 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "5"
+			(uuid "6852f3b4-a2b4-5408-a747-f2924b7f3b4f")
+		)
+		(pin "6"
+			(uuid "4aabf66f-556f-5a8f-8405-d383b0ab709f")
+		)
+		(pin "7"
+			(uuid "74d7f089-9858-5996-b60b-ca6b064630c5")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "U2")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 30.48 97.79 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "26de935c-3692-5317-9848-3a6ab3594bac")
+		(property "Reference" "R2"
+			(at 33.02 96.52 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 33.02 99.06 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 30.48 97.79 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 45.72 87.63 0)
+			(at 30.48 97.79 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 45.72 87.63 0)
+		(property "Description" "Pulldown HEAT: heater uit als CYD los is of opstart"
+			(at 30.48 97.79 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C149504"
+			(at 30.48 97.79 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "6852f3b4-a2b4-5408-a747-f2924b7f3b4f")
+			(uuid "97443e21-5987-5062-b6d1-4516dbe14351")
+		)
+		(pin "2"
+			(uuid "d1ffe486-b32e-5ca8-b9c0-fe4f37807451")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 22.86 93.98) (xy 30.48 93.98))
+		(stroke (width 0) (type default))
+		(uuid "160cf4d4-dc4c-5194-972e-966fa6dfa560")
+	)
+	(wire
+		(pts (xy 30.48 93.98) (xy 55.88 93.98))
+		(stroke (width 0) (type default))
+		(uuid "9d374398-967b-5d98-9b68-afc29aad2647")
+	)
+	(junction
+		(at 30.48 93.98)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "937e19df-b7f2-53e3-9af6-f150d2f80f9f")
+	)
+	(label "HEAT"
+		(at 22.86 93.98 180)
+		(fields_autoplaced yes)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "fdebef9d-09b1-5706-961e-05ef07ea4c0d")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 30.48 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "285676e2-69bd-5e00-88b1-d6bbfe37ab01")
+		(property "Reference" "#PWR20"
+			(at 30.48 107.95 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 30.48 105.41 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 101.6 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 101.6 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 30.48 101.6 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "208f785f-ce73-583c-aacf-7a90ad38eebf")
 		)
 		(instances
 			(project "hotendheater"
@@ -5371,115 +5629,58 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 85.09 96.52 90)
+		(at 44.45 99.06 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4aabf66f-556f-5a8f-8405-d383b0ab709f")
-		(property "Reference" "R3"
-			(at 85.09 93.98 90)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Value" "47"
-			(at 85.09 99.06 90)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 85.09 96.52 90)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 85.09 96.52 90)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Gate-weerstand"
-			(at 85.09 96.52 90)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "74d7f089-9858-5996-b60b-ca6b064630c5")
-		)
-		(pin "2"
-			(uuid "26de935c-3692-5317-9848-3a6ab3594bac")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "R3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts (xy 76.2 96.52) (xy 81.28 96.52))
-		(stroke (width 0) (type default))
-		(uuid "97443e21-5987-5062-b6d1-4516dbe14351")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 93.98 100.33 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d1ffe486-b32e-5ca8-b9c0-fe4f37807451")
+		(uuid "a846dd2d-1e5a-532e-9193-e026aa692c84")
 		(property "Reference" "R4"
-			(at 96.52 99.06 0)
+			(at 44.45 96.52 90)
 			(effects
 				(font (size 1.27 1.27))
-				(justify left)
 			)
 		)
-		(property "Value" "100k"
-			(at 96.52 101.6 0)
+		(property "Value" "10k"
+			(at 44.45 101.6 90)
 			(effects
 				(font (size 1.27 1.27))
-				(justify left)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 93.98 100.33 0)
+			(at 44.45 99.06 90)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 100.33 0)
+			(at 44.45 99.06 90)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "Gate pulldown"
-			(at 93.98 100.33 0)
+		(property "Description" "Drempel HEAT (2,5V)"
+			(at 44.45 99.06 90)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17414"
+			(at 44.45 99.06 90)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "160cf4d4-dc4c-5194-972e-966fa6dfa560")
+			(uuid "a57f7ab2-a60c-5549-9c23-70276f7bfa33")
 		)
 		(pin "2"
-			(uuid "9d374398-967b-5d98-9b68-afc29aad2647")
+			(uuid "7b91ca08-abc3-57d2-94bf-927c11a50e82")
 		)
 		(instances
 			(project "hotendheater"
@@ -5491,55 +5692,283 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 93.98 104.14 0)
+		(lib_id "power:+5V")
+		(at 40.64 99.06 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "937e19df-b7f2-53e3-9af6-f150d2f80f9f")
+		(uuid "c0d7923d-ce54-5a91-8df5-09529860d8f0")
 		(property "Reference" "#PWR21"
-			(at 93.98 110.49 0)
+			(at 40.64 102.87 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 93.98 107.95 0)
+		(property "Value" "+5V"
+			(at 40.64 95.5 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" ""
-			(at 93.98 104.14 0)
+			(at 40.64 99.06 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 93.98 104.14 0)
+			(at 40.64 99.06 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 93.98 104.14 0)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 40.64 99.06 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(pin "1"
-			(uuid "fdebef9d-09b1-5706-961e-05ef07ea4c0d")
+			(uuid "09f62cd7-19f9-59b2-a8ae-4e933a3dca31")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
 					(reference "#PWR21")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 48.26 99.06) (xy 55.88 99.06))
+		(stroke (width 0) (type default))
+		(uuid "29eb9c4d-c0dd-5169-bb16-112040dbdd55")
+	)
+	(junction
+		(at 48.26 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4694ba2c-c193-58f2-82fb-a0cc2aee2cb6")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 48.26 102.87 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a73145ea-fabe-5ce2-ad70-74d2ee215112")
+		(property "Reference" "R5"
+			(at 50.8 101.6 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 50.8 104.14 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 48.26 102.87 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 102.87 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Drempel naar ~{HEAT_EN}: >3,5V bij oververhitting"
+			(at 48.26 102.87 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17414"
+			(at 48.26 102.87 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "0d67aae3-6760-533d-abab-8a9b39fb78d3")
+		)
+		(pin "2"
+			(uuid "18a0b0ea-4d73-5f2b-ad46-e884a46b81b5")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "R5")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts (xy 48.26 106.68) (xy 48.26 109.22))
+		(stroke (width 0) (type default))
+		(uuid "1b600544-a90e-5650-839b-049627570d54")
+	)
+	(label "~{HEAT_EN}"
+		(at 48.26 109.22 270)
+		(fields_autoplaced yes)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "a2d0ce70-e767-59a0-966d-7f7a352afd47")
+	)
+	(wire
+		(pts (xy 71.12 96.52) (xy 78.74 96.52))
+		(stroke (width 0) (type default))
+		(uuid "7823675e-906a-59c8-b1cf-e24d9dd93b0c")
+	)
+	(wire
+		(pts (xy 78.74 96.52) (xy 101.6 96.52))
+		(stroke (width 0) (type default))
+		(uuid "2a646609-b107-548f-97e2-85ca4f733ac8")
+	)
+	(junction
+		(at 78.74 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "22ea186a-dd3a-55f9-8ed8-ec92f8aef139")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 78.74 92.71 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7a41e2b5-92ca-5acf-b83a-aa44a3d3710b")
+		(property "Reference" "R3"
+			(at 81.28 91.44 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Value" "1k"
+			(at 81.28 93.98 0)
+			(effects
+				(font (size 1.27 1.27))
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 78.74 92.71 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 92.71 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Gate pull-up naar 5V"
+			(at 78.74 92.71 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 78.74 92.71 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "81e3e8ab-eef0-5676-ba1d-53d891006ba3")
+		)
+		(pin "2"
+			(uuid "efdf0c13-fdbe-52e0-86b0-3fdfbd5d2857")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "R3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 78.74 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(dnp no)
+		(uuid "eb909bf7-9d55-5854-99f3-74dd4766b2cd")
+		(property "Reference" "#PWR22"
+			(at 78.74 92.71 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Value" "+5V"
+			(at 78.74 85.34 0)
+			(effects
+				(font (size 1.27 1.27))
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 88.9 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 88.9 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 78.74 88.9 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "39aec898-3c65-5589-b613-6f38ac5d4971")
+		)
+		(instances
+			(project "hotendheater"
+				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
+					(reference "#PWR22")
 					(unit 1)
 				)
 			)
@@ -5553,7 +5982,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "285676e2-69bd-5e00-88b1-d6bbfe37ab01")
+		(uuid "c469d6cd-0138-5358-ae4a-41ba85738d01")
 		(property "Reference" "Q1"
 			(at 113.03 95.25 0)
 			(effects
@@ -5582,7 +6011,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "47A Id, 55V Vds, 22mOhm Rds Single N-Channel HEXFET Power MOSFET, TO-220AB"
+		(property "Description" "N-MOSFET 55V logic level (THT, zelf solderen)"
 			(at 106.68 96.52 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -5590,13 +6019,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "208f785f-ce73-583c-aacf-7a90ad38eebf")
+			(uuid "e5178c16-896d-59fd-9318-d947d3f5eec8")
 		)
 		(pin "2"
-			(uuid "a846dd2d-1e5a-532e-9193-e026aa692c84")
+			(uuid "18fdb3bf-21d2-57f6-80e6-bb80921f2ea5")
 		)
 		(pin "3"
-			(uuid "a57f7ab2-a60c-5549-9c23-70276f7bfa33")
+			(uuid "78636f34-d385-53db-88f5-442c7b66934c")
 		)
 		(instances
 			(project "hotendheater"
@@ -5607,22 +6036,6 @@
 			)
 		)
 	)
-	(wire
-		(pts (xy 88.9 96.52) (xy 93.98 96.52))
-		(stroke (width 0) (type default))
-		(uuid "7b91ca08-abc3-57d2-94bf-927c11a50e82")
-	)
-	(wire
-		(pts (xy 93.98 96.52) (xy 101.6 96.52))
-		(stroke (width 0) (type default))
-		(uuid "c0d7923d-ce54-5a91-8df5-09529860d8f0")
-	)
-	(junction
-		(at 93.98 96.52)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "09f62cd7-19f9-59b2-a8ae-4e933a3dca31")
-	)
 	(symbol
 		(lib_id "power:GND")
 		(at 109.22 101.6 0)
@@ -5631,8 +6044,8 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "29eb9c4d-c0dd-5169-bb16-112040dbdd55")
-		(property "Reference" "#PWR22"
+		(uuid "0447fcca-ea91-5c63-8107-0c4c84b72e09")
+		(property "Reference" "#PWR23"
 			(at 109.22 107.95 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -5667,12 +6080,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "4694ba2c-c193-58f2-82fb-a0cc2aee2cb6")
+			(uuid "00f958c4-4057-5e59-8972-6ad8ba25b390")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR22")
+					(reference "#PWR23")
 					(unit 1)
 				)
 			)
@@ -5686,7 +6099,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a73145ea-fabe-5ce2-ad70-74d2ee215112")
+		(uuid "dac623d1-e55f-5db1-bc15-fc88022b16c4")
 		(property "Reference" "J2"
 			(at 128.27 95.25 0)
 			(effects
@@ -5713,7 +6126,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "X1C keramisch verwarmingselement (~12 Ohm, 48W@24V)"
+		(property "Description" "X1C keramisch verwarmingselement (~12 Ohm) (THT, zelf solderen)"
 			(at 129.54 91.44 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -5721,10 +6134,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "0d67aae3-6760-533d-abab-8a9b39fb78d3")
+			(uuid "24a0ac21-c4bf-5011-ba29-fbda0f2eeb8b")
 		)
 		(pin "2"
-			(uuid "18a0b0ea-4d73-5f2b-ad46-e884a46b81b5")
+			(uuid "2174719e-0d12-56e6-a0ce-4f7d139f701a")
 		)
 		(instances
 			(project "hotendheater"
@@ -5738,28 +6151,28 @@
 	(wire
 		(pts (xy 109.22 91.44) (xy 109.22 88.9))
 		(stroke (width 0) (type default))
-		(uuid "1b600544-a90e-5650-839b-049627570d54")
+		(uuid "2c2ff740-fd89-5342-8787-d76ff5c5b305")
 	)
 	(wire
 		(pts (xy 109.22 88.9) (xy 116.84 88.9))
 		(stroke (width 0) (type default))
-		(uuid "a2d0ce70-e767-59a0-966d-7f7a352afd47")
+		(uuid "000f6206-070b-5fbd-8f56-e6934a9be81b")
 	)
 	(wire
 		(pts (xy 116.84 88.9) (xy 124.46 88.9))
 		(stroke (width 0) (type default))
-		(uuid "7823675e-906a-59c8-b1cf-e24d9dd93b0c")
+		(uuid "d7a6b24c-eaa5-5233-942a-3e4648d6b527")
 	)
 	(junction
 		(at 116.84 88.9)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2a646609-b107-548f-97e2-85ca4f733ac8")
+		(uuid "c243005c-bb68-504d-bf9b-ae049cffc2e7")
 	)
 	(wire
 		(pts (xy 124.46 91.44) (xy 119.38 91.44))
 		(stroke (width 0) (type default))
-		(uuid "22ea186a-dd3a-55f9-8ed8-ec92f8aef139")
+		(uuid "1afcb98d-c4e8-5847-904b-c02d7b812596")
 	)
 	(symbol
 		(lib_id "nuzzler:+20V")
@@ -5769,8 +6182,8 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "7a41e2b5-92ca-5acf-b83a-aa44a3d3710b")
-		(property "Reference" "#PWR23"
+		(uuid "decfd6c6-cc9b-5c73-ae6f-65497486ca25")
+		(property "Reference" "#PWR24"
 			(at 123.19 91.44 90)
 			(effects
 				(font (size 1.27 1.27))
@@ -5805,12 +6218,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "81e3e8ab-eef0-5676-ba1d-53d891006ba3")
+			(uuid "daeade9e-be0f-5672-af00-a25627a057b5")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR23")
+					(reference "#PWR24")
 					(unit 1)
 				)
 			)
@@ -5824,7 +6237,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "efdf0c13-fdbe-52e0-86b0-3fdfbd5d2857")
+		(uuid "5e0bbb6e-3122-5ec5-967f-6410f2327cae")
 		(property "Reference" "D3"
 			(at 121.92 83.82 90)
 			(effects
@@ -5832,7 +6245,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "oranje"
+		(property "Value" "geel"
 			(at 121.92 86.36 90)
 			(effects
 				(font (size 1.27 1.27))
@@ -5860,11 +6273,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C2296"
+			(at 116.84 85.09 90)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "eb909bf7-9d55-5854-99f3-74dd4766b2cd")
+			(uuid "4fa5954a-e682-5b31-a63f-227213e88a9c")
 		)
 		(pin "2"
-			(uuid "39aec898-3c65-5589-b613-6f38ac5d4971")
+			(uuid "9a4b71d0-21c6-50bb-b8c7-19f60ae683de")
 		)
 		(instances
 			(project "hotendheater"
@@ -5883,7 +6303,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "c469d6cd-0138-5358-ae4a-41ba85738d01")
+		(uuid "3b8812d2-c6f3-5aba-82ef-ff8d135ba900")
 		(property "Reference" "R6"
 			(at 119.38 76.2 0)
 			(effects
@@ -5919,11 +6339,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17414"
+			(at 116.84 77.47 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "e5178c16-896d-59fd-9318-d947d3f5eec8")
+			(uuid "ff4784e5-8773-567a-ae1c-4753df13027d")
 		)
 		(pin "2"
-			(uuid "18fdb3bf-21d2-57f6-80e6-bb80921f2ea5")
+			(uuid "ac65ce92-42c0-5359-af44-5c874291bb4d")
 		)
 		(instances
 			(project "hotendheater"
@@ -5942,8 +6369,8 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "78636f34-d385-53db-88f5-442c7b66934c")
-		(property "Reference" "#PWR24"
+		(uuid "7d92e096-94ba-5f73-be7b-b139c1943ce7")
+		(property "Reference" "#PWR25"
 			(at 116.84 77.47 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -5978,25 +6405,25 @@
 			)
 		)
 		(pin "1"
-			(uuid "0447fcca-ea91-5c63-8107-0c4c84b72e09")
+			(uuid "7d7411e2-d057-5343-ad84-9bc0608f904c")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR24")
+					(reference "#PWR25")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(text "3. THERMISTOR (NTC 100k, B3950) + HARDWARE-OVERTEMP: uit bij ~290C (Vref 0,275V), weer aan bij ~276C.\n   Pull-up naar +3V3 van de CYD: de ESP32-ADC komt zo nooit boven 3,3V."
+	(text "3. THERMISTOR (NTC 100k, B3950) + HARDWARE-OVERTEMP: uit bij ~281C (Vref 0,30V), weer aan bij ~270C.\n   Pull-up naar +3V3 van de CYD: de ESP32-ADC komt zo nooit boven 3,3V."
 		(exclude_from_sim no)
 		(at 20.32 116.84 0)
 		(effects
 			(font (size 1.5 1.5))
 			(justify left top)
 		)
-		(uuid "00f958c4-4057-5e59-8972-6ad8ba25b390")
+		(uuid "25893868-3374-5984-b650-7456289c6e87")
 	)
 	(symbol
 		(lib_id "Connector_Generic_MountingPin:Conn_01x02_MountingPin")
@@ -6006,7 +6433,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "dac623d1-e55f-5db1-bc15-fc88022b16c4")
+		(uuid "cdd39284-4262-5e8d-ae81-524afea14239")
 		(property "Reference" "J3"
 			(at 38.1 137.16 0)
 			(effects
@@ -6033,7 +6460,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "X1C hotend thermistor"
+		(property "Description" "X1C hotend thermistor (SMD, zelf solderen)"
 			(at 38.1 139.7 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -6041,13 +6468,13 @@
 			)
 		)
 		(pin "1"
-			(uuid "24a0ac21-c4bf-5011-ba29-fbda0f2eeb8b")
+			(uuid "6eba66d7-0642-52c1-9098-a0c9b2b3bbb3")
 		)
 		(pin "2"
-			(uuid "2174719e-0d12-56e6-a0ce-4f7d139f701a")
+			(uuid "1de3de1b-19b5-59b8-b370-05f9abca7d59")
 		)
 		(pin "MP"
-			(uuid "2c2ff740-fd89-5342-8787-d76ff5c5b305")
+			(uuid "3f5c3402-379b-5be6-8856-c0917606e9d1")
 		)
 		(instances
 			(project "hotendheater"
@@ -6061,7 +6488,7 @@
 	(wire
 		(pts (xy 33.02 139.7) (xy 30.48 139.7))
 		(stroke (width 0) (type default))
-		(uuid "000f6206-070b-5fbd-8f56-e6934a9be81b")
+		(uuid "754f694a-2275-545a-b570-84ab1490de63")
 	)
 	(label "THERM"
 		(at 30.48 139.7 180)
@@ -6070,17 +6497,17 @@
 			(font (size 1.27 1.27))
 			(justify right bottom)
 		)
-		(uuid "d7a6b24c-eaa5-5233-942a-3e4648d6b527")
+		(uuid "feb4aea2-8150-5ecb-b20d-82ebc77e6571")
 	)
 	(wire
 		(pts (xy 33.02 142.24) (xy 30.48 142.24))
 		(stroke (width 0) (type default))
-		(uuid "c243005c-bb68-504d-bf9b-ae049cffc2e7")
+		(uuid "8a3aebb4-66b1-57b9-880f-9db262373e88")
 	)
 	(wire
 		(pts (xy 30.48 142.24) (xy 30.48 147.32))
 		(stroke (width 0) (type default))
-		(uuid "1afcb98d-c4e8-5847-904b-c02d7b812596")
+		(uuid "79798ab1-98df-5bba-83d1-538098dc30be")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6090,8 +6517,8 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "decfd6c6-cc9b-5c73-ae6f-65497486ca25")
-		(property "Reference" "#PWR25"
+		(uuid "75383ba5-e802-5dad-8adc-504c8a0e1728")
+		(property "Reference" "#PWR26"
 			(at 30.48 153.67 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -6126,12 +6553,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "daeade9e-be0f-5672-af00-a25627a057b5")
+			(uuid "1051806d-e696-50ea-8607-6c3b9546a23c")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR25")
+					(reference "#PWR26")
 					(unit 1)
 				)
 			)
@@ -6145,8 +6572,8 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "5e0bbb6e-3122-5ec5-967f-6410f2327cae")
-		(property "Reference" "#PWR26"
+		(uuid "8b75ab3b-8723-55ca-8abd-3d5ca7a60b79")
+		(property "Reference" "#PWR27"
 			(at 38.1 153.67 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -6181,12 +6608,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "4fa5954a-e682-5b31-a63f-227213e88a9c")
+			(uuid "3b2958c9-a1fa-50cd-96b6-f90197daf9ed")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR26")
+					(reference "#PWR27")
 					(unit 1)
 				)
 			)
@@ -6200,7 +6627,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "9a4b71d0-21c6-50bb-b8c7-19f60ae683de")
+		(uuid "f58848e0-61fe-5ade-98d0-eacfe70ea178")
 		(property "Reference" "R7"
 			(at 58.42 137.16 0)
 			(effects
@@ -6236,11 +6663,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17520"
+			(at 55.88 138.43 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "3b8812d2-c6f3-5aba-82ef-ff8d135ba900")
+			(uuid "b020c812-8690-52b2-8293-62aaf7408bf8")
 		)
 		(pin "2"
-			(uuid "ff4784e5-8773-567a-ae1c-4753df13027d")
+			(uuid "99c82063-ec40-5924-b532-c0afca944f77")
 		)
 		(instances
 			(project "hotendheater"
@@ -6259,7 +6693,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ac65ce92-42c0-5359-af44-5c874291bb4d")
+		(uuid "e50619c5-6b2b-53d0-abfc-adf0914bb267")
 		(property "Reference" "C5"
 			(at 58.42 144.78 0)
 			(effects
@@ -6295,11 +6729,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 55.88 146.05 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "7d92e096-94ba-5f73-be7b-b139c1943ce7")
+			(uuid "3b9521fa-b56a-52de-ba48-0d13ef4d81b9")
 		)
 		(pin "2"
-			(uuid "7d7411e2-d057-5343-ad84-9bc0608f904c")
+			(uuid "faaef5be-b915-55c4-926d-6d432857318c")
 		)
 		(instances
 			(project "hotendheater"
@@ -6318,8 +6759,8 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "25893868-3374-5984-b650-7456289c6e87")
-		(property "Reference" "#PWR27"
+		(uuid "9cd72db2-4e93-55f8-a560-e47b39b3c630")
+		(property "Reference" "#PWR28"
 			(at 55.88 138.43 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -6354,12 +6795,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "cdd39284-4262-5e8d-ae81-524afea14239")
+			(uuid "049baa43-7fb5-56a9-be8e-57d5ea51e5ba")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR27")
+					(reference "#PWR28")
 					(unit 1)
 				)
 			)
@@ -6373,8 +6814,8 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "6eba66d7-0642-52c1-9098-a0c9b2b3bbb3")
-		(property "Reference" "#PWR28"
+		(uuid "c1a88b6c-53ab-5f30-91d2-c628fc6fbb44")
+		(property "Reference" "#PWR29"
 			(at 55.88 156.21 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -6409,12 +6850,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "1de3de1b-19b5-59b8-b370-05f9abca7d59")
+			(uuid "e0ea469d-57cc-5260-84e3-7e612da67894")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR28")
+					(reference "#PWR29")
 					(unit 1)
 				)
 			)
@@ -6423,13 +6864,13 @@
 	(wire
 		(pts (xy 55.88 142.24) (xy 60.96 142.24))
 		(stroke (width 0) (type default))
-		(uuid "3f5c3402-379b-5be6-8856-c0917606e9d1")
+		(uuid "2a08741d-dedb-5c8d-bfa2-aedd12663634")
 	)
 	(junction
 		(at 55.88 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "754f694a-2275-545a-b570-84ab1490de63")
+		(uuid "1bba0c44-2087-5987-ba5b-a7235368b23d")
 	)
 	(label "THERM"
 		(at 60.96 142.24 0)
@@ -6438,7 +6879,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "feb4aea2-8150-5ecb-b20d-82ebc77e6571")
+		(uuid "8c35ff5e-7453-5322-bef5-f9409e7daa6d")
 	)
 	(symbol
 		(lib_id "Comparator:LM393")
@@ -6448,8 +6889,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "8a3aebb4-66b1-57b9-880f-9db262373e88")
-		(property "Reference" "U3"
+		(uuid "ed74189e-315c-5a13-a0a3-2e3640895733")
+		(property "Reference" "U2"
 			(at 87.63 138.43 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -6482,198 +6923,8 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "79798ab1-98df-5bba-83d1-538098dc30be")
-		)
-		(pin "2"
-			(uuid "75383ba5-e802-5dad-8adc-504c8a0e1728")
-		)
-		(pin "3"
-			(uuid "1051806d-e696-50ea-8607-6c3b9546a23c")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "U3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts (xy 76.2 139.7) (xy 73.66 139.7))
-		(stroke (width 0) (type default))
-		(uuid "8b75ab3b-8723-55ca-8abd-3d5ca7a60b79")
-	)
-	(label "VREF"
-		(at 73.66 139.7 180)
-		(fields_autoplaced yes)
-		(effects
-			(font (size 1.27 1.27))
-			(justify right bottom)
-		)
-		(uuid "3b2958c9-a1fa-50cd-96b6-f90197daf9ed")
-	)
-	(wire
-		(pts (xy 76.2 144.78) (xy 73.66 144.78))
-		(stroke (width 0) (type default))
-		(uuid "f58848e0-61fe-5ade-98d0-eacfe70ea178")
-	)
-	(label "THERM"
-		(at 73.66 144.78 180)
-		(fields_autoplaced yes)
-		(effects
-			(font (size 1.27 1.27))
-			(justify right bottom)
-		)
-		(uuid "b020c812-8690-52b2-8293-62aaf7408bf8")
-	)
-	(wire
-		(pts (xy 91.44 142.24) (xy 93.98 142.24))
-		(stroke (width 0) (type default))
-		(uuid "99c82063-ec40-5924-b532-c0afca944f77")
-	)
-	(label "~{HEAT_EN}"
-		(at 93.98 142.24 0)
-		(fields_autoplaced yes)
-		(effects
-			(font (size 1.27 1.27))
-			(justify left bottom)
-		)
-		(uuid "e50619c5-6b2b-53d0-abfc-adf0914bb267")
-	)
-	(symbol
-		(lib_id "Comparator:LM393")
-		(at 114.3 142.24 0)
-		(unit 2)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "3b9521fa-b56a-52de-ba48-0d13ef4d81b9")
-		(property "Reference" "U3"
-			(at 118.11 138.43 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Value" "LM393"
-			(at 120.65 146.05 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
-		)
-		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
-			(at 114.3 142.24 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lm393.pdf"
-			(at 114.3 142.24 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Low-Power, Low-Offset Voltage, Dual Comparators, DIP-8/SOIC-8/TO-99-8"
-			(at 114.3 142.24 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "5"
-			(uuid "faaef5be-b915-55c4-926d-6d432857318c")
-		)
-		(pin "6"
-			(uuid "9cd72db2-4e93-55f8-a560-e47b39b3c630")
-		)
-		(pin "7"
-			(uuid "049baa43-7fb5-56a9-be8e-57d5ea51e5ba")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "U3")
-					(unit 2)
-				)
-			)
-		)
-	)
-	(wire
-		(pts (xy 106.68 139.7) (xy 104.14 139.7))
-		(stroke (width 0) (type default))
-		(uuid "c1a88b6c-53ab-5f30-91d2-c628fc6fbb44")
-	)
-	(label "THERM"
-		(at 104.14 139.7 180)
-		(fields_autoplaced yes)
-		(effects
-			(font (size 1.27 1.27))
-			(justify right bottom)
-		)
-		(uuid "e0ea469d-57cc-5260-84e3-7e612da67894")
-	)
-	(wire
-		(pts (xy 106.68 144.78) (xy 104.14 144.78))
-		(stroke (width 0) (type default))
-		(uuid "2a08741d-dedb-5c8d-bfa2-aedd12663634")
-	)
-	(label "VREF"
-		(at 104.14 144.78 180)
-		(fields_autoplaced yes)
-		(effects
-			(font (size 1.27 1.27))
-			(justify right bottom)
-		)
-		(uuid "1bba0c44-2087-5987-ba5b-a7235368b23d")
-	)
-	(wire
-		(pts (xy 121.92 142.24) (xy 127 142.24))
-		(stroke (width 0) (type default))
-		(uuid "8c35ff5e-7453-5322-bef5-f9409e7daa6d")
-	)
-	(symbol
-		(lib_id "Device:LED")
-		(at 127 138.43 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ed74189e-315c-5a13-a0a3-2e3640895733")
-		(property "Reference" "D5"
-			(at 132.08 137.16 90)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Value" "rood"
-			(at 132.08 139.7 90)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
-			(at 127 138.43 90)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 138.43 90)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "LED oververhitting"
-			(at 127 138.43 90)
+		(property "LCSC" "C7955"
+			(at 83.82 142.24 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
@@ -6685,128 +6936,68 @@
 		(pin "2"
 			(uuid "c85df73b-5d48-560d-947a-948e064a0598")
 		)
+		(pin "3"
+			(uuid "332c1461-7062-5b4f-b603-b7b773ca54dd")
+		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "D5")
+					(reference "U2")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(symbol
-		(lib_id "Device:R")
-		(at 127 130.81 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "332c1461-7062-5b4f-b603-b7b773ca54dd")
-		(property "Reference" "R11"
-			(at 129.54 129.54 0)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Value" "1k"
-			(at 129.54 132.08 0)
-			(effects
-				(font (size 1.27 1.27))
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 127 130.81 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 127 130.81 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 127 130.81 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ff11b27b-093e-5b2f-b800-4d3c295642e3")
-		)
-		(pin "2"
-			(uuid "de2d8925-c3c1-5a48-81a5-822606203957")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "R11")
-					(unit 1)
-				)
-			)
-		)
+	(wire
+		(pts (xy 76.2 139.7) (xy 73.66 139.7))
+		(stroke (width 0) (type default))
+		(uuid "ff11b27b-093e-5b2f-b800-4d3c295642e3")
 	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 127 127 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(dnp no)
+	(label "VREF"
+		(at 73.66 139.7 180)
+		(fields_autoplaced yes)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
+		)
+		(uuid "de2d8925-c3c1-5a48-81a5-822606203957")
+	)
+	(wire
+		(pts (xy 76.2 144.78) (xy 73.66 144.78))
+		(stroke (width 0) (type default))
 		(uuid "535e60ce-28cd-5a94-973b-60d7f0901b8d")
-		(property "Reference" "#PWR29"
-			(at 127 130.81 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
+	)
+	(label "THERM"
+		(at 73.66 144.78 180)
+		(fields_autoplaced yes)
+		(effects
+			(font (size 1.27 1.27))
+			(justify right bottom)
 		)
-		(property "Value" "+5V"
-			(at 127 123.44 0)
-			(effects
-				(font (size 1.27 1.27))
-			)
+		(uuid "8ddd0895-ce61-54ef-9d50-380ef27e532a")
+	)
+	(wire
+		(pts (xy 91.44 142.24) (xy 93.98 142.24))
+		(stroke (width 0) (type default))
+		(uuid "7e85530b-45f7-5a5e-986f-c996e186d2f5")
+	)
+	(label "~{HEAT_EN}"
+		(at 93.98 142.24 0)
+		(fields_autoplaced yes)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left bottom)
 		)
-		(property "Footprint" ""
-			(at 127 127 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
+		(uuid "45b47c1a-773a-5040-a540-27ab66898e10")
+	)
+	(text "~{HEAT_EN}: laag = normaal (U2B-drempel 2,5V)\nhoog = te heet (drempel ~5V -> gate laag)"
+		(exclude_from_sim no)
+		(at 99.06 139.7 0)
+		(effects
+			(font (size 1.27 1.27))
+			(justify left top)
 		)
-		(property "Datasheet" ""
-			(at 127 127 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"+5V\""
-			(at 127 127 0)
-			(effects
-				(font (size 1.27 1.27))
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8ddd0895-ce61-54ef-9d50-380ef27e532a")
-		)
-		(instances
-			(project "hotendheater"
-				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "#PWR29")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "83565ec5-d54c-5e03-bb28-4d15a273beed")
 	)
 	(symbol
 		(lib_id "Comparator:LM393")
@@ -6816,8 +7007,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "7e85530b-45f7-5a5e-986f-c996e186d2f5")
-		(property "Reference" "U3"
+		(uuid "6971d3b4-075d-5e3c-814f-6bcee58c6366")
+		(property "Reference" "U2"
 			(at 144.78 140.97 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -6852,16 +7043,23 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C7955"
+			(at 142.24 142.24 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "4"
-			(uuid "45b47c1a-773a-5040-a540-27ab66898e10")
+			(uuid "00207ab1-865c-5d84-874e-a7e9018912fe")
 		)
 		(pin "8"
-			(uuid "83565ec5-d54c-5e03-bb28-4d15a273beed")
+			(uuid "faf00937-dd74-5302-b7ef-7ff79335149a")
 		)
 		(instances
 			(project "hotendheater"
 				(path "/36a83f67-854b-4008-bbf5-b2bc94a4913c"
-					(reference "U3")
+					(reference "U2")
 					(unit 3)
 				)
 			)
@@ -6875,7 +7073,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "6971d3b4-075d-5e3c-814f-6bcee58c6366")
+		(uuid "9f6bace4-1210-56da-8834-67608dd276d3")
 		(property "Reference" "#PWR30"
 			(at 139.7 138.43 0)
 			(effects
@@ -6911,7 +7109,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "00207ab1-865c-5d84-874e-a7e9018912fe")
+			(uuid "4d437448-0318-5b3c-bc95-e34641d59fa5")
 		)
 		(instances
 			(project "hotendheater"
@@ -6930,7 +7128,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "faf00937-dd74-5302-b7ef-7ff79335149a")
+		(uuid "22686a12-d438-51c2-97c2-a4e16fc14a95")
 		(property "Reference" "#PWR31"
 			(at 139.7 156.21 0)
 			(effects
@@ -6966,7 +7164,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "9f6bace4-1210-56da-8834-67608dd276d3")
+			(uuid "f33354e8-15fe-5c78-b303-d01d07ee872d")
 		)
 		(instances
 			(project "hotendheater"
@@ -6985,7 +7183,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "4d437448-0318-5b3c-bc95-e34641d59fa5")
+		(uuid "d1da4b5a-8277-5da4-b617-33c25fcd370d")
 		(property "Reference" "C6"
 			(at 157.48 140.97 0)
 			(effects
@@ -7014,7 +7212,14 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Ontkoppeling U3"
+		(property "Description" "Ontkoppeling U2"
+			(at 154.94 142.24 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C49678"
 			(at 154.94 142.24 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -7022,10 +7227,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "22686a12-d438-51c2-97c2-a4e16fc14a95")
+			(uuid "4379a201-7970-5764-a68c-75ad2028e5c3")
 		)
 		(pin "2"
-			(uuid "f33354e8-15fe-5c78-b303-d01d07ee872d")
+			(uuid "a3477a94-f69a-59c2-b78a-2c1421b536a7")
 		)
 		(instances
 			(project "hotendheater"
@@ -7044,7 +7249,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "d1da4b5a-8277-5da4-b617-33c25fcd370d")
+		(uuid "90701bfb-86b4-55a0-b7d9-d86cdd32164f")
 		(property "Reference" "#PWR32"
 			(at 154.94 142.24 0)
 			(effects
@@ -7080,7 +7285,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "4379a201-7970-5764-a68c-75ad2028e5c3")
+			(uuid "9a0439d6-d95e-59e7-906e-b96b738be362")
 		)
 		(instances
 			(project "hotendheater"
@@ -7099,7 +7304,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "a3477a94-f69a-59c2-b78a-2c1421b536a7")
+		(uuid "ceaeccf4-69f2-5b05-98ba-ec75b8bf8642")
 		(property "Reference" "#PWR33"
 			(at 154.94 152.4 0)
 			(effects
@@ -7135,7 +7340,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "90701bfb-86b4-55a0-b7d9-d86cdd32164f")
+			(uuid "87ada31c-c030-5341-a97f-206f8f371783")
 		)
 		(instances
 			(project "hotendheater"
@@ -7154,7 +7359,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "9a0439d6-d95e-59e7-906e-b96b738be362")
+		(uuid "023f203a-222b-59fb-a66a-3c676e0aaaeb")
 		(property "Reference" "R8"
 			(at 167.64 137.16 0)
 			(effects
@@ -7162,7 +7367,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "110k"
+		(property "Value" "100k"
 			(at 167.64 139.7 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -7190,11 +7395,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C149504"
+			(at 170.18 138.43 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "ceaeccf4-69f2-5b05-98ba-ec75b8bf8642")
+			(uuid "9f10c475-a349-5567-9148-be9730600201")
 		)
 		(pin "2"
-			(uuid "87ada31c-c030-5341-a97f-206f8f371783")
+			(uuid "1dcbf5ba-4d79-5c63-b47a-551cddeaec0b")
 		)
 		(instances
 			(project "hotendheater"
@@ -7213,7 +7425,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "023f203a-222b-59fb-a66a-3c676e0aaaeb")
+		(uuid "96711256-da0b-5c82-b249-2a950828feea")
 		(property "Reference" "R9"
 			(at 167.64 144.78 0)
 			(effects
@@ -7249,11 +7461,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17414"
+			(at 170.18 146.05 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "9f10c475-a349-5567-9148-be9730600201")
+			(uuid "bc5c922d-646e-5149-837f-b499af74b2af")
 		)
 		(pin "2"
-			(uuid "1dcbf5ba-4d79-5c63-b47a-551cddeaec0b")
+			(uuid "c1c10df1-9fba-5b4a-9732-f227e28753ac")
 		)
 		(instances
 			(project "hotendheater"
@@ -7272,7 +7491,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "96711256-da0b-5c82-b249-2a950828feea")
+		(uuid "70e29a31-7e19-5cb8-b4a5-519a78a22c7b")
 		(property "Reference" "#PWR34"
 			(at 170.18 138.43 0)
 			(effects
@@ -7308,7 +7527,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "bc5c922d-646e-5149-837f-b499af74b2af")
+			(uuid "074d7421-06f4-5131-a1ee-8f2f6ec7750f")
 		)
 		(instances
 			(project "hotendheater"
@@ -7327,7 +7546,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "c1c10df1-9fba-5b4a-9732-f227e28753ac")
+		(uuid "ade24aef-c46c-59ae-bc85-213ec625b30a")
 		(property "Reference" "#PWR35"
 			(at 170.18 156.21 0)
 			(effects
@@ -7363,7 +7582,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "70e29a31-7e19-5cb8-b4a5-519a78a22c7b")
+			(uuid "0a7ebab4-d395-56e0-b478-f0efcfe1115e")
 		)
 		(instances
 			(project "hotendheater"
@@ -7377,29 +7596,29 @@
 	(wire
 		(pts (xy 170.18 142.24) (xy 175.26 142.24))
 		(stroke (width 0) (type default))
-		(uuid "074d7421-06f4-5131-a1ee-8f2f6ec7750f")
+		(uuid "2962c6f1-8038-5afb-86ff-51cf58ab4c3d")
 	)
 	(wire
 		(pts (xy 175.26 142.24) (xy 180.34 142.24))
 		(stroke (width 0) (type default))
-		(uuid "ade24aef-c46c-59ae-bc85-213ec625b30a")
+		(uuid "ae9a4918-b442-57c4-9324-b444381a1796")
 	)
 	(junction
 		(at 170.18 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "0a7ebab4-d395-56e0-b478-f0efcfe1115e")
+		(uuid "4cb84951-b4da-55fb-8b98-a6acf2fe6515")
 	)
 	(junction
 		(at 175.26 142.24)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "2962c6f1-8038-5afb-86ff-51cf58ab4c3d")
+		(uuid "34a1f8e1-d57b-51e0-a15b-fae64e64203d")
 	)
 	(wire
 		(pts (xy 175.26 142.24) (xy 175.26 139.7))
 		(stroke (width 0) (type default))
-		(uuid "ae9a4918-b442-57c4-9324-b444381a1796")
+		(uuid "afbc48b5-a454-5858-a5f3-a745614b588f")
 	)
 	(label "VREF"
 		(at 175.26 139.7 90)
@@ -7408,7 +7627,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "4cb84951-b4da-55fb-8b98-a6acf2fe6515")
+		(uuid "549ddee2-a332-5d3d-bc9c-7aed642fb654")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -7418,7 +7637,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "34a1f8e1-d57b-51e0-a15b-fae64e64203d")
+		(uuid "a059006b-67e9-54ca-98b3-c1236b8e0bee")
 		(property "Reference" "R10"
 			(at 184.15 139.7 90)
 			(effects
@@ -7445,7 +7664,14 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Hysterese (~14C)"
+		(property "Description" "Hysterese (~11C)"
+			(at 184.15 142.24 90)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
+		(property "LCSC" "C17514"
 			(at 184.15 142.24 90)
 			(effects
 				(font (size 1.27 1.27))
@@ -7453,10 +7679,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "afbc48b5-a454-5858-a5f3-a745614b588f")
+			(uuid "0a6f8eab-495a-5536-a3b4-2d193356c09c")
 		)
 		(pin "2"
-			(uuid "549ddee2-a332-5d3d-bc9c-7aed642fb654")
+			(uuid "24db13f2-6754-5ae2-89f7-5cccad2e8f55")
 		)
 		(instances
 			(project "hotendheater"
@@ -7470,7 +7696,7 @@
 	(wire
 		(pts (xy 187.96 142.24) (xy 190.5 142.24))
 		(stroke (width 0) (type default))
-		(uuid "a059006b-67e9-54ca-98b3-c1236b8e0bee")
+		(uuid "aca739be-93f9-5ead-8403-c8357e8aee63")
 	)
 	(label "~{HEAT_EN}"
 		(at 190.5 142.24 0)
@@ -7479,7 +7705,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "0a6f8eab-495a-5536-a3b4-2d193356c09c")
+		(uuid "d9bb0a2e-a748-5311-a60b-8b92d025b528")
 	)
 	(text "4. HEADER NAAR CHEAP YELLOW DISPLAY + VSENSE (100k/12k: 20V -> 2,14V)"
 		(exclude_from_sim no)
@@ -7488,7 +7714,7 @@
 			(font (size 1.5 1.5))
 			(justify left top)
 		)
-		(uuid "24db13f2-6754-5ae2-89f7-5cccad2e8f55")
+		(uuid "a6b78ce3-bc0c-5ef3-b84d-99fadcf814ae")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -7498,7 +7724,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "aca739be-93f9-5ead-8403-c8357e8aee63")
+		(uuid "15043907-7c3b-5f87-9106-c831111067cc")
 		(property "Reference" "R12"
 			(at 33.02 172.72 0)
 			(effects
@@ -7534,11 +7760,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C149504"
+			(at 30.48 173.99 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "d9bb0a2e-a748-5311-a60b-8b92d025b528")
+			(uuid "9e76130f-94aa-55f0-8824-f7ccd98127b9")
 		)
 		(pin "2"
-			(uuid "a6b78ce3-bc0c-5ef3-b84d-99fadcf814ae")
+			(uuid "398fa493-43f8-5061-9066-74bfb7c9cfb7")
 		)
 		(instances
 			(project "hotendheater"
@@ -7557,7 +7790,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "15043907-7c3b-5f87-9106-c831111067cc")
+		(uuid "74b56fb1-4e25-581a-9781-1fa4ff3ace2e")
 		(property "Reference" "R13"
 			(at 33.02 180.34 0)
 			(effects
@@ -7593,11 +7826,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C17444"
+			(at 30.48 181.61 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "9e76130f-94aa-55f0-8824-f7ccd98127b9")
+			(uuid "033cea16-14d8-5d00-94b9-fc803eb6623e")
 		)
 		(pin "2"
-			(uuid "398fa493-43f8-5061-9066-74bfb7c9cfb7")
+			(uuid "dbe8927e-6904-5a87-b224-a2c72996bb9c")
 		)
 		(instances
 			(project "hotendheater"
@@ -7616,7 +7856,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "74b56fb1-4e25-581a-9781-1fa4ff3ace2e")
+		(uuid "80cbd8ac-c295-5e9d-aaa7-4f122b8ce28b")
 		(property "Reference" "C7"
 			(at 40.64 180.34 0)
 			(effects
@@ -7652,11 +7892,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 38.1 181.61 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "033cea16-14d8-5d00-94b9-fc803eb6623e")
+			(uuid "ec7e6ab8-50f3-5bb0-8620-1a12c5c27bd6")
 		)
 		(pin "2"
-			(uuid "dbe8927e-6904-5a87-b224-a2c72996bb9c")
+			(uuid "9c98df71-b636-5232-a1ee-2c1c50d1c53e")
 		)
 		(instances
 			(project "hotendheater"
@@ -7675,7 +7922,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "80cbd8ac-c295-5e9d-aaa7-4f122b8ce28b")
+		(uuid "97fe5d77-90ca-5126-8115-209021459a66")
 		(property "Reference" "#PWR36"
 			(at 30.48 173.99 0)
 			(effects
@@ -7711,7 +7958,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "ec7e6ab8-50f3-5bb0-8620-1a12c5c27bd6")
+			(uuid "16c98878-6570-5255-bec7-080eac4b4a2b")
 		)
 		(instances
 			(project "hotendheater"
@@ -7730,7 +7977,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "9c98df71-b636-5232-a1ee-2c1c50d1c53e")
+		(uuid "591bed44-291b-5e36-aa21-0ff8de610d35")
 		(property "Reference" "#PWR37"
 			(at 30.48 191.77 0)
 			(effects
@@ -7766,7 +8013,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "97fe5d77-90ca-5126-8115-209021459a66")
+			(uuid "ceb9b52b-ee2c-59de-86e9-b155b9f1f7ab")
 		)
 		(instances
 			(project "hotendheater"
@@ -7785,7 +8032,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "16c98878-6570-5255-bec7-080eac4b4a2b")
+		(uuid "4bb61b95-5a88-5379-b01f-ae018d3850c1")
 		(property "Reference" "#PWR38"
 			(at 38.1 191.77 0)
 			(effects
@@ -7821,7 +8068,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "591bed44-291b-5e36-aa21-0ff8de610d35")
+			(uuid "bde68e14-9ed1-533c-9d1e-4f042266bf9d")
 		)
 		(instances
 			(project "hotendheater"
@@ -7835,24 +8082,24 @@
 	(wire
 		(pts (xy 30.48 177.8) (xy 38.1 177.8))
 		(stroke (width 0) (type default))
-		(uuid "ceb9b52b-ee2c-59de-86e9-b155b9f1f7ab")
+		(uuid "f7968066-d9b2-5708-983b-82a2f30b4bcb")
 	)
 	(wire
 		(pts (xy 38.1 177.8) (xy 43.18 177.8))
 		(stroke (width 0) (type default))
-		(uuid "4bb61b95-5a88-5379-b01f-ae018d3850c1")
+		(uuid "3f9af4dc-85c4-5f32-9f1c-ada36743d079")
 	)
 	(junction
 		(at 30.48 177.8)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bde68e14-9ed1-533c-9d1e-4f042266bf9d")
+		(uuid "ea8861e0-d129-592b-b043-5677ec0a2056")
 	)
 	(junction
 		(at 38.1 177.8)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "f7968066-d9b2-5708-983b-82a2f30b4bcb")
+		(uuid "d74a78de-4572-5723-b645-00e4b5269078")
 	)
 	(label "VSENSE"
 		(at 43.18 177.8 0)
@@ -7861,7 +8108,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "3f9af4dc-85c4-5f32-9f1c-ada36743d079")
+		(uuid "0cdfa609-1da6-5d51-ad6c-7874700756c8")
 	)
 	(symbol
 		(lib_id "Device:D_Schottky")
@@ -7871,7 +8118,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "ea8861e0-d129-592b-b043-5677ec0a2056")
+		(uuid "0c90b1c1-bc70-5c31-91da-0fa5d418711a")
 		(property "Reference" "D4"
 			(at 66.04 175.26 0)
 			(effects
@@ -7905,11 +8152,18 @@
 				(hide yes)
 			)
 		)
+		(property "LCSC" "C8598"
+			(at 66.04 177.8 0)
+			(effects
+				(font (size 1.27 1.27))
+				(hide yes)
+			)
+		)
 		(pin "1"
-			(uuid "d74a78de-4572-5723-b645-00e4b5269078")
+			(uuid "8c4b1afa-2af7-57c4-92c2-ea253c8d8af3")
 		)
 		(pin "2"
-			(uuid "0cdfa609-1da6-5d51-ad6c-7874700756c8")
+			(uuid "c7ccad84-bc47-5844-ae6f-ffa7e1b4a185")
 		)
 		(instances
 			(project "hotendheater"
@@ -7923,7 +8177,7 @@
 	(wire
 		(pts (xy 62.23 177.8) (xy 59.69 177.8))
 		(stroke (width 0) (type default))
-		(uuid "0c90b1c1-bc70-5c31-91da-0fa5d418711a")
+		(uuid "be76297d-ce25-5a94-ba27-9add30122216")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -7933,7 +8187,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "8c4b1afa-2af7-57c4-92c2-ea253c8d8af3")
+		(uuid "e7fe3f96-14b4-5f4f-9b07-269c7fa24ca6")
 		(property "Reference" "#PWR39"
 			(at 63.5 177.8 90)
 			(effects
@@ -7969,7 +8223,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c7ccad84-bc47-5844-ae6f-ffa7e1b4a185")
+			(uuid "371518d3-7573-5da1-bcc7-a97d012b7e2b")
 		)
 		(instances
 			(project "hotendheater"
@@ -7983,7 +8237,7 @@
 	(wire
 		(pts (xy 69.85 177.8) (xy 72.39 177.8))
 		(stroke (width 0) (type default))
-		(uuid "be76297d-ce25-5a94-ba27-9add30122216")
+		(uuid "8d89f8d6-7627-52eb-bad2-ef2f8390bbd1")
 	)
 	(label "5V_CYD"
 		(at 72.39 177.8 0)
@@ -7992,7 +8246,7 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "e7fe3f96-14b4-5f4f-9b07-269c7fa24ca6")
+		(uuid "c2cbcc41-0e14-5ff4-8df1-e2c2105e8f50")
 	)
 	(symbol
 		(lib_id "Connector:Conn_01x06_Pin")
@@ -8002,7 +8256,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "371518d3-7573-5da1-bcc7-a97d012b7e2b")
+		(uuid "7b962dd4-feb2-55ad-a455-e737b3d396a5")
 		(property "Reference" "J4"
 			(at 88.9 167.64 0)
 			(effects
@@ -8029,7 +8283,7 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Naar Cheap Yellow Display (ESP32-2432S028)"
+		(property "Description" "Naar Cheap Yellow Display (ESP32-2432S028) (THT, zelf solderen)"
 			(at 88.9 175.26 0)
 			(effects
 				(font (size 1.27 1.27))
@@ -8037,22 +8291,22 @@
 			)
 		)
 		(pin "1"
-			(uuid "8d89f8d6-7627-52eb-bad2-ef2f8390bbd1")
-		)
-		(pin "2"
-			(uuid "c2cbcc41-0e14-5ff4-8df1-e2c2105e8f50")
-		)
-		(pin "3"
-			(uuid "7b962dd4-feb2-55ad-a455-e737b3d396a5")
-		)
-		(pin "4"
 			(uuid "e46968aa-8018-5ce9-9a6f-0e78dc4aa766")
 		)
-		(pin "5"
+		(pin "2"
 			(uuid "0d6ea56f-4547-5ed2-bbc4-4e3dacfd7ba1")
 		)
-		(pin "6"
+		(pin "3"
 			(uuid "62496d5d-c860-595d-86da-14801217245b")
+		)
+		(pin "4"
+			(uuid "793f0cf3-372e-54bd-bff3-3a580e98aa2b")
+		)
+		(pin "5"
+			(uuid "c2c4116c-ec2b-5e18-88fb-6947fccd33d2")
+		)
+		(pin "6"
+			(uuid "ab5f988d-95f5-5dcc-9964-9da6d05b0976")
 		)
 		(instances
 			(project "hotendheater"
@@ -8066,7 +8320,7 @@
 	(wire
 		(pts (xy 93.98 170.18) (xy 96.52 170.18))
 		(stroke (width 0) (type default))
-		(uuid "793f0cf3-372e-54bd-bff3-3a580e98aa2b")
+		(uuid "f2aa1ad0-a0bb-5bee-b6d2-02c53a08f98c")
 	)
 	(label "5V_CYD"
 		(at 96.52 170.18 0)
@@ -8075,12 +8329,12 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "c2c4116c-ec2b-5e18-88fb-6947fccd33d2")
+		(uuid "d7993b4c-f5e9-5f02-9c8d-a1129a437775")
 	)
 	(wire
 		(pts (xy 93.98 172.72) (xy 96.52 172.72))
 		(stroke (width 0) (type default))
-		(uuid "ab5f988d-95f5-5dcc-9964-9da6d05b0976")
+		(uuid "aed3042a-66c1-548d-876c-e01375ef0e2b")
 	)
 	(label "THERM"
 		(at 96.52 172.72 0)
@@ -8089,12 +8343,12 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "f2aa1ad0-a0bb-5bee-b6d2-02c53a08f98c")
+		(uuid "77ebc8e1-ec7e-52fa-8b0c-222f743393e3")
 	)
 	(wire
 		(pts (xy 93.98 175.26) (xy 96.52 175.26))
 		(stroke (width 0) (type default))
-		(uuid "d7993b4c-f5e9-5f02-9c8d-a1129a437775")
+		(uuid "01d28c28-fbb8-5ddd-90e1-1d450d0b1aef")
 	)
 	(label "HEAT"
 		(at 96.52 175.26 0)
@@ -8103,12 +8357,12 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "aed3042a-66c1-548d-876c-e01375ef0e2b")
+		(uuid "ce817c01-a084-5dc5-adec-151a3cc254a4")
 	)
 	(wire
 		(pts (xy 93.98 177.8) (xy 96.52 177.8))
 		(stroke (width 0) (type default))
-		(uuid "77ebc8e1-ec7e-52fa-8b0c-222f743393e3")
+		(uuid "9e692fda-74cd-50eb-8de4-a5ede4d49889")
 	)
 	(label "VSENSE"
 		(at 96.52 177.8 0)
@@ -8117,12 +8371,12 @@
 			(font (size 1.27 1.27))
 			(justify left bottom)
 		)
-		(uuid "01d28c28-fbb8-5ddd-90e1-1d450d0b1aef")
+		(uuid "184be123-991d-50d8-a6f7-587f85a2f7ce")
 	)
 	(wire
 		(pts (xy 93.98 180.34) (xy 96.52 180.34))
 		(stroke (width 0) (type default))
-		(uuid "ce817c01-a084-5dc5-adec-151a3cc254a4")
+		(uuid "98ef186b-551f-5751-87d3-7169960444a7")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -8132,7 +8386,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "9e692fda-74cd-50eb-8de4-a5ede4d49889")
+		(uuid "4ab61a09-eb47-5890-8e49-c374d225d149")
 		(property "Reference" "#PWR40"
 			(at 92.71 180.34 270)
 			(effects
@@ -8168,7 +8422,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "184be123-991d-50d8-a6f7-587f85a2f7ce")
+			(uuid "6ec59494-de98-5df7-8659-03f2786ec0d1")
 		)
 		(instances
 			(project "hotendheater"
@@ -8182,12 +8436,12 @@
 	(wire
 		(pts (xy 93.98 182.88) (xy 96.52 182.88))
 		(stroke (width 0) (type default))
-		(uuid "98ef186b-551f-5751-87d3-7169960444a7")
+		(uuid "aba84dbe-37c8-5c2f-b724-b8c903fee3d4")
 	)
 	(wire
 		(pts (xy 96.52 182.88) (xy 96.52 185.42))
 		(stroke (width 0) (type default))
-		(uuid "4ab61a09-eb47-5890-8e49-c374d225d149")
+		(uuid "c898e625-ff2b-5df0-af3b-e9302652fd82")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8197,7 +8451,7 @@
 		(in_bom no)
 		(on_board no)
 		(dnp no)
-		(uuid "6ec59494-de98-5df7-8659-03f2786ec0d1")
+		(uuid "d0c847b8-5e7a-51c7-9d98-bfe2febfd45a")
 		(property "Reference" "#PWR41"
 			(at 96.52 191.77 0)
 			(effects
@@ -8233,7 +8487,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "aba84dbe-37c8-5c2f-b724-b8c903fee3d4")
+			(uuid "2cd62d77-c288-5562-9236-2781c7d43235")
 		)
 		(instances
 			(project "hotendheater"
@@ -8251,45 +8505,45 @@
 			(font (size 1.27 1.27))
 			(justify left top)
 		)
-		(uuid "c898e625-ff2b-5df0-af3b-e9302652fd82")
+		(uuid "218eb448-f0ce-580d-bc9b-ad69132cf193")
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 228.6 68.58 0)
+		(at 231.14 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "d0c847b8-5e7a-51c7-9d98-bfe2febfd45a")
+		(uuid "b4b19ef9-128c-5249-9251-10def89710ab")
 		(property "Reference" "H1"
-			(at 228.6 63.5 0)
+			(at 231.14 66.04 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Value" "M3"
-			(at 228.6 65.4 0)
+			(at 231.14 67.95 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 228.6 68.58 0)
+			(at 231.14 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 228.6 68.58 0)
+			(at 231.14 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 228.6 68.58 0)
+			(at 231.14 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
@@ -8306,41 +8560,41 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 241.3 68.58 0)
+		(at 243.84 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "2cd62d77-c288-5562-9236-2781c7d43235")
+		(uuid "0fcfb594-c290-543b-b365-5dbbbc61ca5b")
 		(property "Reference" "H2"
-			(at 241.3 63.5 0)
+			(at 243.84 66.04 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Value" "M3"
-			(at 241.3 65.4 0)
+			(at 243.84 67.95 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 241.3 68.58 0)
+			(at 243.84 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 241.3 68.58 0)
+			(at 243.84 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 241.3 68.58 0)
+			(at 243.84 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
@@ -8357,41 +8611,41 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 254 68.58 0)
+		(at 256.54 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "218eb448-f0ce-580d-bc9b-ad69132cf193")
+		(uuid "0ebc543c-8b6e-5de8-aa0f-de152b9416d4")
 		(property "Reference" "H3"
-			(at 254 63.5 0)
+			(at 256.54 66.04 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Value" "M3"
-			(at 254 65.4 0)
+			(at 256.54 67.95 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 254 68.58 0)
+			(at 256.54 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 254 68.58 0)
+			(at 256.54 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 254 68.58 0)
+			(at 256.54 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
@@ -8408,41 +8662,41 @@
 	)
 	(symbol
 		(lib_id "Mechanical:MountingHole")
-		(at 266.7 68.58 0)
+		(at 269.24 71.12 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom no)
 		(on_board yes)
 		(dnp no)
-		(uuid "b4b19ef9-128c-5249-9251-10def89710ab")
+		(uuid "7f9a3a5b-e160-52a3-8528-e3e2d9653aa2")
 		(property "Reference" "H4"
-			(at 266.7 63.5 0)
+			(at 269.24 66.04 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Value" "M3"
-			(at 266.7 65.4 0)
+			(at 269.24 67.95 0)
 			(effects
 				(font (size 1.27 1.27))
 			)
 		)
 		(property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
-			(at 266.7 68.58 0)
+			(at 269.24 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Datasheet" ""
-			(at 266.7 68.58 0)
+			(at 269.24 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
 			)
 		)
 		(property "Description" "Mounting Hole without connection"
-			(at 266.7 68.58 0)
+			(at 269.24 71.12 0)
 			(effects
 				(font (size 1.27 1.27))
 				(hide yes)
