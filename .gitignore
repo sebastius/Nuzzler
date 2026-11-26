@@ -30,3 +30,6 @@ fp-info-cache
 
 # KiCad lock files
 *.lck
+
+# JLC fabrication files
+!jlc/*.csv
